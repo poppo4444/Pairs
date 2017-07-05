@@ -51,4 +51,5 @@ production:
   <<: *default
   database: Pairs_production
   username: Pairs
-  password: <%= ENV['PAIRS_DATABASE_PASSWORD'] %>
+  password: <%= ENV['aritomo44'] %>
+  socket: /var/lib/mysql/mysql.sock
