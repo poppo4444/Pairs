@@ -34,6 +34,13 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick'
+gem "haml-rails", "~> 0.9"
+gem "font-awesome-rails"
+gem 'fog'
+
 group :production do
   gem 'unicorn'
 end
@@ -41,6 +48,17 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'rails-controller-testing'
+  gem 'pry-rails'
+  gem 'erb2haml'
 end
 
 group :development do
