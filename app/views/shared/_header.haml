@@ -1,0 +1,8 @@
+%header.main_header
+  .box_header_inner
+    =image_tag "logo_pairs.png"
+    = link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path(:facebook)
+    .header_logo
+      %p.pairs_concept Facebookではじめる恋愛・結婚
+      %i.fa.fa-comments-o
+        %a.hide
