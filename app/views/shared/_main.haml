@@ -1,0 +1,73 @@
+.ui-view
+  .main.box_serch_view.contents_padding
+    .box_notice_summary
+      %ul.notice_list
+        %li.notice_item
+          %a Pairsからのお知らせが◯件あります
+    .banner
+      %p.banner__message バナーだよ
+    .box_search_menu
+      .button_search_setting
+        %a.button_b.button_white_a 
+          %span 検索条件
+      %p.search_result_count ◯人中 1~16人を表示
+      %nav.box_change_view_tabs
+        %ul.change_view_tabs
+          %li.tab_item.tab_item01.is_current
+          %li.tab_item.tab_item02
+    .box_grid_header
+      .box_grid_header01
+        %p.header_display_label 表示人数
+        .header_display_select
+          %select.customSelect.button_white_a
+            %option{value: "16"} 16人
+            %option{value: "32"} 32人
+            %option{value: "64"} 64人
+            %option{value: "96"} 96人
+            %option{value: "128"} 128人
+      .box_grid_header03
+        %span.total_like_number_desc いいねをあと
+        %em
+          %span 46人押しましょう！
+      .box_grid_header02
+        %button.button_b.button_white_a.button_show_pickup 今日のピックアップ
+    .box_list_view_user
+      %ul.list_view_users
+        %li.list_view_user_item
+          =image_tag "logo_pairs.png"
+          .box_user_info01
+            %p.user_summary ◯
+            %span.user_area 神奈川
+            %span.user_age 28歳
+          .box_user_info02
+          .box_user_info03
+            %p.user_chemistry 86%
+            %i.fa.fa-thumbs-o-up
+            %p.user_like_count 30いいね！
+            .user_tweet
+              .user_tweet_body よろしくお願いします！
+          %button.box_button_like
+            %i.fa.fa-thumbs-o-up いいね！
+        %li.list_view_user_item
+          =image_tag "logo_pairs.png"
+          .box_user_info01
+            %p.user_summary ◯
+            %span.user_area 神奈川
+            %span.user_age 28歳
+          .box_user_info02
+          .box_user_info03
+            %p.user_chemistry 86%
+            %i.fa.fa-thumbs-o-up
+            %p.user_like_count 30いいね！
+            .user_tweet
+              .user_tweet_body よろしくお願いします！
+          %button.box_button_like
+            %i.fa.fa-thumbs-o-up いいね！
+      .box_result_pager
+        %ol.pager_nums 雷
+        %li.pager_num
+      .box_like_remaining
+        %p いいねをあと
+        %em
+          %span#total_like_numbers_footer 46人押せます！
+

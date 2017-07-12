@@ -1,0 +1,20 @@
+@mixin boxgnavi() {
+  & {
+    padding:20px 0 12px 0;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: #cbced0;
+    ul{
+      list-style-type:none;
+      font-size: 14px;
+      li{
+        display: block;
+        height: 35px;
+        vertical-align: middle;
+        a{
+          margin:0 0 4px 20px;
+        }
+      }
+    }
+  }
+}

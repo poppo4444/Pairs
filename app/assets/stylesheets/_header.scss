@@ -1,0 +1,29 @@
+header.main_header{
+  border-bottom: 1px solid #cbced0;
+  height: 60px;
+  @include clearfix();
+  .box_header_inner{
+    padding: 14px 0;
+      img{
+        float:left;
+      }
+    .header_logo{
+      p{
+        float:left;
+        font-size: 12px;
+        color:#a1a7ac;
+        display: block;
+        padding-left: 20px;
+        margin-before: 1em;
+        margin-after: 1em;
+        margin-start: 0px;
+        margin-end: 0px;
+      }
+    }
+  }
+  .fa{
+    float:right;
+    font-size: 24px;
+    color:#a1a7ac;
+  }
+}
