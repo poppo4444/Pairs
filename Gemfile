@@ -40,6 +40,9 @@ gem 'mini_magick'
 gem "haml-rails", "~> 0.9"
 gem "font-awesome-rails"
 gem 'fog'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'kaminari'
 
 group :production do
   gem 'unicorn'
