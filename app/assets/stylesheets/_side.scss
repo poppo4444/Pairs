@@ -1,0 +1,116 @@
+.side_contents{
+  float:left;
+  display: table-cell;
+  width: 188px;
+  padding-top: 15px;
+  vertical-align: top;
+  background-color: $light-gray;
+  border-right: 1px solid #cbced0;
+  border-left: 1px solid #cbced0;
+  .profile__summary{
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .profile_photo {
+    margin-bottom: 12px;
+  }
+  .profile_name{
+    margin-bottom: 2px;
+    text-align: center;
+    a{
+      font-size: 16px;
+    }
+  }
+  .profile_status{
+    color:#788086;
+    text-align: center;
+    p{
+      font-size: 14px;
+    }
+  }
+  .my_profile_input_rate{
+    border: 0;
+    outline: 0;
+    background:transparent;
+    padding:0;
+    font-style: normal;
+    text-align: center;
+    p{
+      font-size: 12px;
+    }
+  }
+  .box_my_status{
+    @include clearfix();
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    outline: 0;
+    ul{
+      list-style-type: none;
+      border-width: 1px 0;
+      border-style: solid;
+      border-color: #cbced0;
+      box-shadow: 0 1px 0 white;
+      li{
+        border-right: 1px solid #cbced0;
+        float: left;
+        box-sizing: border-box;
+        width: 50%;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 1px 1px 0 white inset;
+        p{
+          font-size: 10px;
+          margin-before: 1em;
+          margin-after: 1em;
+          margin-start: 0px;
+          margin-end: 0px;
+        }
+        a{
+          font-size: 10p;
+        }
+      }
+    }
+  }
+  .box_my_private_mode{
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #cbced0;
+    box-shadow: 0 1px 0 white;
+    text-align: center;
+    .box_pm_state{
+      margin:10px 15px;
+    }
+    p{
+      font-size: 10px;
+    }
+    a{
+      font-size: 10px;
+    }
+  }
+  .box_gnavi{
+    .box_gnavis01{
+      @include boxgnavi();
+    }
+    .box_gnavis02{
+      @include boxgnavi();
+    }
+    .box_gnavis03{
+      @include boxgnavi();
+    }
+    .box_gnavis04{
+      @include boxgnavi();
+    }
+    .box_gnavis05{
+      @include boxgnavi();
+    }
+    .box_gnavis06{
+      @include boxgnavi();
+    }
+    .box_gnavis07{
+      @include boxgnavi();
+    }
+  }
+}

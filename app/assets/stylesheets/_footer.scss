@@ -1,0 +1,18 @@
+footer#main_footer{
+  .main_footer{
+    .foot-banner{
+      margin-bottom: 20px;
+      padding: 16px 20px;
+      border: solid 1px ;
+      background-color: #fff8f8;
+    }
+    nav{
+      ul{
+        @include clearfix();
+        li{
+          float:left;
+        }
+      }
+    }
+  }
+}

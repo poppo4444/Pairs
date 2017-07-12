@@ -1,0 +1,102 @@
+.ui-view{
+  .main{
+    min-height: 500px;
+    margin-bottom: 50px;
+    padding: 20px 0 0 17px;
+    width: 80%;
+    .button_white_a{
+      color: #8d9399;
+      border: 1px solid #cbced0;
+      background-color: #fff;
+      box-shadow: 0 2px 0 #c9c9c9;
+    }
+    .button_b{
+      font-size: 16px;
+      line-height: 1.0;
+      display: block;
+      padding: 10px;
+      text-align: center;
+      border-radius: 30px;
+    }
+    .box_notice_summary{
+      margin-bottom: 20px;
+      padding: 16px 20px;
+      border: solid 1px #fbd4b8;
+      background-color: #fff8f8;
+      ul{
+        display: block;
+        list-style-type: disc;
+        font-size: 14px;
+        li{
+          color: #ed4655;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .banner{
+      margin-bottom: 20px;
+      padding: 16px 20px;
+      border: solid 1px ;
+      background-color: #fff8f8;
+    }
+    .box_search_menu{
+      font-size: 18px;
+      margin-bottom: 15px;
+      @include clearfix();
+      .button_search_setting{
+        float:left;
+      }
+      .search_result_count{
+        padding-top: 15px;
+        text-align: center;
+        font-size: 14px;
+      }
+      nav.box_change_view_tabs{
+        float: right;
+        ul{
+          list-style: none;
+          li.tab_item.tab_item01.tab_item02{
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .box_grid_header{
+      @include clearfix();
+      font-size: 14px;
+      margin-bottom: 15px;
+      padding: 8px 14px;
+      background-color: #f3f3f3;
+      .box_grid_header01{
+        float: left;
+        p{
+          padding-top: 8px;
+          color: #788086;
+        }
+        .header_desplay_select{
+          select{
+            appearance: menulist-button;
+            width: 81.3594px;
+            position: absolute;
+            opacity: 0;
+            height: 29px;
+            font-size: 12px;
+          }
+        }
+      }
+      .box_grid_header02{
+        float: right;
+        button{
+          font-size: 16px;
+          padding: 4px 10px 7px;
+        }
+      }
+      .box_grid_header03{
+        width: 400px;
+        margin: 8px auto 0;
+        text-align: center;
+
+      }
+    }
+  }
+}
