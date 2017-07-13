@@ -2411,3 +2411,1436 @@
   INFO [90923499] Running /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712103934 by poppo" >> /var/www/Pairs/revisions.log as ec2-user@52.69.6.42
  DEBUG [90923499] Command: cd /var/www/Pairs/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712103934 by poppo" >> /var/www/Pairs/revisions.log )
   INFO [90923499] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-13 16:53:00 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [57115fd4] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.69.6.42
+ DEBUG [57115fd4] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [57115fd4] Finished in 0.325 seconds with exit status 0 (successful).
+  INFO [17dd9bee] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.69.6.42
+ DEBUG [17dd9bee] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [17dd9bee] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pairs-production-poppo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pairs-production-poppo.sh 100.0%
+  INFO [ac15bdb3] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh as ec2-user@52.69.6.42
+ DEBUG [ac15bdb3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh )
+  INFO [ac15bdb3] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [f78f08d4] Running /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD as ec2-user@52.69.6.42
+ DEBUG [f78f08d4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD )
+ DEBUG [f78f08d4] 	a7957ac883a5083578acbd30b718b6732df4e3fd	HEAD
+  INFO [f78f08d4] Finished in 1.558 seconds with exit status 0 (successful).
+  INFO [b86b0640] Running /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [b86b0640] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases )
+  INFO [b86b0640] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [899a1220] Running /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets as ec2-user@52.69.6.42
+ DEBUG [899a1220] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets )
+  INFO [899a1220] Finished in 0.037 seconds with exit status 0 (successful).
+ DEBUG [cce8d914] Running [ -f /var/www/Pairs/current/REVISION ] as ec2-user@52.69.6.42
+ DEBUG [cce8d914] Command: [ -f /var/www/Pairs/current/REVISION ]
+ DEBUG [cce8d914] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [711c7184] Running /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null as ec2-user@52.69.6.42
+ DEBUG [711c7184] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null )
+ DEBUG [711c7184] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [711c7184] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [0ed00bb6] Running [ -f /var/www/Pairs/repo/HEAD ] as ec2-user@52.69.6.42
+ DEBUG [0ed00bb6] Command: [ -f /var/www/Pairs/repo/HEAD ]
+ DEBUG [0ed00bb6] Finished in 0.028 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/Pairs/repo
+ DEBUG [8b232f0d] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [8b232f0d] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [8b232f0d] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [16bc881b] Running /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git as ec2-user@52.69.6.42
+ DEBUG [16bc881b] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git )
+  INFO [16bc881b] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [2325f65e] Running /usr/bin/env git remote update --prune as ec2-user@52.69.6.42
+ DEBUG [2325f65e] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2325f65e] 	Fetching origin
+ DEBUG [2325f65e] 	From github.com:poppo4444/Pairs
+   4319472..a7957ac  master     -> master
+  INFO [2325f65e] Finished in 1.928 seconds with exit status 0 (successful).
+ DEBUG [69a22ea2] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [69a22ea2] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [69a22ea2] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [e5e72bb8] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075302 as ec2-user@52.69.6.42
+ DEBUG [e5e72bb8] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075302 )
+  INFO [e5e72bb8] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [52f84c8d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170713075302 as ec2-user@52.69.6.42
+ DEBUG [52f84c8d] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170713075302 )
+  INFO [52f84c8d] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [c2eb276d] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [c2eb276d] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [c2eb276d] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [ba188106] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.69.6.42
+ DEBUG [ba188106] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ba188106] 	a7957ac883a5083578acbd30b718b6732df4e3fd
+ DEBUG [ba188106] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [704bf7da] Running if test ! -d /var/www/Pairs/releases/20170713075302; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075302'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [704bf7da] Command: if test ! -d /var/www/Pairs/releases/20170713075302; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075302'" 1>&2; false; fi
+ DEBUG [704bf7da] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [3fb03ce5] Running /usr/bin/env echo "a7957ac883a5083578acbd30b718b6732df4e3fd" >> REVISION as ec2-user@52.69.6.42
+ DEBUG [3fb03ce5] Command: cd /var/www/Pairs/releases/20170713075302 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "a7957ac883a5083578acbd30b718b6732df4e3fd" >> REVISION )
+  INFO [3fb03ce5] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [149dbc43] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075302 /var/www/Pairs/releases/20170713075302/tmp /var/www/Pairs/releases/20170713075302/vendor /var/www/Pairs/releases/20170713075302/public as ec2-user@52.69.6.42
+ DEBUG [149dbc43] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075302 /var/www/Pairs/releases/20170713075302/tmp /var/www/Pairs/releases/20170713075302/vendor /var/www/Pairs/releases/20170713075302/public )
+  INFO [149dbc43] Finished in 0.034 seconds with exit status 0 (successful).
+ DEBUG [a366e7b5] Running [ -L /var/www/Pairs/releases/20170713075302/log ] as ec2-user@52.69.6.42
+ DEBUG [a366e7b5] Command: [ -L /var/www/Pairs/releases/20170713075302/log ]
+ DEBUG [a366e7b5] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [ed3b636d] Running [ -d /var/www/Pairs/releases/20170713075302/log ] as ec2-user@52.69.6.42
+ DEBUG [ed3b636d] Command: [ -d /var/www/Pairs/releases/20170713075302/log ]
+ DEBUG [ed3b636d] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [190f4090] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075302/log as ec2-user@52.69.6.42
+ DEBUG [190f4090] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075302/log )
+  INFO [190f4090] Finished in 0.028 seconds with exit status 0 (successful).
+  INFO [418747f5] Running /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170713075302/log as ec2-user@52.69.6.42
+ DEBUG [418747f5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170713075302/log )
+  INFO [418747f5] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [e8bd85af] Running [ -L /var/www/Pairs/releases/20170713075302/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [e8bd85af] Command: [ -L /var/www/Pairs/releases/20170713075302/tmp/pids ]
+ DEBUG [e8bd85af] Finished in 0.034 seconds with exit status 1 (failed).
+ DEBUG [0267d119] Running [ -d /var/www/Pairs/releases/20170713075302/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [0267d119] Command: [ -d /var/www/Pairs/releases/20170713075302/tmp/pids ]
+ DEBUG [0267d119] Finished in 0.027 seconds with exit status 1 (failed).
+  INFO [f3a9af58] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170713075302/tmp/pids as ec2-user@52.69.6.42
+ DEBUG [f3a9af58] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170713075302/tmp/pids )
+  INFO [f3a9af58] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [7ebc96e0] Running [ -L /var/www/Pairs/releases/20170713075302/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [7ebc96e0] Command: [ -L /var/www/Pairs/releases/20170713075302/tmp/cache ]
+ DEBUG [7ebc96e0] Finished in 0.030 seconds with exit status 1 (failed).
+ DEBUG [d26c385f] Running [ -d /var/www/Pairs/releases/20170713075302/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [d26c385f] Command: [ -d /var/www/Pairs/releases/20170713075302/tmp/cache ]
+ DEBUG [d26c385f] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [2199dff2] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075302/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [2199dff2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075302/tmp/cache )
+  INFO [2199dff2] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [416b63e2] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170713075302/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [416b63e2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170713075302/tmp/cache )
+  INFO [416b63e2] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [9460c494] Running [ -L /var/www/Pairs/releases/20170713075302/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [9460c494] Command: [ -L /var/www/Pairs/releases/20170713075302/tmp/sockets ]
+ DEBUG [9460c494] Finished in 0.040 seconds with exit status 1 (failed).
+ DEBUG [b72c6f8c] Running [ -d /var/www/Pairs/releases/20170713075302/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [b72c6f8c] Command: [ -d /var/www/Pairs/releases/20170713075302/tmp/sockets ]
+ DEBUG [b72c6f8c] Finished in 0.030 seconds with exit status 1 (failed).
+  INFO [8f9eda93] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170713075302/tmp/sockets as ec2-user@52.69.6.42
+ DEBUG [8f9eda93] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170713075302/tmp/sockets )
+  INFO [8f9eda93] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [fded03dd] Running [ -L /var/www/Pairs/releases/20170713075302/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [fded03dd] Command: [ -L /var/www/Pairs/releases/20170713075302/vendor/bundle ]
+ DEBUG [fded03dd] Finished in 0.030 seconds with exit status 1 (failed).
+ DEBUG [2c18cca5] Running [ -d /var/www/Pairs/releases/20170713075302/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [2c18cca5] Command: [ -d /var/www/Pairs/releases/20170713075302/vendor/bundle ]
+ DEBUG [2c18cca5] Finished in 0.028 seconds with exit status 1 (failed).
+  INFO [7a0a43ef] Running /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170713075302/vendor/bundle as ec2-user@52.69.6.42
+ DEBUG [7a0a43ef] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170713075302/vendor/bundle )
+  INFO [7a0a43ef] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [c20c68bf] Running [ -L /var/www/Pairs/releases/20170713075302/public/system ] as ec2-user@52.69.6.42
+ DEBUG [c20c68bf] Command: [ -L /var/www/Pairs/releases/20170713075302/public/system ]
+ DEBUG [c20c68bf] Finished in 0.032 seconds with exit status 1 (failed).
+ DEBUG [bca7f229] Running [ -d /var/www/Pairs/releases/20170713075302/public/system ] as ec2-user@52.69.6.42
+ DEBUG [bca7f229] Command: [ -d /var/www/Pairs/releases/20170713075302/public/system ]
+ DEBUG [bca7f229] Finished in 0.033 seconds with exit status 1 (failed).
+  INFO [1733e2c9] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170713075302/public/system as ec2-user@52.69.6.42
+ DEBUG [1733e2c9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170713075302/public/system )
+  INFO [1733e2c9] Finished in 0.036 seconds with exit status 0 (successful).
+ DEBUG [bc284a84] Running [ -L /var/www/Pairs/releases/20170713075302/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [bc284a84] Command: [ -L /var/www/Pairs/releases/20170713075302/public/uploads ]
+ DEBUG [bc284a84] Finished in 0.036 seconds with exit status 1 (failed).
+ DEBUG [e0dc2372] Running [ -d /var/www/Pairs/releases/20170713075302/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [e0dc2372] Command: [ -d /var/www/Pairs/releases/20170713075302/public/uploads ]
+ DEBUG [e0dc2372] Finished in 0.027 seconds with exit status 1 (failed).
+  INFO [243ce49e] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170713075302/public/uploads as ec2-user@52.69.6.42
+ DEBUG [243ce49e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170713075302/public/uploads )
+  INFO [243ce49e] Finished in 0.042 seconds with exit status 0 (successful).
+ DEBUG [e7f67242] Running [ -L /var/www/Pairs/releases/20170713075302/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [e7f67242] Command: [ -L /var/www/Pairs/releases/20170713075302/public/assets ]
+ DEBUG [e7f67242] Finished in 0.029 seconds with exit status 1 (failed).
+ DEBUG [59988164] Running [ -d /var/www/Pairs/releases/20170713075302/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [59988164] Command: [ -d /var/www/Pairs/releases/20170713075302/public/assets ]
+ DEBUG [59988164] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO [659456a1] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075302/public/assets as ec2-user@52.69.6.42
+ DEBUG [659456a1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075302/public/assets )
+  INFO [659456a1] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [d9193720] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170713075302/public/assets as ec2-user@52.69.6.42
+ DEBUG [d9193720] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170713075302/public/assets )
+  INFO [d9193720] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [0de6cc4c] Running if test ! -d /var/www/Pairs/releases/20170713075302; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075302'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [0de6cc4c] Command: if test ! -d /var/www/Pairs/releases/20170713075302; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075302'" 1>&2; false; fi
+ DEBUG [0de6cc4c] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [8dada23a] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle as ec2-user@52.69.6.42
+ DEBUG [8dada23a] Command: cd /var/www/Pairs/releases/20170713075302 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle )
+ DEBUG [8dada23a] 	The following gems are missing
+ DEBUG [8dada23a] 	 * i18n (0.8.6)
+ DEBUG [8dada23a] 	 * mysql2 (0.4.8)
+ DEBUG [8dada23a] 	 * rb-fsevent (0.10.2)
+ DEBUG [8dada23a] 	 * ffi (1.9.18)
+ DEBUG [8dada23a] 	 * rb-inotify (0.9.10)
+ DEBUG [8dada23a] 	 * sass-listen (3.0.7)
+ DEBUG [8dada23a] 	 * sass (3.5.0)
+ DEBUG [8dada23a] 	 * mini_magick (4.8.0)
+ DEBUG [8dada23a] 	 * fog-vsphere (1.11.2)
+ DEBUG [8dada23a] 	 * hashie (3.5.6)
+ DEBUG [8dada23a] 	 * dotenv (2.2.1)
+ DEBUG [8dada23a] 	 * dotenv-rails (2.2.1)
+ DEBUG [8dada23a] 	 * byebug (9.0.6)
+ DEBUG [8dada23a] 	 * net-ssh (4.1.0)
+ DEBUG [8dada23a] 	 * net-scp (1.2.1)
+ DEBUG [8dada23a] 	 * sshkit (1.14.0)
+ DEBUG [8dada23a] 	 * airbrussh (1.3.0)
+ DEBUG [8dada23a] 	 * capistrano (3.8.2)
+ DEBUG [8dada23a] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [8dada23a] 	 * capistrano-bundler (1.2.0)
+ DEBUG [8dada23a] 	 * capistrano-rails (1.3.0)
+ DEBUG [8dada23a] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [8dada23a] 	 * rspec-support (3.6.0)
+ DEBUG [8dada23a] 	 * rspec-core (3.6.0)
+ DEBUG [8dada23a] 	 * diff-lcs (1.3)
+ DEBUG [8dada23a] 	 * rspec-expectations (3.6.0)
+ DEBUG [8dada23a] 	 * rspec-mocks (3.6.0)
+ DEBUG [8dada23a] 	 * rspec-rails (3.6.0)
+ DEBUG [8dada23a] 	 * factory_girl (4.8.0)
+ DEBUG [8dada23a] 	 * factory_girl_rails (4.8.0)
+ DEBUG [8dada23a] 	 * faker (1.8.4)
+ DEBUG [8dada23a] 	 * rails-controller-testing (1.0.2)
+ DEBUG [8dada23a] 	 * coderay (1.1.1)
+ DEBUG [8dada23a] 	 * slop (3.6.0)
+ DEBUG [8dada23a] 	 * pry (0.10.4)
+ DEBUG [8dada23a] 	 * pry-rails (0.3.6)
+ DEBUG [8dada23a] 	 * erb2haml (0.1.5)
+ DEBUG [8dada23a] 	 * bindex (0.5.0)
+ DEBUG [8dada23a] 	 * web-console (3.5.1)
+ DEBUG [8dada23a] 	 * listen (3.0.8)
+ DEBUG [8dada23a] 	 * spring (2.0.2)
+ DEBUG [8dada23a] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [8dada23a] 	Install missing gems with `bundle install`
+ DEBUG [8dada23a] Finished in 0.298 seconds with exit status 1 (failed).
+  INFO [368bf1f4] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet as ec2-user@52.69.6.42
+ DEBUG [368bf1f4] Command: cd /var/www/Pairs/releases/20170713075302 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet )
+  INFO [368bf1f4] Finished in 23.219 seconds with exit status 0 (successful).
+ DEBUG [81be9468] Running if test ! -d /var/www/Pairs/releases/20170713075302; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075302'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [81be9468] Command: if test ! -d /var/www/Pairs/releases/20170713075302; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075302'" 1>&2; false; fi
+ DEBUG [81be9468] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [fda10f90] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@52.69.6.42
+ DEBUG [fda10f90] Command: cd /var/www/Pairs/releases/20170713075302 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [fda10f90] Finished in 6.679 seconds with exit status 0 (successful).
+ DEBUG [fb717692] Running if test ! -d /var/www/Pairs/releases/20170713075302; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075302'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [fb717692] Command: if test ! -d /var/www/Pairs/releases/20170713075302; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075302'" 1>&2; false; fi
+ DEBUG [fb717692] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [8693a705] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075302/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [8693a705] Command: cd /var/www/Pairs/releases/20170713075302 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075302/assets_manifest_backup )
+  INFO [8693a705] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [09877db2] Running /usr/bin/env ls /var/www/Pairs/releases/20170713075302/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [09877db2] Command: cd /var/www/Pairs/releases/20170713075302 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170713075302/public/assets/.sprockets-manifest* )
+ DEBUG [09877db2] 	/var/www/Pairs/releases/20170713075302/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [09877db2] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [24f31db2] Running /usr/bin/env ls /var/www/Pairs/releases/20170713075302/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [24f31db2] Command: cd /var/www/Pairs/releases/20170713075302 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170713075302/public/assets/.sprockets-manifest* )
+ DEBUG [24f31db2] 	/var/www/Pairs/releases/20170713075302/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [24f31db2] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [d83e4813] Running /usr/bin/env cp /var/www/Pairs/releases/20170713075302/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170713075302/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [d83e4813] Command: cd /var/www/Pairs/releases/20170713075302 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/Pairs/releases/20170713075302/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170713075302/assets_manifest_backup )
+  INFO [d83e4813] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [8480fbed] Running if test ! -d /var/www/Pairs/releases/20170713075302; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075302'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [8480fbed] Command: if test ! -d /var/www/Pairs/releases/20170713075302; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075302'" 1>&2; false; fi
+ DEBUG [8480fbed] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [5cb94e5a] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@52.69.6.42
+ DEBUG [5cb94e5a] Command: cd /var/www/Pairs/releases/20170713075302 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [5cb94e5a] 	rake aborted!
+ DEBUG [5cb94e5a] 	StandardError: An error has occurred, all later migrations canceled:
+
+Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `provider` varchar(255), `uid` varchar(255), `name` varchar(255), `token` varchar(255)) ENGINE=InnoDB
+ DEBUG [5cb94e5a] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/schema_statements.rb:278:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:423:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713075302/db/migrate/20170713061441_add_devise_to_users.rb:3:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [5cb94e5a] 	ActiveRecord::StatementInvalid: Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `provider` varchar(255), `uid` varchar(255), `name` varchar(255), `token` varchar(255)) ENGINE=InnoDB
+ DEBUG [5cb94e5a] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/schema_statements.rb:278:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:423:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713075302/db/migrate/20170713061441_add_devise_to_users.rb:3:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [5cb94e5a] 	Mysql2::Error: Table 'users' already exists
+ DEBUG [5cb94e5a] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/schema_statements.rb:278:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:423:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713075302/db/migrate/20170713061441_add_devise_to_users.rb:3:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [5cb94e5a] 	Tasks: TOP => db:migrate
+ DEBUG [5cb94e5a] 	(See full trace by running task with --trace)
+ DEBUG [5cb94e5a] 	== 20170713061441 AddDeviseToUsers: migrating =================================
+-- create_table(:users)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-13 16:57:25 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [7963a34a] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.69.6.42
+ DEBUG [7963a34a] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [7963a34a] Finished in 0.239 seconds with exit status 0 (successful).
+  INFO [7ae40a27] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.69.6.42
+ DEBUG [7ae40a27] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [7ae40a27] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pairs-production-poppo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pairs-production-poppo.sh 100.0%
+  INFO [18ee030f] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh as ec2-user@52.69.6.42
+ DEBUG [18ee030f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh )
+  INFO [18ee030f] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [5c54d3da] Running /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD as ec2-user@52.69.6.42
+ DEBUG [5c54d3da] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD )
+ DEBUG [5c54d3da] 	a7957ac883a5083578acbd30b718b6732df4e3fd	HEAD
+  INFO [5c54d3da] Finished in 1.632 seconds with exit status 0 (successful).
+  INFO [240f062a] Running /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [240f062a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases )
+  INFO [240f062a] Finished in 0.036 seconds with exit status 0 (successful).
+  INFO [006aa0d4] Running /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets as ec2-user@52.69.6.42
+ DEBUG [006aa0d4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets )
+  INFO [006aa0d4] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG [f0a50361] Running [ -f /var/www/Pairs/current/REVISION ] as ec2-user@52.69.6.42
+ DEBUG [f0a50361] Command: [ -f /var/www/Pairs/current/REVISION ]
+ DEBUG [f0a50361] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [9e695ea9] Running /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null as ec2-user@52.69.6.42
+ DEBUG [9e695ea9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null )
+ DEBUG [9e695ea9] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [9e695ea9] Finished in 0.032 seconds with exit status 0 (successful).
+ DEBUG [45671365] Running [ -f /var/www/Pairs/repo/HEAD ] as ec2-user@52.69.6.42
+ DEBUG [45671365] Command: [ -f /var/www/Pairs/repo/HEAD ]
+ DEBUG [45671365] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/Pairs/repo
+ DEBUG [7a709c94] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [7a709c94] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [7a709c94] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [58e8d4dc] Running /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git as ec2-user@52.69.6.42
+ DEBUG [58e8d4dc] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git )
+  INFO [58e8d4dc] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [b6fb6033] Running /usr/bin/env git remote update --prune as ec2-user@52.69.6.42
+ DEBUG [b6fb6033] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b6fb6033] 	Fetching origin
+  INFO [b6fb6033] Finished in 1.676 seconds with exit status 0 (successful).
+ DEBUG [387c4d62] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [387c4d62] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [387c4d62] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [289b946b] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075727 as ec2-user@52.69.6.42
+ DEBUG [289b946b] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075727 )
+  INFO [289b946b] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [e38ef974] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170713075727 as ec2-user@52.69.6.42
+ DEBUG [e38ef974] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170713075727 )
+  INFO [e38ef974] Finished in 0.241 seconds with exit status 0 (successful).
+ DEBUG [cfd98ffe] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [cfd98ffe] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [cfd98ffe] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG [fb5d4d18] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.69.6.42
+ DEBUG [fb5d4d18] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [fb5d4d18] 	a7957ac883a5083578acbd30b718b6732df4e3fd
+ DEBUG [fb5d4d18] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [7b7cbe0d] Running if test ! -d /var/www/Pairs/releases/20170713075727; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075727'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [7b7cbe0d] Command: if test ! -d /var/www/Pairs/releases/20170713075727; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075727'" 1>&2; false; fi
+ DEBUG [7b7cbe0d] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [7e075708] Running /usr/bin/env echo "a7957ac883a5083578acbd30b718b6732df4e3fd" >> REVISION as ec2-user@52.69.6.42
+ DEBUG [7e075708] Command: cd /var/www/Pairs/releases/20170713075727 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "a7957ac883a5083578acbd30b718b6732df4e3fd" >> REVISION )
+  INFO [7e075708] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [b3399d25] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075727 /var/www/Pairs/releases/20170713075727/tmp /var/www/Pairs/releases/20170713075727/vendor /var/www/Pairs/releases/20170713075727/public as ec2-user@52.69.6.42
+ DEBUG [b3399d25] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075727 /var/www/Pairs/releases/20170713075727/tmp /var/www/Pairs/releases/20170713075727/vendor /var/www/Pairs/releases/20170713075727/public )
+  INFO [b3399d25] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG [9b41deaa] Running [ -L /var/www/Pairs/releases/20170713075727/log ] as ec2-user@52.69.6.42
+ DEBUG [9b41deaa] Command: [ -L /var/www/Pairs/releases/20170713075727/log ]
+ DEBUG [9b41deaa] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [d5c5a7a8] Running [ -d /var/www/Pairs/releases/20170713075727/log ] as ec2-user@52.69.6.42
+ DEBUG [d5c5a7a8] Command: [ -d /var/www/Pairs/releases/20170713075727/log ]
+ DEBUG [d5c5a7a8] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [1d8bafe9] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075727/log as ec2-user@52.69.6.42
+ DEBUG [1d8bafe9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075727/log )
+  INFO [1d8bafe9] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [ee437058] Running /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170713075727/log as ec2-user@52.69.6.42
+ DEBUG [ee437058] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170713075727/log )
+  INFO [ee437058] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [61adb280] Running [ -L /var/www/Pairs/releases/20170713075727/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [61adb280] Command: [ -L /var/www/Pairs/releases/20170713075727/tmp/pids ]
+ DEBUG [61adb280] Finished in 0.040 seconds with exit status 1 (failed).
+ DEBUG [267186dd] Running [ -d /var/www/Pairs/releases/20170713075727/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [267186dd] Command: [ -d /var/www/Pairs/releases/20170713075727/tmp/pids ]
+ DEBUG [267186dd] Finished in 0.030 seconds with exit status 1 (failed).
+  INFO [74bba86f] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170713075727/tmp/pids as ec2-user@52.69.6.42
+ DEBUG [74bba86f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170713075727/tmp/pids )
+  INFO [74bba86f] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [642f86f8] Running [ -L /var/www/Pairs/releases/20170713075727/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [642f86f8] Command: [ -L /var/www/Pairs/releases/20170713075727/tmp/cache ]
+ DEBUG [642f86f8] Finished in 0.030 seconds with exit status 1 (failed).
+ DEBUG [fdd0c18f] Running [ -d /var/www/Pairs/releases/20170713075727/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [fdd0c18f] Command: [ -d /var/www/Pairs/releases/20170713075727/tmp/cache ]
+ DEBUG [fdd0c18f] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [f64695c6] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075727/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [f64695c6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075727/tmp/cache )
+  INFO [f64695c6] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [db26a714] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170713075727/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [db26a714] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170713075727/tmp/cache )
+  INFO [db26a714] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG [6aa39274] Running [ -L /var/www/Pairs/releases/20170713075727/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [6aa39274] Command: [ -L /var/www/Pairs/releases/20170713075727/tmp/sockets ]
+ DEBUG [6aa39274] Finished in 0.030 seconds with exit status 1 (failed).
+ DEBUG [025a4c1c] Running [ -d /var/www/Pairs/releases/20170713075727/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [025a4c1c] Command: [ -d /var/www/Pairs/releases/20170713075727/tmp/sockets ]
+ DEBUG [025a4c1c] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [eada29e5] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170713075727/tmp/sockets as ec2-user@52.69.6.42
+ DEBUG [eada29e5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170713075727/tmp/sockets )
+  INFO [eada29e5] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [b8b5c498] Running [ -L /var/www/Pairs/releases/20170713075727/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [b8b5c498] Command: [ -L /var/www/Pairs/releases/20170713075727/vendor/bundle ]
+ DEBUG [b8b5c498] Finished in 0.030 seconds with exit status 1 (failed).
+ DEBUG [8ea0559e] Running [ -d /var/www/Pairs/releases/20170713075727/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [8ea0559e] Command: [ -d /var/www/Pairs/releases/20170713075727/vendor/bundle ]
+ DEBUG [8ea0559e] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [42f89dd8] Running /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170713075727/vendor/bundle as ec2-user@52.69.6.42
+ DEBUG [42f89dd8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170713075727/vendor/bundle )
+  INFO [42f89dd8] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [face6dd9] Running [ -L /var/www/Pairs/releases/20170713075727/public/system ] as ec2-user@52.69.6.42
+ DEBUG [face6dd9] Command: [ -L /var/www/Pairs/releases/20170713075727/public/system ]
+ DEBUG [face6dd9] Finished in 0.030 seconds with exit status 1 (failed).
+ DEBUG [aea4a00c] Running [ -d /var/www/Pairs/releases/20170713075727/public/system ] as ec2-user@52.69.6.42
+ DEBUG [aea4a00c] Command: [ -d /var/www/Pairs/releases/20170713075727/public/system ]
+ DEBUG [aea4a00c] Finished in 0.040 seconds with exit status 1 (failed).
+  INFO [56c854d0] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170713075727/public/system as ec2-user@52.69.6.42
+ DEBUG [56c854d0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170713075727/public/system )
+  INFO [56c854d0] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [4454bc8a] Running [ -L /var/www/Pairs/releases/20170713075727/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [4454bc8a] Command: [ -L /var/www/Pairs/releases/20170713075727/public/uploads ]
+ DEBUG [4454bc8a] Finished in 0.041 seconds with exit status 1 (failed).
+ DEBUG [c3a1712d] Running [ -d /var/www/Pairs/releases/20170713075727/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [c3a1712d] Command: [ -d /var/www/Pairs/releases/20170713075727/public/uploads ]
+ DEBUG [c3a1712d] Finished in 0.035 seconds with exit status 1 (failed).
+  INFO [a4f42ecd] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170713075727/public/uploads as ec2-user@52.69.6.42
+ DEBUG [a4f42ecd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170713075727/public/uploads )
+  INFO [a4f42ecd] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [cd16d6db] Running [ -L /var/www/Pairs/releases/20170713075727/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [cd16d6db] Command: [ -L /var/www/Pairs/releases/20170713075727/public/assets ]
+ DEBUG [cd16d6db] Finished in 0.048 seconds with exit status 1 (failed).
+ DEBUG [582b888f] Running [ -d /var/www/Pairs/releases/20170713075727/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [582b888f] Command: [ -d /var/www/Pairs/releases/20170713075727/public/assets ]
+ DEBUG [582b888f] Finished in 0.033 seconds with exit status 0 (successful).
+  INFO [32f1b756] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075727/public/assets as ec2-user@52.69.6.42
+ DEBUG [32f1b756] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713075727/public/assets )
+  INFO [32f1b756] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [b95cb801] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170713075727/public/assets as ec2-user@52.69.6.42
+ DEBUG [b95cb801] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170713075727/public/assets )
+  INFO [b95cb801] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [b657f935] Running if test ! -d /var/www/Pairs/releases/20170713075727; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075727'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [b657f935] Command: if test ! -d /var/www/Pairs/releases/20170713075727; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075727'" 1>&2; false; fi
+ DEBUG [b657f935] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [08ad4bed] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle as ec2-user@52.69.6.42
+ DEBUG [08ad4bed] Command: cd /var/www/Pairs/releases/20170713075727 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle )
+ DEBUG [08ad4bed] 	The following gems are missing
+ DEBUG [08ad4bed] 	 * byebug (9.0.6)
+ DEBUG [08ad4bed] 	 * net-ssh (4.1.0)
+ DEBUG [08ad4bed] 	 * net-scp (1.2.1)
+ DEBUG [08ad4bed] 	 * sshkit (1.14.0)
+ DEBUG [08ad4bed] 	 * airbrussh (1.3.0)
+ DEBUG [08ad4bed] 	 * capistrano (3.8.2)
+ DEBUG [08ad4bed] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [08ad4bed] 	 * capistrano-bundler (1.2.0)
+ DEBUG [08ad4bed] 	 * capistrano-rails (1.3.0)
+ DEBUG [08ad4bed] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [08ad4bed] 	 * rspec-support (3.6.0)
+ DEBUG [08ad4bed] 	 * rspec-core (3.6.0)
+ DEBUG [08ad4bed] 	 * diff-lcs (1.3)
+ DEBUG [08ad4bed] 	 * rspec-expectations (3.6.0)
+ DEBUG [08ad4bed] 	 * rspec-mocks (3.6.0)
+ DEBUG [08ad4bed] 	 * rspec-rails (3.6.0)
+ DEBUG [08ad4bed] 	 * factory_girl (4.8.0)
+ DEBUG [08ad4bed] 	 * factory_girl_rails (4.8.0)
+ DEBUG [08ad4bed] 	 * faker (1.8.4)
+ DEBUG [08ad4bed] 	 * rails-controller-testing (1.0.2)
+ DEBUG [08ad4bed] 	 * coderay (1.1.1)
+ DEBUG [08ad4bed] 	 * slop (3.6.0)
+ DEBUG [08ad4bed] 	 * pry (0.10.4)
+ DEBUG [08ad4bed] 	 * pry-rails (0.3.6)
+ DEBUG [08ad4bed] 	 * erb2haml (0.1.5)
+ DEBUG [08ad4bed] 	 * bindex (0.5.0)
+ DEBUG [08ad4bed] 	 * web-console (3.5.1)
+ DEBUG [08ad4bed] 	 * listen (3.0.8)
+ DEBUG [08ad4bed] 	 * spring (2.0.2)
+ DEBUG [08ad4bed] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [08ad4bed] 	Install missing gems with `bundle install`
+ DEBUG [08ad4bed] Finished in 0.320 seconds with exit status 1 (failed).
+  INFO [d071c5ca] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet as ec2-user@52.69.6.42
+ DEBUG [d071c5ca] Command: cd /var/www/Pairs/releases/20170713075727 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet )
+  INFO [d071c5ca] Finished in 2.645 seconds with exit status 0 (successful).
+ DEBUG [15db3ce0] Running if test ! -d /var/www/Pairs/releases/20170713075727; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075727'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [15db3ce0] Command: if test ! -d /var/www/Pairs/releases/20170713075727; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075727'" 1>&2; false; fi
+ DEBUG [15db3ce0] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [bcd87ca3] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@52.69.6.42
+ DEBUG [bcd87ca3] Command: cd /var/www/Pairs/releases/20170713075727 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [bcd87ca3] Finished in 2.532 seconds with exit status 0 (successful).
+ DEBUG [572b838d] Running if test ! -d /var/www/Pairs/releases/20170713075727; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075727'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [572b838d] Command: if test ! -d /var/www/Pairs/releases/20170713075727; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075727'" 1>&2; false; fi
+ DEBUG [572b838d] Finished in 0.045 seconds with exit status 0 (successful).
+  INFO [5c47e8ea] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075727/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [5c47e8ea] Command: cd /var/www/Pairs/releases/20170713075727 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713075727/assets_manifest_backup )
+  INFO [5c47e8ea] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [925cabec] Running /usr/bin/env ls /var/www/Pairs/releases/20170713075727/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [925cabec] Command: cd /var/www/Pairs/releases/20170713075727 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170713075727/public/assets/.sprockets-manifest* )
+ DEBUG [925cabec] 	/var/www/Pairs/releases/20170713075727/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [925cabec] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [fd9eea72] Running /usr/bin/env ls /var/www/Pairs/releases/20170713075727/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [fd9eea72] Command: cd /var/www/Pairs/releases/20170713075727 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170713075727/public/assets/.sprockets-manifest* )
+ DEBUG [fd9eea72] 	/var/www/Pairs/releases/20170713075727/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [fd9eea72] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [f8471b4e] Running /usr/bin/env cp /var/www/Pairs/releases/20170713075727/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170713075727/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [f8471b4e] Command: cd /var/www/Pairs/releases/20170713075727 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/Pairs/releases/20170713075727/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170713075727/assets_manifest_backup )
+  INFO [f8471b4e] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [8921d6a1] Running if test ! -d /var/www/Pairs/releases/20170713075727; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075727'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [8921d6a1] Command: if test ! -d /var/www/Pairs/releases/20170713075727; then echo "Directory does not exist '/var/www/Pairs/releases/20170713075727'" 1>&2; false; fi
+ DEBUG [8921d6a1] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [139bd007] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@52.69.6.42
+ DEBUG [139bd007] Command: cd /var/www/Pairs/releases/20170713075727 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [139bd007] 	rake aborted!
+ DEBUG [139bd007] 	StandardError: An error has occurred, all later migrations canceled:
+
+Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `provider` varchar(255), `uid` varchar(255), `name` varchar(255), `token` varchar(255)) ENGINE=InnoDB
+ DEBUG [139bd007] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/schema_statements.rb:278:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:423:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713075727/db/migrate/20170713061441_add_devise_to_users.rb:3:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [139bd007] 	ActiveRecord::StatementInvalid: Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `provider` varchar(255), `uid` varchar(255), `name` varchar(255), `token` varchar(255)) ENGINE=InnoDB
+ DEBUG [139bd007] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/schema_statements.rb:278:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:423:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713075727/db/migrate/20170713061441_add_devise_to_users.rb:3:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [139bd007] 	Mysql2::Error: Table 'users' already exists
+ DEBUG [139bd007] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/schema_statements.rb:278:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:423:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713075727/db/migrate/20170713061441_add_devise_to_users.rb:3:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [139bd007] 	Tasks: TOP => db:migrate
+ DEBUG [139bd007] 	(See full trace by running task with --trace)
+ DEBUG [139bd007] 	== 20170713061441 AddDeviseToUsers: migrating =================================
+-- create_table(:users)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-13 17:22:25 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [7b072ead] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.69.6.42
+ DEBUG [7b072ead] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [7b072ead] Finished in 0.537 seconds with exit status 0 (successful).
+  INFO [a0d58cf3] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.69.6.42
+ DEBUG [a0d58cf3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [a0d58cf3] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pairs-production-poppo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pairs-production-poppo.sh 100.0%
+  INFO [7701c66d] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh as ec2-user@52.69.6.42
+ DEBUG [7701c66d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh )
+  INFO [7701c66d] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [a131305b] Running /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD as ec2-user@52.69.6.42
+ DEBUG [a131305b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD )
+ DEBUG [a131305b] 	a7957ac883a5083578acbd30b718b6732df4e3fd	HEAD
+  INFO [a131305b] Finished in 1.634 seconds with exit status 0 (successful).
+  INFO [7e80c184] Running /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [7e80c184] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases )
+  INFO [7e80c184] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [76103165] Running /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets as ec2-user@52.69.6.42
+ DEBUG [76103165] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets )
+  INFO [76103165] Finished in 0.032 seconds with exit status 0 (successful).
+ DEBUG [98ce6bca] Running [ -f /var/www/Pairs/current/REVISION ] as ec2-user@52.69.6.42
+ DEBUG [98ce6bca] Command: [ -f /var/www/Pairs/current/REVISION ]
+ DEBUG [98ce6bca] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [d59c2b8f] Running /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null as ec2-user@52.69.6.42
+ DEBUG [d59c2b8f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null )
+ DEBUG [d59c2b8f] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [d59c2b8f] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [c6f6a0e7] Running [ -f /var/www/Pairs/repo/HEAD ] as ec2-user@52.69.6.42
+ DEBUG [c6f6a0e7] Command: [ -f /var/www/Pairs/repo/HEAD ]
+ DEBUG [c6f6a0e7] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/Pairs/repo
+ DEBUG [07368543] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [07368543] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [07368543] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [52bb567d] Running /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git as ec2-user@52.69.6.42
+ DEBUG [52bb567d] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git )
+  INFO [52bb567d] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [8eae92b3] Running /usr/bin/env git remote update --prune as ec2-user@52.69.6.42
+ DEBUG [8eae92b3] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8eae92b3] 	Fetching origin
+  INFO [8eae92b3] Finished in 1.445 seconds with exit status 0 (successful).
+ DEBUG [5d13ed73] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [5d13ed73] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [5d13ed73] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [24d2de1c] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082227 as ec2-user@52.69.6.42
+ DEBUG [24d2de1c] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082227 )
+  INFO [24d2de1c] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [cab3c71c] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170713082227 as ec2-user@52.69.6.42
+ DEBUG [cab3c71c] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170713082227 )
+  INFO [cab3c71c] Finished in 0.187 seconds with exit status 0 (successful).
+ DEBUG [a5cd8154] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [a5cd8154] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [a5cd8154] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [9f196c5c] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.69.6.42
+ DEBUG [9f196c5c] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9f196c5c] 	a7957ac883a5083578acbd30b718b6732df4e3fd
+ DEBUG [9f196c5c] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [94952915] Running if test ! -d /var/www/Pairs/releases/20170713082227; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082227'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [94952915] Command: if test ! -d /var/www/Pairs/releases/20170713082227; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082227'" 1>&2; false; fi
+ DEBUG [94952915] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [df1a08ec] Running /usr/bin/env echo "a7957ac883a5083578acbd30b718b6732df4e3fd" >> REVISION as ec2-user@52.69.6.42
+ DEBUG [df1a08ec] Command: cd /var/www/Pairs/releases/20170713082227 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "a7957ac883a5083578acbd30b718b6732df4e3fd" >> REVISION )
+  INFO [df1a08ec] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [cf870b4b] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082227 /var/www/Pairs/releases/20170713082227/tmp /var/www/Pairs/releases/20170713082227/vendor /var/www/Pairs/releases/20170713082227/public as ec2-user@52.69.6.42
+ DEBUG [cf870b4b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082227 /var/www/Pairs/releases/20170713082227/tmp /var/www/Pairs/releases/20170713082227/vendor /var/www/Pairs/releases/20170713082227/public )
+  INFO [cf870b4b] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [f9606f68] Running [ -L /var/www/Pairs/releases/20170713082227/log ] as ec2-user@52.69.6.42
+ DEBUG [f9606f68] Command: [ -L /var/www/Pairs/releases/20170713082227/log ]
+ DEBUG [f9606f68] Finished in 0.025 seconds with exit status 1 (failed).
+ DEBUG [8c319f32] Running [ -d /var/www/Pairs/releases/20170713082227/log ] as ec2-user@52.69.6.42
+ DEBUG [8c319f32] Command: [ -d /var/www/Pairs/releases/20170713082227/log ]
+ DEBUG [8c319f32] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [19af5301] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082227/log as ec2-user@52.69.6.42
+ DEBUG [19af5301] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082227/log )
+  INFO [19af5301] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [9d0eb662] Running /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170713082227/log as ec2-user@52.69.6.42
+ DEBUG [9d0eb662] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170713082227/log )
+  INFO [9d0eb662] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [47258819] Running [ -L /var/www/Pairs/releases/20170713082227/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [47258819] Command: [ -L /var/www/Pairs/releases/20170713082227/tmp/pids ]
+ DEBUG [47258819] Finished in 0.025 seconds with exit status 1 (failed).
+ DEBUG [f83529b6] Running [ -d /var/www/Pairs/releases/20170713082227/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [f83529b6] Command: [ -d /var/www/Pairs/releases/20170713082227/tmp/pids ]
+ DEBUG [f83529b6] Finished in 0.024 seconds with exit status 1 (failed).
+  INFO [2fa5512e] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170713082227/tmp/pids as ec2-user@52.69.6.42
+ DEBUG [2fa5512e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170713082227/tmp/pids )
+  INFO [2fa5512e] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [a136ce64] Running [ -L /var/www/Pairs/releases/20170713082227/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [a136ce64] Command: [ -L /var/www/Pairs/releases/20170713082227/tmp/cache ]
+ DEBUG [a136ce64] Finished in 0.269 seconds with exit status 1 (failed).
+ DEBUG [25bdd6c0] Running [ -d /var/www/Pairs/releases/20170713082227/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [25bdd6c0] Command: [ -d /var/www/Pairs/releases/20170713082227/tmp/cache ]
+ DEBUG [25bdd6c0] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [68efd218] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082227/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [68efd218] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082227/tmp/cache )
+  INFO [68efd218] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [ba5dec11] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170713082227/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [ba5dec11] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170713082227/tmp/cache )
+  INFO [ba5dec11] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [a59a71b4] Running [ -L /var/www/Pairs/releases/20170713082227/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [a59a71b4] Command: [ -L /var/www/Pairs/releases/20170713082227/tmp/sockets ]
+ DEBUG [a59a71b4] Finished in 0.038 seconds with exit status 1 (failed).
+ DEBUG [93289ad5] Running [ -d /var/www/Pairs/releases/20170713082227/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [93289ad5] Command: [ -d /var/www/Pairs/releases/20170713082227/tmp/sockets ]
+ DEBUG [93289ad5] Finished in 0.038 seconds with exit status 1 (failed).
+  INFO [89ef5f59] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170713082227/tmp/sockets as ec2-user@52.69.6.42
+ DEBUG [89ef5f59] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170713082227/tmp/sockets )
+  INFO [89ef5f59] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [b36a3d61] Running [ -L /var/www/Pairs/releases/20170713082227/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [b36a3d61] Command: [ -L /var/www/Pairs/releases/20170713082227/vendor/bundle ]
+ DEBUG [b36a3d61] Finished in 0.029 seconds with exit status 1 (failed).
+ DEBUG [5b1fb8c9] Running [ -d /var/www/Pairs/releases/20170713082227/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [5b1fb8c9] Command: [ -d /var/www/Pairs/releases/20170713082227/vendor/bundle ]
+ DEBUG [5b1fb8c9] Finished in 0.030 seconds with exit status 1 (failed).
+  INFO [d57a565b] Running /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170713082227/vendor/bundle as ec2-user@52.69.6.42
+ DEBUG [d57a565b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170713082227/vendor/bundle )
+  INFO [d57a565b] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [0e7d3b5d] Running [ -L /var/www/Pairs/releases/20170713082227/public/system ] as ec2-user@52.69.6.42
+ DEBUG [0e7d3b5d] Command: [ -L /var/www/Pairs/releases/20170713082227/public/system ]
+ DEBUG [0e7d3b5d] Finished in 0.040 seconds with exit status 1 (failed).
+ DEBUG [2164d620] Running [ -d /var/www/Pairs/releases/20170713082227/public/system ] as ec2-user@52.69.6.42
+ DEBUG [2164d620] Command: [ -d /var/www/Pairs/releases/20170713082227/public/system ]
+ DEBUG [2164d620] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [ef223764] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170713082227/public/system as ec2-user@52.69.6.42
+ DEBUG [ef223764] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170713082227/public/system )
+  INFO [ef223764] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [28b785ea] Running [ -L /var/www/Pairs/releases/20170713082227/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [28b785ea] Command: [ -L /var/www/Pairs/releases/20170713082227/public/uploads ]
+ DEBUG [28b785ea] Finished in 0.030 seconds with exit status 1 (failed).
+ DEBUG [b3235689] Running [ -d /var/www/Pairs/releases/20170713082227/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [b3235689] Command: [ -d /var/www/Pairs/releases/20170713082227/public/uploads ]
+ DEBUG [b3235689] Finished in 0.039 seconds with exit status 1 (failed).
+  INFO [1adbdfbc] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170713082227/public/uploads as ec2-user@52.69.6.42
+ DEBUG [1adbdfbc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170713082227/public/uploads )
+  INFO [1adbdfbc] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG [7ee597a3] Running [ -L /var/www/Pairs/releases/20170713082227/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [7ee597a3] Command: [ -L /var/www/Pairs/releases/20170713082227/public/assets ]
+ DEBUG [7ee597a3] Finished in 0.028 seconds with exit status 1 (failed).
+ DEBUG [538af98a] Running [ -d /var/www/Pairs/releases/20170713082227/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [538af98a] Command: [ -d /var/www/Pairs/releases/20170713082227/public/assets ]
+ DEBUG [538af98a] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [d4156b2a] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082227/public/assets as ec2-user@52.69.6.42
+ DEBUG [d4156b2a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082227/public/assets )
+  INFO [d4156b2a] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO [1f1881bc] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170713082227/public/assets as ec2-user@52.69.6.42
+ DEBUG [1f1881bc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170713082227/public/assets )
+  INFO [1f1881bc] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [cfd0f237] Running if test ! -d /var/www/Pairs/releases/20170713082227; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082227'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [cfd0f237] Command: if test ! -d /var/www/Pairs/releases/20170713082227; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082227'" 1>&2; false; fi
+ DEBUG [cfd0f237] Finished in 0.041 seconds with exit status 0 (successful).
+ DEBUG [a19f7b74] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle as ec2-user@52.69.6.42
+ DEBUG [a19f7b74] Command: cd /var/www/Pairs/releases/20170713082227 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle )
+ DEBUG [a19f7b74] 	The following gems are missing
+ DEBUG [a19f7b74] 	 * byebug (9.0.6)
+ DEBUG [a19f7b74] 	 * net-ssh (4.1.0)
+ DEBUG [a19f7b74] 	 * net-scp (1.2.1)
+ DEBUG [a19f7b74] 	 * sshkit (1.14.0)
+ DEBUG [a19f7b74] 	 * airbrussh (1.3.0)
+ DEBUG [a19f7b74] 	 * capistrano (3.8.2)
+ DEBUG [a19f7b74] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [a19f7b74] 	 * capistrano-bundler (1.2.0)
+ DEBUG [a19f7b74] 	 * capistrano-rails (1.3.0)
+ DEBUG [a19f7b74] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [a19f7b74] 	 * rspec-support (3.6.0)
+ DEBUG [a19f7b74] 	 * rspec-core (3.6.0)
+ DEBUG [a19f7b74] 	 * diff-lcs (1.3)
+ DEBUG [a19f7b74] 	 * rspec-expectations (3.6.0)
+ DEBUG [a19f7b74] 	 * rspec-mocks (3.6.0)
+ DEBUG [a19f7b74] 	 * rspec-rails (3.6.0)
+ DEBUG [a19f7b74] 	 * factory_girl (4.8.0)
+ DEBUG [a19f7b74] 	 * factory_girl_rails (4.8.0)
+ DEBUG [a19f7b74] 	 * faker (1.8.4)
+ DEBUG [a19f7b74] 	 * rails-controller-testing (1.0.2)
+ DEBUG [a19f7b74] 	 * coderay (1.1.1)
+ DEBUG [a19f7b74] 	 * slop (3.6.0)
+ DEBUG [a19f7b74] 	 * pry (0.10.4)
+ DEBUG [a19f7b74] 	 * pry-rails (0.3.6)
+ DEBUG [a19f7b74] 	 * erb2haml (0.1.5)
+ DEBUG [a19f7b74] 	 * bindex (0.5.0)
+ DEBUG [a19f7b74] 	 * web-console (3.5.1)
+ DEBUG [a19f7b74] 	 * listen (3.0.8)
+ DEBUG [a19f7b74] 	 * spring (2.0.2)
+ DEBUG [a19f7b74] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [a19f7b74] 	Install missing gems with `bundle install`
+ DEBUG [a19f7b74] Finished in 0.308 seconds with exit status 1 (failed).
+  INFO [e47d8c7a] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet as ec2-user@52.69.6.42
+ DEBUG [e47d8c7a] Command: cd /var/www/Pairs/releases/20170713082227 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet )
+  INFO [e47d8c7a] Finished in 2.471 seconds with exit status 0 (successful).
+ DEBUG [9515d991] Running if test ! -d /var/www/Pairs/releases/20170713082227; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082227'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [9515d991] Command: if test ! -d /var/www/Pairs/releases/20170713082227; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082227'" 1>&2; false; fi
+ DEBUG [9515d991] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [83bc9ef9] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@52.69.6.42
+ DEBUG [83bc9ef9] Command: cd /var/www/Pairs/releases/20170713082227 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [83bc9ef9] Finished in 3.738 seconds with exit status 0 (successful).
+ DEBUG [d61f5ef2] Running if test ! -d /var/www/Pairs/releases/20170713082227; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082227'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [d61f5ef2] Command: if test ! -d /var/www/Pairs/releases/20170713082227; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082227'" 1>&2; false; fi
+ DEBUG [d61f5ef2] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [5261da72] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082227/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [5261da72] Command: cd /var/www/Pairs/releases/20170713082227 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082227/assets_manifest_backup )
+  INFO [5261da72] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [14fcb39d] Running /usr/bin/env ls /var/www/Pairs/releases/20170713082227/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [14fcb39d] Command: cd /var/www/Pairs/releases/20170713082227 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170713082227/public/assets/.sprockets-manifest* )
+ DEBUG [14fcb39d] 	/var/www/Pairs/releases/20170713082227/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [14fcb39d] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [37339dcd] Running /usr/bin/env ls /var/www/Pairs/releases/20170713082227/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [37339dcd] Command: cd /var/www/Pairs/releases/20170713082227 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170713082227/public/assets/.sprockets-manifest* )
+ DEBUG [37339dcd] 	/var/www/Pairs/releases/20170713082227/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [37339dcd] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [e1816da5] Running /usr/bin/env cp /var/www/Pairs/releases/20170713082227/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170713082227/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [e1816da5] Command: cd /var/www/Pairs/releases/20170713082227 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/Pairs/releases/20170713082227/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170713082227/assets_manifest_backup )
+  INFO [e1816da5] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [11c734ce] Running if test ! -d /var/www/Pairs/releases/20170713082227; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082227'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [11c734ce] Command: if test ! -d /var/www/Pairs/releases/20170713082227; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082227'" 1>&2; false; fi
+ DEBUG [11c734ce] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [7d91bdb4] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@52.69.6.42
+ DEBUG [7d91bdb4] Command: cd /var/www/Pairs/releases/20170713082227 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [7d91bdb4] 	rake aborted!
+ DEBUG [7d91bdb4] 	StandardError: An error has occurred, all later migrations canceled:
+
+Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `provider` varchar(255), `uid` varchar(255), `name` varchar(255), `token` varchar(255)) ENGINE=InnoDB
+ DEBUG [7d91bdb4] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/schema_statements.rb:278:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:423:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713082227/db/migrate/20170713061441_add_devise_to_users.rb:3:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [7d91bdb4] 	ActiveRecord::StatementInvalid: Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `provider` varchar(255), `uid` varchar(255), `name` varchar(255), `token` varchar(255)) ENGINE=InnoDB
+ DEBUG [7d91bdb4] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/schema_statements.rb:278:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:423:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713082227/db/migrate/20170713061441_add_devise_to_users.rb:3:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [7d91bdb4] 	Mysql2::Error: Table 'users' already exists
+ DEBUG [7d91bdb4] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/schema_statements.rb:278:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:423:in `create_table'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713082227/db/migrate/20170713061441_add_devise_to_users.rb:3:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [7d91bdb4] 	Tasks: TOP => db:migrate
+ DEBUG [7d91bdb4] 	(See full trace by running task with --trace)
+ DEBUG [7d91bdb4] 	== 20170713061441 AddDeviseToUsers: migrating =================================
+-- create_table(:users)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-13 17:26:42 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9a1584d5] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.69.6.42
+ DEBUG [9a1584d5] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [9a1584d5] Finished in 0.411 seconds with exit status 0 (successful).
+  INFO [8b375982] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.69.6.42
+ DEBUG [8b375982] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [8b375982] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pairs-production-poppo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pairs-production-poppo.sh 100.0%
+  INFO [840381f4] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh as ec2-user@52.69.6.42
+ DEBUG [840381f4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh )
+  INFO [840381f4] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [495b3d1a] Running /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD as ec2-user@52.69.6.42
+ DEBUG [495b3d1a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD )
+ DEBUG [495b3d1a] 	a7957ac883a5083578acbd30b718b6732df4e3fd	HEAD
+  INFO [495b3d1a] Finished in 1.701 seconds with exit status 0 (successful).
+  INFO [c7726241] Running /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [c7726241] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases )
+  INFO [c7726241] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [9a1eca03] Running /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets as ec2-user@52.69.6.42
+ DEBUG [9a1eca03] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets )
+  INFO [9a1eca03] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [885c4806] Running [ -f /var/www/Pairs/current/REVISION ] as ec2-user@52.69.6.42
+ DEBUG [885c4806] Command: [ -f /var/www/Pairs/current/REVISION ]
+ DEBUG [885c4806] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [6a93315d] Running /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null as ec2-user@52.69.6.42
+ DEBUG [6a93315d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null )
+ DEBUG [6a93315d] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [6a93315d] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [f57acbfe] Running [ -f /var/www/Pairs/repo/HEAD ] as ec2-user@52.69.6.42
+ DEBUG [f57acbfe] Command: [ -f /var/www/Pairs/repo/HEAD ]
+ DEBUG [f57acbfe] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/Pairs/repo
+ DEBUG [c8da9cce] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [c8da9cce] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [c8da9cce] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [13cac870] Running /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git as ec2-user@52.69.6.42
+ DEBUG [13cac870] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git )
+  INFO [13cac870] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [fadc9565] Running /usr/bin/env git remote update --prune as ec2-user@52.69.6.42
+ DEBUG [fadc9565] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [fadc9565] 	Fetching origin
+  INFO [fadc9565] Finished in 1.586 seconds with exit status 0 (successful).
+ DEBUG [cdaff42f] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [cdaff42f] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [cdaff42f] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO [ae8c84a7] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082644 as ec2-user@52.69.6.42
+ DEBUG [ae8c84a7] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082644 )
+  INFO [ae8c84a7] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [b8b6ac99] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170713082644 as ec2-user@52.69.6.42
+ DEBUG [b8b6ac99] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170713082644 )
+  INFO [b8b6ac99] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [279e5c35] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [279e5c35] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [279e5c35] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [8e5ac747] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.69.6.42
+ DEBUG [8e5ac747] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [8e5ac747] 	a7957ac883a5083578acbd30b718b6732df4e3fd
+ DEBUG [8e5ac747] Finished in 0.032 seconds with exit status 0 (successful).
+ DEBUG [540f48f4] Running if test ! -d /var/www/Pairs/releases/20170713082644; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082644'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [540f48f4] Command: if test ! -d /var/www/Pairs/releases/20170713082644; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082644'" 1>&2; false; fi
+ DEBUG [540f48f4] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [66baff3b] Running /usr/bin/env echo "a7957ac883a5083578acbd30b718b6732df4e3fd" >> REVISION as ec2-user@52.69.6.42
+ DEBUG [66baff3b] Command: cd /var/www/Pairs/releases/20170713082644 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "a7957ac883a5083578acbd30b718b6732df4e3fd" >> REVISION )
+  INFO [66baff3b] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [1e8e5308] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082644 /var/www/Pairs/releases/20170713082644/tmp /var/www/Pairs/releases/20170713082644/vendor /var/www/Pairs/releases/20170713082644/public as ec2-user@52.69.6.42
+ DEBUG [1e8e5308] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082644 /var/www/Pairs/releases/20170713082644/tmp /var/www/Pairs/releases/20170713082644/vendor /var/www/Pairs/releases/20170713082644/public )
+  INFO [1e8e5308] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [e8802e2f] Running [ -L /var/www/Pairs/releases/20170713082644/log ] as ec2-user@52.69.6.42
+ DEBUG [e8802e2f] Command: [ -L /var/www/Pairs/releases/20170713082644/log ]
+ DEBUG [e8802e2f] Finished in 0.047 seconds with exit status 1 (failed).
+ DEBUG [bbf6f42a] Running [ -d /var/www/Pairs/releases/20170713082644/log ] as ec2-user@52.69.6.42
+ DEBUG [bbf6f42a] Command: [ -d /var/www/Pairs/releases/20170713082644/log ]
+ DEBUG [bbf6f42a] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [cd51e8f7] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082644/log as ec2-user@52.69.6.42
+ DEBUG [cd51e8f7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082644/log )
+  INFO [cd51e8f7] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [9a1563cb] Running /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170713082644/log as ec2-user@52.69.6.42
+ DEBUG [9a1563cb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170713082644/log )
+  INFO [9a1563cb] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [f21044e9] Running [ -L /var/www/Pairs/releases/20170713082644/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [f21044e9] Command: [ -L /var/www/Pairs/releases/20170713082644/tmp/pids ]
+ DEBUG [f21044e9] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [51bbef10] Running [ -d /var/www/Pairs/releases/20170713082644/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [51bbef10] Command: [ -d /var/www/Pairs/releases/20170713082644/tmp/pids ]
+ DEBUG [51bbef10] Finished in 0.038 seconds with exit status 1 (failed).
+  INFO [647af4f3] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170713082644/tmp/pids as ec2-user@52.69.6.42
+ DEBUG [647af4f3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170713082644/tmp/pids )
+  INFO [647af4f3] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [cf2f21d2] Running [ -L /var/www/Pairs/releases/20170713082644/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [cf2f21d2] Command: [ -L /var/www/Pairs/releases/20170713082644/tmp/cache ]
+ DEBUG [cf2f21d2] Finished in 0.030 seconds with exit status 1 (failed).
+ DEBUG [26c77234] Running [ -d /var/www/Pairs/releases/20170713082644/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [26c77234] Command: [ -d /var/www/Pairs/releases/20170713082644/tmp/cache ]
+ DEBUG [26c77234] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [9716a841] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082644/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [9716a841] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082644/tmp/cache )
+  INFO [9716a841] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [d2bc946a] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170713082644/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [d2bc946a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170713082644/tmp/cache )
+  INFO [d2bc946a] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [e6004992] Running [ -L /var/www/Pairs/releases/20170713082644/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [e6004992] Command: [ -L /var/www/Pairs/releases/20170713082644/tmp/sockets ]
+ DEBUG [e6004992] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [8b23bcd8] Running [ -d /var/www/Pairs/releases/20170713082644/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [8b23bcd8] Command: [ -d /var/www/Pairs/releases/20170713082644/tmp/sockets ]
+ DEBUG [8b23bcd8] Finished in 0.041 seconds with exit status 1 (failed).
+  INFO [6112bfc6] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170713082644/tmp/sockets as ec2-user@52.69.6.42
+ DEBUG [6112bfc6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170713082644/tmp/sockets )
+  INFO [6112bfc6] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [e4aa181e] Running [ -L /var/www/Pairs/releases/20170713082644/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [e4aa181e] Command: [ -L /var/www/Pairs/releases/20170713082644/vendor/bundle ]
+ DEBUG [e4aa181e] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [6d5eabff] Running [ -d /var/www/Pairs/releases/20170713082644/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [6d5eabff] Command: [ -d /var/www/Pairs/releases/20170713082644/vendor/bundle ]
+ DEBUG [6d5eabff] Finished in 0.030 seconds with exit status 1 (failed).
+  INFO [57fd36e6] Running /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170713082644/vendor/bundle as ec2-user@52.69.6.42
+ DEBUG [57fd36e6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170713082644/vendor/bundle )
+  INFO [57fd36e6] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [ff72e49b] Running [ -L /var/www/Pairs/releases/20170713082644/public/system ] as ec2-user@52.69.6.42
+ DEBUG [ff72e49b] Command: [ -L /var/www/Pairs/releases/20170713082644/public/system ]
+ DEBUG [ff72e49b] Finished in 0.028 seconds with exit status 1 (failed).
+ DEBUG [563eb61c] Running [ -d /var/www/Pairs/releases/20170713082644/public/system ] as ec2-user@52.69.6.42
+ DEBUG [563eb61c] Command: [ -d /var/www/Pairs/releases/20170713082644/public/system ]
+ DEBUG [563eb61c] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [1c7c709b] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170713082644/public/system as ec2-user@52.69.6.42
+ DEBUG [1c7c709b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170713082644/public/system )
+  INFO [1c7c709b] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [ff8efcd2] Running [ -L /var/www/Pairs/releases/20170713082644/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [ff8efcd2] Command: [ -L /var/www/Pairs/releases/20170713082644/public/uploads ]
+ DEBUG [ff8efcd2] Finished in 0.031 seconds with exit status 1 (failed).
+ DEBUG [f901c6d2] Running [ -d /var/www/Pairs/releases/20170713082644/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [f901c6d2] Command: [ -d /var/www/Pairs/releases/20170713082644/public/uploads ]
+ DEBUG [f901c6d2] Finished in 0.036 seconds with exit status 1 (failed).
+  INFO [33870b23] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170713082644/public/uploads as ec2-user@52.69.6.42
+ DEBUG [33870b23] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170713082644/public/uploads )
+  INFO [33870b23] Finished in 0.042 seconds with exit status 0 (successful).
+ DEBUG [0a3fc2d8] Running [ -L /var/www/Pairs/releases/20170713082644/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [0a3fc2d8] Command: [ -L /var/www/Pairs/releases/20170713082644/public/assets ]
+ DEBUG [0a3fc2d8] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [854ffe57] Running [ -d /var/www/Pairs/releases/20170713082644/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [854ffe57] Command: [ -d /var/www/Pairs/releases/20170713082644/public/assets ]
+ DEBUG [854ffe57] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [b072db92] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082644/public/assets as ec2-user@52.69.6.42
+ DEBUG [b072db92] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170713082644/public/assets )
+  INFO [b072db92] Finished in 0.028 seconds with exit status 0 (successful).
+  INFO [667a9e31] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170713082644/public/assets as ec2-user@52.69.6.42
+ DEBUG [667a9e31] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170713082644/public/assets )
+  INFO [667a9e31] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [e73d408f] Running if test ! -d /var/www/Pairs/releases/20170713082644; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082644'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [e73d408f] Command: if test ! -d /var/www/Pairs/releases/20170713082644; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082644'" 1>&2; false; fi
+ DEBUG [e73d408f] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [1ef61374] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle as ec2-user@52.69.6.42
+ DEBUG [1ef61374] Command: cd /var/www/Pairs/releases/20170713082644 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle )
+ DEBUG [1ef61374] 	The following gems are missing
+ DEBUG [1ef61374] 	 * byebug (9.0.6)
+ DEBUG [1ef61374] 	 * net-ssh (4.1.0)
+ DEBUG [1ef61374] 	 * net-scp (1.2.1)
+ DEBUG [1ef61374] 	 * sshkit (1.14.0)
+ DEBUG [1ef61374] 	 * airbrussh (1.3.0)
+ DEBUG [1ef61374] 	 * capistrano (3.8.2)
+ DEBUG [1ef61374] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [1ef61374] 	 * capistrano-bundler (1.2.0)
+ DEBUG [1ef61374] 	 * capistrano-rails (1.3.0)
+ DEBUG [1ef61374] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [1ef61374] 	 * rspec-support (3.6.0)
+ DEBUG [1ef61374] 	 * rspec-core (3.6.0)
+ DEBUG [1ef61374] 	 * diff-lcs (1.3)
+ DEBUG [1ef61374] 	 * rspec-expectations (3.6.0)
+ DEBUG [1ef61374] 	 * rspec-mocks (3.6.0)
+ DEBUG [1ef61374] 	 * rspec-rails (3.6.0)
+ DEBUG [1ef61374] 	 * factory_girl (4.8.0)
+ DEBUG [1ef61374] 	 * factory_girl_rails (4.8.0)
+ DEBUG [1ef61374] 	 * faker (1.8.4)
+ DEBUG [1ef61374] 	 * rails-controller-testing (1.0.2)
+ DEBUG [1ef61374] 	 * coderay (1.1.1)
+ DEBUG [1ef61374] 	 * slop (3.6.0)
+ DEBUG [1ef61374] 	 * pry (0.10.4)
+ DEBUG [1ef61374] 	 * pry-rails (0.3.6)
+ DEBUG [1ef61374] 	 * erb2haml (0.1.5)
+ DEBUG [1ef61374] 	 * bindex (0.5.0)
+ DEBUG [1ef61374] 	 * web-console (3.5.1)
+ DEBUG [1ef61374] 	 * listen (3.0.8)
+ DEBUG [1ef61374] 	 * spring (2.0.2)
+ DEBUG [1ef61374] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [1ef61374] 	Install missing gems with `bundle install`
+ DEBUG [1ef61374] Finished in 0.321 seconds with exit status 1 (failed).
+  INFO [fc8b6d45] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet as ec2-user@52.69.6.42
+ DEBUG [fc8b6d45] Command: cd /var/www/Pairs/releases/20170713082644 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet )
+  INFO [fc8b6d45] Finished in 2.431 seconds with exit status 0 (successful).
+ DEBUG [5e6bb397] Running if test ! -d /var/www/Pairs/releases/20170713082644; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082644'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [5e6bb397] Command: if test ! -d /var/www/Pairs/releases/20170713082644; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082644'" 1>&2; false; fi
+ DEBUG [5e6bb397] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [6fff686a] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@52.69.6.42
+ DEBUG [6fff686a] Command: cd /var/www/Pairs/releases/20170713082644 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [6fff686a] Finished in 2.542 seconds with exit status 0 (successful).
+ DEBUG [1c648398] Running if test ! -d /var/www/Pairs/releases/20170713082644; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082644'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [1c648398] Command: if test ! -d /var/www/Pairs/releases/20170713082644; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082644'" 1>&2; false; fi
+ DEBUG [1c648398] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [7c554105] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082644/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [7c554105] Command: cd /var/www/Pairs/releases/20170713082644 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170713082644/assets_manifest_backup )
+  INFO [7c554105] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [57539d02] Running /usr/bin/env ls /var/www/Pairs/releases/20170713082644/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [57539d02] Command: cd /var/www/Pairs/releases/20170713082644 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170713082644/public/assets/.sprockets-manifest* )
+ DEBUG [57539d02] 	/var/www/Pairs/releases/20170713082644/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [57539d02] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [23e8467f] Running /usr/bin/env ls /var/www/Pairs/releases/20170713082644/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [23e8467f] Command: cd /var/www/Pairs/releases/20170713082644 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170713082644/public/assets/.sprockets-manifest* )
+ DEBUG [23e8467f] 	/var/www/Pairs/releases/20170713082644/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [23e8467f] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [16dca071] Running /usr/bin/env cp /var/www/Pairs/releases/20170713082644/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170713082644/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [16dca071] Command: cd /var/www/Pairs/releases/20170713082644 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/Pairs/releases/20170713082644/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170713082644/assets_manifest_backup )
+  INFO [16dca071] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [616fb5d3] Running if test ! -d /var/www/Pairs/releases/20170713082644; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082644'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [616fb5d3] Command: if test ! -d /var/www/Pairs/releases/20170713082644; then echo "Directory does not exist '/var/www/Pairs/releases/20170713082644'" 1>&2; false; fi
+ DEBUG [616fb5d3] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [da096609] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@52.69.6.42
+ DEBUG [da096609] Command: cd /var/www/Pairs/releases/20170713082644 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [da096609] 	rake aborted!
+ DEBUG [da096609] 	StandardError: An error has occurred, all later migrations canceled:
+
+Mysql2::Error: Key column 'image' doesn't exist in table: CREATE  INDEX `index_users_on_image`  ON `users` (`image`) 
+ DEBUG [da096609] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:507:in `add_index'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713082644/db/migrate/20170713061441_add_devise_to_users.rb:45:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [da096609] 	ActiveRecord::StatementInvalid: Mysql2::Error: Key column 'image' doesn't exist in table: CREATE  INDEX `index_users_on_image`  ON `users` (`image`) 
+ DEBUG [da096609] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:507:in `add_index'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713082644/db/migrate/20170713061441_add_devise_to_users.rb:45:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [da096609] 	Mysql2::Error: Key column 'image' doesn't exist in table
+ DEBUG [da096609] 	/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `_query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:120:in `block in query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `handle_interrupt'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.8/lib/mysql2/client.rb:119:in `query'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `block in execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:218:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/mysql/database_statements.rb:31:in `execute'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:507:in `add_index'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:597:in `method_missing'
+/var/www/Pairs/releases/20170713082644/db/migrate/20170713061441_add_devise_to_users.rb:45:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:752:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1302:in `ddl_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `block in migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1319:in `with_advisory_lock'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1150:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/var/www/Pairs/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `load'
+/home/ec2-user/.rbenv/versions/2.3.1/bin/bundle:23:in `<main>'
+ DEBUG [da096609] 	Tasks: TOP => db:migrate
+ DEBUG [da096609] 	(See full trace by running task with --trace)
+ DEBUG [da096609] 	== 20170713061441 AddDeviseToUsers: migrating =================================
+-- create_table(:users)
+   -> 0.0169s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0135s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0109s
+-- add_index(:users, :image)
