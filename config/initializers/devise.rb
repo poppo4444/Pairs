@@ -2,8 +2,11 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   # API key
-  config.omniauth :facebook, "1400028070073629", "518d0aa21cdcf318d6f3de55865e1d84"
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  if Rails.env.production?     
+    config.omniauth :facebook, ENV['API_PRODUCT_ID'], ENV['API_PRODUCT_PASS']
+  else
+  config.omniauth :facebook, ENV['API_DEVELOPMENT_ID'], ENV['API_DEVELOPMENT_PASS']
+  end
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'

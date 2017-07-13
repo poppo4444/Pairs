@@ -513,6 +513,7 @@
  DEBUG [ca5884ab] Command: cd /var/www/Pairs/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at e2c4aa53b84bfdeba330c984610f60d124b7574c) deployed as release 20170706104016 by poppo" >> /var/www/Pairs/revisions.log )
   INFO [ca5884ab] Finished in 0.070 seconds with exit status 0 (successful).
   INFO ---------------------------------------------------------------------------
+<<<<<<< Updated upstream
   INFO START 2017-07-06 19:47:25 +0900 cap production deploy
   INFO ---------------------------------------------------------------------------
  DEBUG [9a58537b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.69.6.42
@@ -1067,3 +1068,1346 @@
   INFO [52a0ac75] Running /usr/bin/env echo "Branch master (at 5dda9df5a3fe6a2f01567c77ceee07efabd4512c) deployed as release 20170712082256 by poppo" >> /var/www/Pairs/revisions.log as ec2-user@52.69.6.42
  DEBUG [52a0ac75] Command: cd /var/www/Pairs/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 5dda9df5a3fe6a2f01567c77ceee07efabd4512c) deployed as release 20170712082256 by poppo" >> /var/www/Pairs/revisions.log )
   INFO [52a0ac75] Finished in 0.066 seconds with exit status 0 (successful).
+=======
+  INFO START 2017-07-12 18:43:12 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [f6b25cfc] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.69.6.42
+ DEBUG [f6b25cfc] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [f6b25cfc] Finished in 0.469 seconds with exit status 0 (successful).
+  INFO [4424df21] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.69.6.42
+ DEBUG [4424df21] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [4424df21] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pairs-production-poppo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pairs-production-poppo.sh 100.0%
+  INFO [a69e70f3] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh as ec2-user@52.69.6.42
+ DEBUG [a69e70f3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh )
+  INFO [a69e70f3] Finished in 0.034 seconds with exit status 0 (successful).
+  INFO [54fafbf5] Running /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD as ec2-user@52.69.6.42
+ DEBUG [54fafbf5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD )
+ DEBUG [54fafbf5] 	4319472d106fe609295cb1f76d243fe31754abd4	HEAD
+  INFO [54fafbf5] Finished in 1.537 seconds with exit status 0 (successful).
+  INFO [253a777e] Running /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [253a777e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases )
+  INFO [253a777e] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [ad674e73] Running /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets as ec2-user@52.69.6.42
+ DEBUG [ad674e73] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets )
+  INFO [ad674e73] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [b08985dd] Running [ -f /var/www/Pairs/current/REVISION ] as ec2-user@52.69.6.42
+ DEBUG [b08985dd] Command: [ -f /var/www/Pairs/current/REVISION ]
+ DEBUG [b08985dd] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG [413fec55] Running /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null as ec2-user@52.69.6.42
+ DEBUG [413fec55] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null )
+ DEBUG [413fec55] 	5dda9df5a3fe6a2f01567c77ceee07efabd4512c
+ DEBUG [413fec55] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG [4325a4d8] Running [ -f /var/www/Pairs/repo/HEAD ] as ec2-user@52.69.6.42
+ DEBUG [4325a4d8] Command: [ -f /var/www/Pairs/repo/HEAD ]
+ DEBUG [4325a4d8] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/Pairs/repo
+ DEBUG [00ad8c58] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [00ad8c58] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [00ad8c58] Finished in 0.043 seconds with exit status 0 (successful).
+  INFO [4fb8fc16] Running /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git as ec2-user@52.69.6.42
+ DEBUG [4fb8fc16] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git )
+  INFO [4fb8fc16] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [c9911035] Running /usr/bin/env git remote update --prune as ec2-user@52.69.6.42
+ DEBUG [c9911035] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c9911035] 	Fetching origin
+ DEBUG [c9911035] 	From github.com:poppo4444/Pairs
+ x [deleted]         (none)     -> make_views
+ DEBUG [c9911035] 	   5dda9df..4319472  master     -> master
+ * [new ref]         refs/pull/1/head -> refs/pull/1/head
+  INFO [c9911035] Finished in 5.218 seconds with exit status 0 (successful).
+ DEBUG [8d368b6f] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [8d368b6f] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [8d368b6f] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [a50ecfc2] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094314 as ec2-user@52.69.6.42
+ DEBUG [a50ecfc2] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094314 )
+  INFO [a50ecfc2] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [017d661e] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170712094314 as ec2-user@52.69.6.42
+ DEBUG [017d661e] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170712094314 )
+  INFO [017d661e] Finished in 0.114 seconds with exit status 0 (successful).
+ DEBUG [e19d835e] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [e19d835e] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [e19d835e] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [9eccd916] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.69.6.42
+ DEBUG [9eccd916] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9eccd916] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [9eccd916] Finished in 0.031 seconds with exit status 0 (successful).
+ DEBUG [e5f53213] Running if test ! -d /var/www/Pairs/releases/20170712094314; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094314'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [e5f53213] Command: if test ! -d /var/www/Pairs/releases/20170712094314; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094314'" 1>&2; false; fi
+ DEBUG [e5f53213] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [f4bff4c3] Running /usr/bin/env echo "4319472d106fe609295cb1f76d243fe31754abd4" >> REVISION as ec2-user@52.69.6.42
+ DEBUG [f4bff4c3] Command: cd /var/www/Pairs/releases/20170712094314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "4319472d106fe609295cb1f76d243fe31754abd4" >> REVISION )
+  INFO [f4bff4c3] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [7e689704] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094314 /var/www/Pairs/releases/20170712094314/tmp /var/www/Pairs/releases/20170712094314/vendor /var/www/Pairs/releases/20170712094314/public as ec2-user@52.69.6.42
+ DEBUG [7e689704] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094314 /var/www/Pairs/releases/20170712094314/tmp /var/www/Pairs/releases/20170712094314/vendor /var/www/Pairs/releases/20170712094314/public )
+  INFO [7e689704] Finished in 0.035 seconds with exit status 0 (successful).
+ DEBUG [41473bea] Running [ -L /var/www/Pairs/releases/20170712094314/log ] as ec2-user@52.69.6.42
+ DEBUG [41473bea] Command: [ -L /var/www/Pairs/releases/20170712094314/log ]
+ DEBUG [41473bea] Finished in 0.031 seconds with exit status 1 (failed).
+ DEBUG [e272eeff] Running [ -d /var/www/Pairs/releases/20170712094314/log ] as ec2-user@52.69.6.42
+ DEBUG [e272eeff] Command: [ -d /var/www/Pairs/releases/20170712094314/log ]
+ DEBUG [e272eeff] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO [c7e7e0e7] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094314/log as ec2-user@52.69.6.42
+ DEBUG [c7e7e0e7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094314/log )
+  INFO [c7e7e0e7] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO [1d321dce] Running /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170712094314/log as ec2-user@52.69.6.42
+ DEBUG [1d321dce] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170712094314/log )
+  INFO [1d321dce] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [9bf6d939] Running [ -L /var/www/Pairs/releases/20170712094314/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [9bf6d939] Command: [ -L /var/www/Pairs/releases/20170712094314/tmp/pids ]
+ DEBUG [9bf6d939] Finished in 0.026 seconds with exit status 1 (failed).
+ DEBUG [b07a41b1] Running [ -d /var/www/Pairs/releases/20170712094314/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [b07a41b1] Command: [ -d /var/www/Pairs/releases/20170712094314/tmp/pids ]
+ DEBUG [b07a41b1] Finished in 0.031 seconds with exit status 1 (failed).
+  INFO [34822c36] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170712094314/tmp/pids as ec2-user@52.69.6.42
+ DEBUG [34822c36] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170712094314/tmp/pids )
+  INFO [34822c36] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [44116bb6] Running [ -L /var/www/Pairs/releases/20170712094314/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [44116bb6] Command: [ -L /var/www/Pairs/releases/20170712094314/tmp/cache ]
+ DEBUG [44116bb6] Finished in 0.032 seconds with exit status 1 (failed).
+ DEBUG [35a967f0] Running [ -d /var/www/Pairs/releases/20170712094314/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [35a967f0] Command: [ -d /var/www/Pairs/releases/20170712094314/tmp/cache ]
+ DEBUG [35a967f0] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [9b594dd9] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094314/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [9b594dd9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094314/tmp/cache )
+  INFO [9b594dd9] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [241a8331] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170712094314/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [241a8331] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170712094314/tmp/cache )
+  INFO [241a8331] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [514ea3fa] Running [ -L /var/www/Pairs/releases/20170712094314/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [514ea3fa] Command: [ -L /var/www/Pairs/releases/20170712094314/tmp/sockets ]
+ DEBUG [514ea3fa] Finished in 0.033 seconds with exit status 1 (failed).
+ DEBUG [cca0240f] Running [ -d /var/www/Pairs/releases/20170712094314/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [cca0240f] Command: [ -d /var/www/Pairs/releases/20170712094314/tmp/sockets ]
+ DEBUG [cca0240f] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [44ee51c1] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170712094314/tmp/sockets as ec2-user@52.69.6.42
+ DEBUG [44ee51c1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170712094314/tmp/sockets )
+  INFO [44ee51c1] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [11665372] Running [ -L /var/www/Pairs/releases/20170712094314/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [11665372] Command: [ -L /var/www/Pairs/releases/20170712094314/vendor/bundle ]
+ DEBUG [11665372] Finished in 0.028 seconds with exit status 1 (failed).
+ DEBUG [d8d57dd3] Running [ -d /var/www/Pairs/releases/20170712094314/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [d8d57dd3] Command: [ -d /var/www/Pairs/releases/20170712094314/vendor/bundle ]
+ DEBUG [d8d57dd3] Finished in 0.052 seconds with exit status 1 (failed).
+  INFO [ea77ea1e] Running /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170712094314/vendor/bundle as ec2-user@52.69.6.42
+ DEBUG [ea77ea1e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170712094314/vendor/bundle )
+  INFO [ea77ea1e] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [452c4674] Running [ -L /var/www/Pairs/releases/20170712094314/public/system ] as ec2-user@52.69.6.42
+ DEBUG [452c4674] Command: [ -L /var/www/Pairs/releases/20170712094314/public/system ]
+ DEBUG [452c4674] Finished in 0.029 seconds with exit status 1 (failed).
+ DEBUG [a6f9aeb4] Running [ -d /var/www/Pairs/releases/20170712094314/public/system ] as ec2-user@52.69.6.42
+ DEBUG [a6f9aeb4] Command: [ -d /var/www/Pairs/releases/20170712094314/public/system ]
+ DEBUG [a6f9aeb4] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [5b146f78] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170712094314/public/system as ec2-user@52.69.6.42
+ DEBUG [5b146f78] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170712094314/public/system )
+  INFO [5b146f78] Finished in 0.034 seconds with exit status 0 (successful).
+ DEBUG [efc2f1c7] Running [ -L /var/www/Pairs/releases/20170712094314/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [efc2f1c7] Command: [ -L /var/www/Pairs/releases/20170712094314/public/uploads ]
+ DEBUG [efc2f1c7] Finished in 0.026 seconds with exit status 1 (failed).
+ DEBUG [15caa4b4] Running [ -d /var/www/Pairs/releases/20170712094314/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [15caa4b4] Command: [ -d /var/www/Pairs/releases/20170712094314/public/uploads ]
+ DEBUG [15caa4b4] Finished in 0.025 seconds with exit status 1 (failed).
+  INFO [583d716d] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170712094314/public/uploads as ec2-user@52.69.6.42
+ DEBUG [583d716d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170712094314/public/uploads )
+  INFO [583d716d] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [8cf010f5] Running [ -L /var/www/Pairs/releases/20170712094314/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [8cf010f5] Command: [ -L /var/www/Pairs/releases/20170712094314/public/assets ]
+ DEBUG [8cf010f5] Finished in 0.023 seconds with exit status 1 (failed).
+ DEBUG [042420ae] Running [ -d /var/www/Pairs/releases/20170712094314/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [042420ae] Command: [ -d /var/www/Pairs/releases/20170712094314/public/assets ]
+ DEBUG [042420ae] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [7f5c0d36] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094314/public/assets as ec2-user@52.69.6.42
+ DEBUG [7f5c0d36] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094314/public/assets )
+  INFO [7f5c0d36] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [c6171fdc] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170712094314/public/assets as ec2-user@52.69.6.42
+ DEBUG [c6171fdc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170712094314/public/assets )
+  INFO [c6171fdc] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [1ddee07f] Running if test ! -d /var/www/Pairs/releases/20170712094314; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094314'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [1ddee07f] Command: if test ! -d /var/www/Pairs/releases/20170712094314; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094314'" 1>&2; false; fi
+ DEBUG [1ddee07f] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [db4d84da] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle as ec2-user@52.69.6.42
+ DEBUG [db4d84da] Command: cd /var/www/Pairs/releases/20170712094314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle )
+ DEBUG [db4d84da] 	The following gems are missing
+ DEBUG [db4d84da] 	 * hashie (3.5.5)
+ DEBUG [db4d84da] 	 * omniauth (1.6.1)
+ DEBUG [db4d84da] 	 * multipart-post (2.0.0)
+ DEBUG [db4d84da] 	 * faraday (0.12.1)
+ DEBUG [db4d84da] 	 * jwt (1.5.6)
+ DEBUG [db4d84da] 	 * multi_xml (0.6.0)
+ DEBUG [db4d84da] 	 * oauth2 (1.4.0)
+ DEBUG [db4d84da] 	 * omniauth-oauth2 (1.4.0)
+ DEBUG [db4d84da] 	 * omniauth-facebook (4.0.0)
+ DEBUG [db4d84da] 	 * kaminari-core (1.0.1)
+ DEBUG [db4d84da] 	 * kaminari-actionview (1.0.1)
+ DEBUG [db4d84da] 	 * kaminari-activerecord (1.0.1)
+ DEBUG [db4d84da] 	 * kaminari (1.0.1)
+ DEBUG [db4d84da] 	 * byebug (9.0.6)
+ DEBUG [db4d84da] 	 * net-ssh (4.1.0)
+ DEBUG [db4d84da] 	 * net-scp (1.2.1)
+ DEBUG [db4d84da] 	 * sshkit (1.14.0)
+ DEBUG [db4d84da] 	 * airbrussh (1.3.0)
+ DEBUG [db4d84da] 	 * capistrano (3.8.2)
+ DEBUG [db4d84da] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [db4d84da] 	 * capistrano-bundler (1.2.0)
+ DEBUG [db4d84da] 	 * capistrano-rails (1.3.0)
+ DEBUG [db4d84da] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [db4d84da] 	 * rspec-support (3.6.0)
+ DEBUG [db4d84da] 	 * rspec-core (3.6.0)
+ DEBUG [db4d84da] 	 * diff-lcs (1.3)
+ DEBUG [db4d84da] 	 * rspec-expectations (3.6.0)
+ DEBUG [db4d84da] 	 * rspec-mocks (3.6.0)
+ DEBUG [db4d84da] 	 * rspec-rails (3.6.0)
+ DEBUG [db4d84da] 	 * factory_girl (4.8.0)
+ DEBUG [db4d84da] 	 * factory_girl_rails (4.8.0)
+ DEBUG [db4d84da] 	 * faker (1.7.3)
+ DEBUG [db4d84da] 	 * rails-controller-testing (1.0.2)
+ DEBUG [db4d84da] 	 * coderay (1.1.1)
+ DEBUG [db4d84da] 	 * slop (3.6.0)
+ DEBUG [db4d84da] 	 * pry (0.10.4)
+ DEBUG [db4d84da] 	 * pry-rails (0.3.6)
+ DEBUG [db4d84da] 	 * erb2haml (0.1.5)
+ DEBUG [db4d84da] 	 * bindex (0.5.0)
+ DEBUG [db4d84da] 	 * web-console (3.5.1)
+ DEBUG [db4d84da] 	 * rb-fsevent (0.10.2)
+ DEBUG [db4d84da] 	 * ffi (1.9.18)
+ DEBUG [db4d84da] 	 * rb-inotify (0.9.10)
+ DEBUG [db4d84da] 	 * listen (3.0.8)
+ DEBUG [db4d84da] 	 * spring (2.0.2)
+ DEBUG [db4d84da] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [db4d84da] 	Install missing gems with `bundle install`
+ DEBUG [db4d84da] Finished in 0.310 seconds with exit status 1 (failed).
+  INFO [d929f989] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet as ec2-user@52.69.6.42
+ DEBUG [d929f989] Command: cd /var/www/Pairs/releases/20170712094314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet )
+  INFO [d929f989] Finished in 6.761 seconds with exit status 0 (successful).
+ DEBUG [a08e4fe4] Running if test ! -d /var/www/Pairs/releases/20170712094314; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094314'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [a08e4fe4] Command: if test ! -d /var/www/Pairs/releases/20170712094314; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094314'" 1>&2; false; fi
+ DEBUG [a08e4fe4] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [38f92de3] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@52.69.6.42
+ DEBUG [38f92de3] Command: cd /var/www/Pairs/releases/20170712094314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:30.748286 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/SSL-20420ad45ecdb1489b55d2f6d63e913c419748afaa9d2523504e028baaaf399b.png
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:30.749980 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/logo_pairs-e6e1e1a18cc056daebb4bc11f1be3247b35a7258f847403cc1643b9a58c58e4c.png
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:30.751331 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/truste_ja-1802a95b4ad48fe7fbacbf8623102a56a5c7294c057679afa89e65d0803cf8dc.png
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:36.076001 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/application-eae9c8ec05aa18ac8c2b68e83ef63c2841ded160889320d5e030cd30eefcd7d2.css
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:36.076463 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/application-eae9c8ec05aa18ac8c2b68e83ef63c2841ded160889320d5e030cd30eefcd7d2.css.gz
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:36.076786 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:36.080451 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot.gz
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:36.080740 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:36.081563 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:36.085293 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:36.089159 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf.gz
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:36.089766 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg
+ DEBUG [38f92de3] 	I, [2017-07-12T09:43:36.093947 #935]  INFO -- : Writing /var/www/Pairs/releases/20170712094314/public/assets/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg.gz
+  INFO [38f92de3] Finished in 8.060 seconds with exit status 0 (successful).
+ DEBUG [2edccc8c] Running if test ! -d /var/www/Pairs/releases/20170712094314; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094314'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [2edccc8c] Command: if test ! -d /var/www/Pairs/releases/20170712094314; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094314'" 1>&2; false; fi
+ DEBUG [2edccc8c] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [1a51329a] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094314/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [1a51329a] Command: cd /var/www/Pairs/releases/20170712094314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094314/assets_manifest_backup )
+  INFO [1a51329a] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [14269a58] Running /usr/bin/env ls /var/www/Pairs/releases/20170712094314/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [14269a58] Command: cd /var/www/Pairs/releases/20170712094314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170712094314/public/assets/.sprockets-manifest* )
+ DEBUG [14269a58] 	/var/www/Pairs/releases/20170712094314/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [14269a58] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [c61fada2] Running /usr/bin/env ls /var/www/Pairs/releases/20170712094314/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [c61fada2] Command: cd /var/www/Pairs/releases/20170712094314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170712094314/public/assets/.sprockets-manifest* )
+ DEBUG [c61fada2] 	/var/www/Pairs/releases/20170712094314/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [c61fada2] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [a33dc1b6] Running /usr/bin/env cp /var/www/Pairs/releases/20170712094314/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170712094314/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [a33dc1b6] Command: cd /var/www/Pairs/releases/20170712094314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/Pairs/releases/20170712094314/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170712094314/assets_manifest_backup )
+  INFO [a33dc1b6] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [c1fb95ed] Running if test ! -d /var/www/Pairs/releases/20170712094314; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094314'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [c1fb95ed] Command: if test ! -d /var/www/Pairs/releases/20170712094314; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094314'" 1>&2; false; fi
+ DEBUG [c1fb95ed] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [b5621feb] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@52.69.6.42
+ DEBUG [b5621feb] Command: cd /var/www/Pairs/releases/20170712094314 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [b5621feb] 	== 20170706111740 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0439s
+-- add_index(:users, [:provider, :uid, :name], {:unique=>true})
+   -> 0.0174s
+== 20170706111740 DeviseCreateUsers: migrated (0.0614s) =======================
+
+  INFO [b5621feb] Finished in 2.882 seconds with exit status 0 (successful).
+  INFO [bc0dcd09] Running /usr/bin/env ln -s /var/www/Pairs/releases/20170712094314 /var/www/Pairs/releases/current as ec2-user@52.69.6.42
+ DEBUG [bc0dcd09] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/releases/20170712094314 /var/www/Pairs/releases/current )
+  INFO [bc0dcd09] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [d0038dd5] Running /usr/bin/env mv /var/www/Pairs/releases/current /var/www/Pairs as ec2-user@52.69.6.42
+ DEBUG [d0038dd5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /var/www/Pairs/releases/current /var/www/Pairs )
+  INFO [d0038dd5] Finished in 0.043 seconds with exit status 0 (successful).
+ DEBUG [e5022cad] Running if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [e5022cad] Command: if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi
+ DEBUG [e5022cad] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [4286f3c1] Running [ -e /var/www/Pairs/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` as ec2-user@52.69.6.42
+ DEBUG [4286f3c1] Command: [ -e /var/www/Pairs/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid`
+ DEBUG [4286f3c1] Finished in 0.035 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+ DEBUG [e147613c] Running if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [e147613c] Command: if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi
+ DEBUG [e147613c] Finished in 0.033 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [f2e82110] Running /usr/bin/env kill -s USR2 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` as ec2-user@52.69.6.42
+ DEBUG [f2e82110] Command: cd /var/www/Pairs/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env kill -s USR2 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` )
+  INFO [f2e82110] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [ae25fd2b] Running /usr/bin/env ls -x /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [ae25fd2b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /var/www/Pairs/releases )
+ DEBUG [ae25fd2b] 	20170712082256	20170712090938	20170712091648	20170712092502	20170712094050
+20170712094314
+ DEBUG [ae25fd2b] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 52.69.6.42
+  INFO [84e91e53] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712082256 as ec2-user@52.69.6.42
+ DEBUG [84e91e53] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712082256 )
+  INFO [84e91e53] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [89bfea95] Running if test ! -d /var/www/Pairs/releases; then echo "Directory does not exist '/var/www/Pairs/releases'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [89bfea95] Command: if test ! -d /var/www/Pairs/releases; then echo "Directory does not exist '/var/www/Pairs/releases'" 1>&2; false; fi
+ DEBUG [89bfea95] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [5cc58fd0] Running /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712094314 by poppo" >> /var/www/Pairs/revisions.log as ec2-user@52.69.6.42
+ DEBUG [5cc58fd0] Command: cd /var/www/Pairs/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712094314 by poppo" >> /var/www/Pairs/revisions.log )
+  INFO [5cc58fd0] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-12 18:44:46 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [603eadb6] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.69.6.42
+ DEBUG [603eadb6] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [603eadb6] Finished in 0.234 seconds with exit status 0 (successful).
+  INFO [9b9c99c7] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.69.6.42
+ DEBUG [9b9c99c7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [9b9c99c7] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pairs-production-poppo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pairs-production-poppo.sh 100.0%
+  INFO [bd9be7d9] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh as ec2-user@52.69.6.42
+ DEBUG [bd9be7d9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh )
+  INFO [bd9be7d9] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [034e6079] Running /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD as ec2-user@52.69.6.42
+ DEBUG [034e6079] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD )
+ DEBUG [034e6079] 	4319472d106fe609295cb1f76d243fe31754abd4	HEAD
+  INFO [034e6079] Finished in 1.575 seconds with exit status 0 (successful).
+  INFO [9e8a478a] Running /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [9e8a478a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases )
+  INFO [9e8a478a] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [ce495b79] Running /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets as ec2-user@52.69.6.42
+ DEBUG [ce495b79] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets )
+  INFO [ce495b79] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [0342ceb1] Running [ -f /var/www/Pairs/current/REVISION ] as ec2-user@52.69.6.42
+ DEBUG [0342ceb1] Command: [ -f /var/www/Pairs/current/REVISION ]
+ DEBUG [0342ceb1] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [c9b4ccb1] Running /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null as ec2-user@52.69.6.42
+ DEBUG [c9b4ccb1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null )
+ DEBUG [c9b4ccb1] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [c9b4ccb1] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [f886ca2a] Running [ -f /var/www/Pairs/repo/HEAD ] as ec2-user@52.69.6.42
+ DEBUG [f886ca2a] Command: [ -f /var/www/Pairs/repo/HEAD ]
+ DEBUG [f886ca2a] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/Pairs/repo
+ DEBUG [7bb64923] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [7bb64923] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [7bb64923] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [25f058b3] Running /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git as ec2-user@52.69.6.42
+ DEBUG [25f058b3] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git )
+  INFO [25f058b3] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [9538411f] Running /usr/bin/env git remote update --prune as ec2-user@52.69.6.42
+ DEBUG [9538411f] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [9538411f] 	Fetching origin
+  INFO [9538411f] Finished in 1.526 seconds with exit status 0 (successful).
+ DEBUG [f631f2b8] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [f631f2b8] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [f631f2b8] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [2cc55e39] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094448 as ec2-user@52.69.6.42
+ DEBUG [2cc55e39] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094448 )
+  INFO [2cc55e39] Finished in 0.034 seconds with exit status 0 (successful).
+  INFO [b9a8a4b3] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170712094448 as ec2-user@52.69.6.42
+ DEBUG [b9a8a4b3] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170712094448 )
+  INFO [b9a8a4b3] Finished in 0.139 seconds with exit status 0 (successful).
+ DEBUG [f289b1f2] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [f289b1f2] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [f289b1f2] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [1a6638c6] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.69.6.42
+ DEBUG [1a6638c6] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [1a6638c6] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [1a6638c6] Finished in 0.042 seconds with exit status 0 (successful).
+ DEBUG [7dbccb95] Running if test ! -d /var/www/Pairs/releases/20170712094448; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094448'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [7dbccb95] Command: if test ! -d /var/www/Pairs/releases/20170712094448; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094448'" 1>&2; false; fi
+ DEBUG [7dbccb95] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [7cc31630] Running /usr/bin/env echo "4319472d106fe609295cb1f76d243fe31754abd4" >> REVISION as ec2-user@52.69.6.42
+ DEBUG [7cc31630] Command: cd /var/www/Pairs/releases/20170712094448 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "4319472d106fe609295cb1f76d243fe31754abd4" >> REVISION )
+  INFO [7cc31630] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [8306f8d9] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094448 /var/www/Pairs/releases/20170712094448/tmp /var/www/Pairs/releases/20170712094448/vendor /var/www/Pairs/releases/20170712094448/public as ec2-user@52.69.6.42
+ DEBUG [8306f8d9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094448 /var/www/Pairs/releases/20170712094448/tmp /var/www/Pairs/releases/20170712094448/vendor /var/www/Pairs/releases/20170712094448/public )
+  INFO [8306f8d9] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [73aa5480] Running [ -L /var/www/Pairs/releases/20170712094448/log ] as ec2-user@52.69.6.42
+ DEBUG [73aa5480] Command: [ -L /var/www/Pairs/releases/20170712094448/log ]
+ DEBUG [73aa5480] Finished in 0.029 seconds with exit status 1 (failed).
+ DEBUG [d76e4fd7] Running [ -d /var/www/Pairs/releases/20170712094448/log ] as ec2-user@52.69.6.42
+ DEBUG [d76e4fd7] Command: [ -d /var/www/Pairs/releases/20170712094448/log ]
+ DEBUG [d76e4fd7] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [898384fc] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094448/log as ec2-user@52.69.6.42
+ DEBUG [898384fc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094448/log )
+  INFO [898384fc] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [9a668162] Running /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170712094448/log as ec2-user@52.69.6.42
+ DEBUG [9a668162] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170712094448/log )
+  INFO [9a668162] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [1280f8ef] Running [ -L /var/www/Pairs/releases/20170712094448/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [1280f8ef] Command: [ -L /var/www/Pairs/releases/20170712094448/tmp/pids ]
+ DEBUG [1280f8ef] Finished in 0.031 seconds with exit status 1 (failed).
+ DEBUG [76236d91] Running [ -d /var/www/Pairs/releases/20170712094448/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [76236d91] Command: [ -d /var/www/Pairs/releases/20170712094448/tmp/pids ]
+ DEBUG [76236d91] Finished in 0.038 seconds with exit status 1 (failed).
+  INFO [4705c7d1] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170712094448/tmp/pids as ec2-user@52.69.6.42
+ DEBUG [4705c7d1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170712094448/tmp/pids )
+  INFO [4705c7d1] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [93365e8a] Running [ -L /var/www/Pairs/releases/20170712094448/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [93365e8a] Command: [ -L /var/www/Pairs/releases/20170712094448/tmp/cache ]
+ DEBUG [93365e8a] Finished in 0.038 seconds with exit status 1 (failed).
+ DEBUG [f808cb43] Running [ -d /var/www/Pairs/releases/20170712094448/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [f808cb43] Command: [ -d /var/www/Pairs/releases/20170712094448/tmp/cache ]
+ DEBUG [f808cb43] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [dc10b79f] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094448/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [dc10b79f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094448/tmp/cache )
+  INFO [dc10b79f] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [b46640a7] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170712094448/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [b46640a7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170712094448/tmp/cache )
+  INFO [b46640a7] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [1877716a] Running [ -L /var/www/Pairs/releases/20170712094448/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [1877716a] Command: [ -L /var/www/Pairs/releases/20170712094448/tmp/sockets ]
+ DEBUG [1877716a] Finished in 0.037 seconds with exit status 1 (failed).
+ DEBUG [5bcb9e3c] Running [ -d /var/www/Pairs/releases/20170712094448/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [5bcb9e3c] Command: [ -d /var/www/Pairs/releases/20170712094448/tmp/sockets ]
+ DEBUG [5bcb9e3c] Finished in 0.031 seconds with exit status 1 (failed).
+  INFO [6eb55eb7] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170712094448/tmp/sockets as ec2-user@52.69.6.42
+ DEBUG [6eb55eb7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170712094448/tmp/sockets )
+  INFO [6eb55eb7] Finished in 0.042 seconds with exit status 0 (successful).
+ DEBUG [9b23c916] Running [ -L /var/www/Pairs/releases/20170712094448/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [9b23c916] Command: [ -L /var/www/Pairs/releases/20170712094448/vendor/bundle ]
+ DEBUG [9b23c916] Finished in 0.041 seconds with exit status 1 (failed).
+ DEBUG [12fdff7c] Running [ -d /var/www/Pairs/releases/20170712094448/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [12fdff7c] Command: [ -d /var/www/Pairs/releases/20170712094448/vendor/bundle ]
+ DEBUG [12fdff7c] Finished in 0.035 seconds with exit status 1 (failed).
+  INFO [1164a8e1] Running /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170712094448/vendor/bundle as ec2-user@52.69.6.42
+ DEBUG [1164a8e1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170712094448/vendor/bundle )
+  INFO [1164a8e1] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [9ac047c6] Running [ -L /var/www/Pairs/releases/20170712094448/public/system ] as ec2-user@52.69.6.42
+ DEBUG [9ac047c6] Command: [ -L /var/www/Pairs/releases/20170712094448/public/system ]
+ DEBUG [9ac047c6] Finished in 0.030 seconds with exit status 1 (failed).
+ DEBUG [ddd453dc] Running [ -d /var/www/Pairs/releases/20170712094448/public/system ] as ec2-user@52.69.6.42
+ DEBUG [ddd453dc] Command: [ -d /var/www/Pairs/releases/20170712094448/public/system ]
+ DEBUG [ddd453dc] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [90201503] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170712094448/public/system as ec2-user@52.69.6.42
+ DEBUG [90201503] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170712094448/public/system )
+  INFO [90201503] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [0374d95c] Running [ -L /var/www/Pairs/releases/20170712094448/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [0374d95c] Command: [ -L /var/www/Pairs/releases/20170712094448/public/uploads ]
+ DEBUG [0374d95c] Finished in 0.028 seconds with exit status 1 (failed).
+ DEBUG [fb162313] Running [ -d /var/www/Pairs/releases/20170712094448/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [fb162313] Command: [ -d /var/www/Pairs/releases/20170712094448/public/uploads ]
+ DEBUG [fb162313] Finished in 0.031 seconds with exit status 1 (failed).
+  INFO [3b75f082] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170712094448/public/uploads as ec2-user@52.69.6.42
+ DEBUG [3b75f082] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170712094448/public/uploads )
+  INFO [3b75f082] Finished in 0.042 seconds with exit status 0 (successful).
+ DEBUG [0a032bec] Running [ -L /var/www/Pairs/releases/20170712094448/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [0a032bec] Command: [ -L /var/www/Pairs/releases/20170712094448/public/assets ]
+ DEBUG [0a032bec] Finished in 0.040 seconds with exit status 1 (failed).
+ DEBUG [3f29134c] Running [ -d /var/www/Pairs/releases/20170712094448/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [3f29134c] Command: [ -d /var/www/Pairs/releases/20170712094448/public/assets ]
+ DEBUG [3f29134c] Finished in 0.036 seconds with exit status 0 (successful).
+  INFO [f9290d3a] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094448/public/assets as ec2-user@52.69.6.42
+ DEBUG [f9290d3a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094448/public/assets )
+  INFO [f9290d3a] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [74a44c44] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170712094448/public/assets as ec2-user@52.69.6.42
+ DEBUG [74a44c44] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170712094448/public/assets )
+  INFO [74a44c44] Finished in 0.033 seconds with exit status 0 (successful).
+ DEBUG [2674ed93] Running if test ! -d /var/www/Pairs/releases/20170712094448; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094448'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [2674ed93] Command: if test ! -d /var/www/Pairs/releases/20170712094448; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094448'" 1>&2; false; fi
+ DEBUG [2674ed93] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG [5ea0b01a] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle as ec2-user@52.69.6.42
+ DEBUG [5ea0b01a] Command: cd /var/www/Pairs/releases/20170712094448 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle )
+ DEBUG [5ea0b01a] 	The following gems are missing
+ DEBUG [5ea0b01a] 	 * byebug (9.0.6)
+ DEBUG [5ea0b01a] 	 * net-ssh (4.1.0)
+ DEBUG [5ea0b01a] 	 * net-scp (1.2.1)
+ DEBUG [5ea0b01a] 	 * sshkit (1.14.0)
+ DEBUG [5ea0b01a] 	 * airbrussh (1.3.0)
+ DEBUG [5ea0b01a] 	 * capistrano (3.8.2)
+ DEBUG [5ea0b01a] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [5ea0b01a] 	 * capistrano-bundler (1.2.0)
+ DEBUG [5ea0b01a] 	 * capistrano-rails (1.3.0)
+ DEBUG [5ea0b01a] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [5ea0b01a] 	 * rspec-support (3.6.0)
+ DEBUG [5ea0b01a] 	 * rspec-core (3.6.0)
+ DEBUG [5ea0b01a] 	 * diff-lcs (1.3)
+ DEBUG [5ea0b01a] 	 * rspec-expectations (3.6.0)
+ DEBUG [5ea0b01a] 	 * rspec-mocks (3.6.0)
+ DEBUG [5ea0b01a] 	 * rspec-rails (3.6.0)
+ DEBUG [5ea0b01a] 	 * factory_girl (4.8.0)
+ DEBUG [5ea0b01a] 	 * factory_girl_rails (4.8.0)
+ DEBUG [5ea0b01a] 	 * faker (1.7.3)
+ DEBUG [5ea0b01a] 	 * rails-controller-testing (1.0.2)
+ DEBUG [5ea0b01a] 	 * coderay (1.1.1)
+ DEBUG [5ea0b01a] 	 * slop (3.6.0)
+ DEBUG [5ea0b01a] 	 * pry (0.10.4)
+ DEBUG [5ea0b01a] 	 * pry-rails (0.3.6)
+ DEBUG [5ea0b01a] 	 * erb2haml (0.1.5)
+ DEBUG [5ea0b01a] 	 * bindex (0.5.0)
+ DEBUG [5ea0b01a] 	 * web-console (3.5.1)
+ DEBUG [5ea0b01a] 	 * rb-fsevent (0.10.2)
+ DEBUG [5ea0b01a] 	 * ffi (1.9.18)
+ DEBUG [5ea0b01a] 	 * rb-inotify (0.9.10)
+ DEBUG [5ea0b01a] 	 * listen (3.0.8)
+ DEBUG [5ea0b01a] 	 * spring (2.0.2)
+ DEBUG [5ea0b01a] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [5ea0b01a] 	Install missing gems with `bundle install`
+ DEBUG [5ea0b01a] Finished in 0.315 seconds with exit status 1 (failed).
+  INFO [19274fbd] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet as ec2-user@52.69.6.42
+ DEBUG [19274fbd] Command: cd /var/www/Pairs/releases/20170712094448 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet )
+  INFO [19274fbd] Finished in 2.644 seconds with exit status 0 (successful).
+ DEBUG [8d7fbf74] Running if test ! -d /var/www/Pairs/releases/20170712094448; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094448'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [8d7fbf74] Command: if test ! -d /var/www/Pairs/releases/20170712094448; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094448'" 1>&2; false; fi
+ DEBUG [8d7fbf74] Finished in 0.033 seconds with exit status 0 (successful).
+  INFO [da64b112] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@52.69.6.42
+ DEBUG [da64b112] Command: cd /var/www/Pairs/releases/20170712094448 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [da64b112] Finished in 2.525 seconds with exit status 0 (successful).
+ DEBUG [3978cda0] Running if test ! -d /var/www/Pairs/releases/20170712094448; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094448'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [3978cda0] Command: if test ! -d /var/www/Pairs/releases/20170712094448; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094448'" 1>&2; false; fi
+ DEBUG [3978cda0] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [8a53ecf6] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094448/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [8a53ecf6] Command: cd /var/www/Pairs/releases/20170712094448 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712094448/assets_manifest_backup )
+  INFO [8a53ecf6] Finished in 0.041 seconds with exit status 0 (successful).
+ DEBUG [325f347d] Running /usr/bin/env ls /var/www/Pairs/releases/20170712094448/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [325f347d] Command: cd /var/www/Pairs/releases/20170712094448 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170712094448/public/assets/.sprockets-manifest* )
+ DEBUG [325f347d] 	/var/www/Pairs/releases/20170712094448/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [325f347d] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [7e876adc] Running /usr/bin/env ls /var/www/Pairs/releases/20170712094448/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [7e876adc] Command: cd /var/www/Pairs/releases/20170712094448 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170712094448/public/assets/.sprockets-manifest* )
+ DEBUG [7e876adc] 	/var/www/Pairs/releases/20170712094448/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [7e876adc] Finished in 0.037 seconds with exit status 0 (successful).
+  INFO [e32d107a] Running /usr/bin/env cp /var/www/Pairs/releases/20170712094448/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170712094448/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [e32d107a] Command: cd /var/www/Pairs/releases/20170712094448 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/Pairs/releases/20170712094448/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170712094448/assets_manifest_backup )
+  INFO [e32d107a] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [805ff5ec] Running if test ! -d /var/www/Pairs/releases/20170712094448; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094448'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [805ff5ec] Command: if test ! -d /var/www/Pairs/releases/20170712094448; then echo "Directory does not exist '/var/www/Pairs/releases/20170712094448'" 1>&2; false; fi
+ DEBUG [805ff5ec] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [fcb9ce47] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@52.69.6.42
+ DEBUG [fcb9ce47] Command: cd /var/www/Pairs/releases/20170712094448 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [fcb9ce47] Finished in 2.381 seconds with exit status 0 (successful).
+  INFO [078ec83f] Running /usr/bin/env ln -s /var/www/Pairs/releases/20170712094448 /var/www/Pairs/releases/current as ec2-user@52.69.6.42
+ DEBUG [078ec83f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/releases/20170712094448 /var/www/Pairs/releases/current )
+  INFO [078ec83f] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [4aa03e34] Running /usr/bin/env mv /var/www/Pairs/releases/current /var/www/Pairs as ec2-user@52.69.6.42
+ DEBUG [4aa03e34] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /var/www/Pairs/releases/current /var/www/Pairs )
+  INFO [4aa03e34] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [32a20b05] Running if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [32a20b05] Command: if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi
+ DEBUG [32a20b05] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [f803569c] Running [ -e /var/www/Pairs/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` as ec2-user@52.69.6.42
+ DEBUG [f803569c] Command: [ -e /var/www/Pairs/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid`
+ DEBUG [f803569c] Finished in 0.048 seconds with exit status 1 (failed).
+  INFO [36fac34b] Running $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/Pairs/current/config/unicorn.rb -E deployment -D  as ec2-user@52.69.6.42
+ DEBUG [36fac34b] Command: cd /var/www/Pairs/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/Pairs/current/config/unicorn.rb -E deployment -D  )
+  INFO [36fac34b] Finished in 2.740 seconds with exit status 0 (successful).
+ DEBUG [ca650df7] Running if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [ca650df7] Command: if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi
+ DEBUG [ca650df7] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [bb2771b8] Running /usr/bin/env kill -s USR2 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` as ec2-user@52.69.6.42
+ DEBUG [bb2771b8] Command: cd /var/www/Pairs/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env kill -s USR2 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` )
+  INFO [bb2771b8] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [d4ffc26e] Running /usr/bin/env ls -x /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [d4ffc26e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /var/www/Pairs/releases )
+ DEBUG [d4ffc26e] 	20170712090938	20170712091648	20170712092502	20170712094050	20170712094314
+20170712094448
+ DEBUG [d4ffc26e] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 52.69.6.42
+  INFO [75239c2c] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712090938 as ec2-user@52.69.6.42
+ DEBUG [75239c2c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712090938 )
+  INFO [75239c2c] Finished in 0.199 seconds with exit status 0 (successful).
+ DEBUG [41abbfed] Running if test ! -d /var/www/Pairs/releases; then echo "Directory does not exist '/var/www/Pairs/releases'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [41abbfed] Command: if test ! -d /var/www/Pairs/releases; then echo "Directory does not exist '/var/www/Pairs/releases'" 1>&2; false; fi
+ DEBUG [41abbfed] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [411d4764] Running /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712094448 by poppo" >> /var/www/Pairs/revisions.log as ec2-user@52.69.6.42
+ DEBUG [411d4764] Command: cd /var/www/Pairs/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712094448 by poppo" >> /var/www/Pairs/revisions.log )
+  INFO [411d4764] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-12 19:07:57 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c723956d] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.69.6.42
+ DEBUG [c723956d] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [c723956d] Finished in 0.363 seconds with exit status 0 (successful).
+  INFO [db17b67b] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.69.6.42
+ DEBUG [db17b67b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [db17b67b] Finished in 0.031 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pairs-production-poppo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pairs-production-poppo.sh 100.0%
+  INFO [9f666c4b] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh as ec2-user@52.69.6.42
+ DEBUG [9f666c4b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh )
+  INFO [9f666c4b] Finished in 0.032 seconds with exit status 0 (successful).
+  INFO [9c4dfc3a] Running /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD as ec2-user@52.69.6.42
+ DEBUG [9c4dfc3a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD )
+ DEBUG [9c4dfc3a] 	4319472d106fe609295cb1f76d243fe31754abd4	HEAD
+  INFO [9c4dfc3a] Finished in 1.565 seconds with exit status 0 (successful).
+  INFO [e98d0e0b] Running /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [e98d0e0b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases )
+  INFO [e98d0e0b] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [8cb8a540] Running /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets as ec2-user@52.69.6.42
+ DEBUG [8cb8a540] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets )
+  INFO [8cb8a540] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [dadfb0f0] Running [ -f /var/www/Pairs/current/REVISION ] as ec2-user@52.69.6.42
+ DEBUG [dadfb0f0] Command: [ -f /var/www/Pairs/current/REVISION ]
+ DEBUG [dadfb0f0] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [c0753dd4] Running /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null as ec2-user@52.69.6.42
+ DEBUG [c0753dd4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null )
+ DEBUG [c0753dd4] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [c0753dd4] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [75d7e524] Running [ -f /var/www/Pairs/repo/HEAD ] as ec2-user@52.69.6.42
+ DEBUG [75d7e524] Command: [ -f /var/www/Pairs/repo/HEAD ]
+ DEBUG [75d7e524] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/Pairs/repo
+ DEBUG [561f1ac5] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [561f1ac5] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [561f1ac5] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [85236bcb] Running /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git as ec2-user@52.69.6.42
+ DEBUG [85236bcb] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git )
+  INFO [85236bcb] Finished in 0.035 seconds with exit status 0 (successful).
+  INFO [384608a6] Running /usr/bin/env git remote update --prune as ec2-user@52.69.6.42
+ DEBUG [384608a6] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [384608a6] 	Fetching origin
+  INFO [384608a6] Finished in 1.627 seconds with exit status 0 (successful).
+ DEBUG [c9f08645] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [c9f08645] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [c9f08645] Finished in 0.033 seconds with exit status 0 (successful).
+  INFO [63cde45e] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712100800 as ec2-user@52.69.6.42
+ DEBUG [63cde45e] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712100800 )
+  INFO [63cde45e] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [8a77456e] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170712100800 as ec2-user@52.69.6.42
+ DEBUG [8a77456e] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170712100800 )
+  INFO [8a77456e] Finished in 0.229 seconds with exit status 0 (successful).
+ DEBUG [1e1a97a0] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [1e1a97a0] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [1e1a97a0] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [1f5163a5] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.69.6.42
+ DEBUG [1f5163a5] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [1f5163a5] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [1f5163a5] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [6c05e435] Running if test ! -d /var/www/Pairs/releases/20170712100800; then echo "Directory does not exist '/var/www/Pairs/releases/20170712100800'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [6c05e435] Command: if test ! -d /var/www/Pairs/releases/20170712100800; then echo "Directory does not exist '/var/www/Pairs/releases/20170712100800'" 1>&2; false; fi
+ DEBUG [6c05e435] Finished in 0.035 seconds with exit status 0 (successful).
+  INFO [cf469e23] Running /usr/bin/env echo "4319472d106fe609295cb1f76d243fe31754abd4" >> REVISION as ec2-user@52.69.6.42
+ DEBUG [cf469e23] Command: cd /var/www/Pairs/releases/20170712100800 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "4319472d106fe609295cb1f76d243fe31754abd4" >> REVISION )
+  INFO [cf469e23] Finished in 0.037 seconds with exit status 0 (successful).
+  INFO [ef4e325f] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712100800 /var/www/Pairs/releases/20170712100800/tmp /var/www/Pairs/releases/20170712100800/vendor /var/www/Pairs/releases/20170712100800/public as ec2-user@52.69.6.42
+ DEBUG [ef4e325f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712100800 /var/www/Pairs/releases/20170712100800/tmp /var/www/Pairs/releases/20170712100800/vendor /var/www/Pairs/releases/20170712100800/public )
+  INFO [ef4e325f] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [f9248ef4] Running [ -L /var/www/Pairs/releases/20170712100800/log ] as ec2-user@52.69.6.42
+ DEBUG [f9248ef4] Command: [ -L /var/www/Pairs/releases/20170712100800/log ]
+ DEBUG [f9248ef4] Finished in 0.038 seconds with exit status 1 (failed).
+ DEBUG [235db024] Running [ -d /var/www/Pairs/releases/20170712100800/log ] as ec2-user@52.69.6.42
+ DEBUG [235db024] Command: [ -d /var/www/Pairs/releases/20170712100800/log ]
+ DEBUG [235db024] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO [f97c7690] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712100800/log as ec2-user@52.69.6.42
+ DEBUG [f97c7690] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712100800/log )
+  INFO [f97c7690] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [a10f98d7] Running /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170712100800/log as ec2-user@52.69.6.42
+ DEBUG [a10f98d7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170712100800/log )
+  INFO [a10f98d7] Finished in 0.042 seconds with exit status 0 (successful).
+ DEBUG [556c9213] Running [ -L /var/www/Pairs/releases/20170712100800/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [556c9213] Command: [ -L /var/www/Pairs/releases/20170712100800/tmp/pids ]
+ DEBUG [556c9213] Finished in 0.038 seconds with exit status 1 (failed).
+ DEBUG [5f1a3265] Running [ -d /var/www/Pairs/releases/20170712100800/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [5f1a3265] Command: [ -d /var/www/Pairs/releases/20170712100800/tmp/pids ]
+ DEBUG [5f1a3265] Finished in 0.028 seconds with exit status 1 (failed).
+  INFO [af9f23f4] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170712100800/tmp/pids as ec2-user@52.69.6.42
+ DEBUG [af9f23f4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170712100800/tmp/pids )
+  INFO [af9f23f4] Finished in 0.031 seconds with exit status 0 (successful).
+ DEBUG [0b5ecb6e] Running [ -L /var/www/Pairs/releases/20170712100800/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [0b5ecb6e] Command: [ -L /var/www/Pairs/releases/20170712100800/tmp/cache ]
+ DEBUG [0b5ecb6e] Finished in 0.041 seconds with exit status 1 (failed).
+ DEBUG [72579930] Running [ -d /var/www/Pairs/releases/20170712100800/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [72579930] Command: [ -d /var/www/Pairs/releases/20170712100800/tmp/cache ]
+ DEBUG [72579930] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [143c30a5] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712100800/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [143c30a5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712100800/tmp/cache )
+  INFO [143c30a5] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [98dd5635] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170712100800/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [98dd5635] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170712100800/tmp/cache )
+  INFO [98dd5635] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [2ff8f6dc] Running [ -L /var/www/Pairs/releases/20170712100800/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [2ff8f6dc] Command: [ -L /var/www/Pairs/releases/20170712100800/tmp/sockets ]
+ DEBUG [2ff8f6dc] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [f86cc716] Running [ -d /var/www/Pairs/releases/20170712100800/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [f86cc716] Command: [ -d /var/www/Pairs/releases/20170712100800/tmp/sockets ]
+ DEBUG [f86cc716] Finished in 0.031 seconds with exit status 1 (failed).
+  INFO [4aedb70e] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170712100800/tmp/sockets as ec2-user@52.69.6.42
+ DEBUG [4aedb70e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170712100800/tmp/sockets )
+  INFO [4aedb70e] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [7cb3c98c] Running [ -L /var/www/Pairs/releases/20170712100800/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [7cb3c98c] Command: [ -L /var/www/Pairs/releases/20170712100800/vendor/bundle ]
+ DEBUG [7cb3c98c] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [c0e365e7] Running [ -d /var/www/Pairs/releases/20170712100800/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [c0e365e7] Command: [ -d /var/www/Pairs/releases/20170712100800/vendor/bundle ]
+ DEBUG [c0e365e7] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [abcd8dba] Running /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170712100800/vendor/bundle as ec2-user@52.69.6.42
+ DEBUG [abcd8dba] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170712100800/vendor/bundle )
+  INFO [abcd8dba] Finished in 0.041 seconds with exit status 0 (successful).
+ DEBUG [ad61fc73] Running [ -L /var/www/Pairs/releases/20170712100800/public/system ] as ec2-user@52.69.6.42
+ DEBUG [ad61fc73] Command: [ -L /var/www/Pairs/releases/20170712100800/public/system ]
+ DEBUG [ad61fc73] Finished in 0.038 seconds with exit status 1 (failed).
+ DEBUG [19390c4e] Running [ -d /var/www/Pairs/releases/20170712100800/public/system ] as ec2-user@52.69.6.42
+ DEBUG [19390c4e] Command: [ -d /var/www/Pairs/releases/20170712100800/public/system ]
+ DEBUG [19390c4e] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [538cdad3] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170712100800/public/system as ec2-user@52.69.6.42
+ DEBUG [538cdad3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170712100800/public/system )
+  INFO [538cdad3] Finished in 0.041 seconds with exit status 0 (successful).
+ DEBUG [98e0e8c3] Running [ -L /var/www/Pairs/releases/20170712100800/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [98e0e8c3] Command: [ -L /var/www/Pairs/releases/20170712100800/public/uploads ]
+ DEBUG [98e0e8c3] Finished in 0.035 seconds with exit status 1 (failed).
+ DEBUG [3ea529c5] Running [ -d /var/www/Pairs/releases/20170712100800/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [3ea529c5] Command: [ -d /var/www/Pairs/releases/20170712100800/public/uploads ]
+ DEBUG [3ea529c5] Finished in 0.025 seconds with exit status 1 (failed).
+  INFO [90ed7a89] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170712100800/public/uploads as ec2-user@52.69.6.42
+ DEBUG [90ed7a89] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170712100800/public/uploads )
+  INFO [90ed7a89] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [2d492c4b] Running [ -L /var/www/Pairs/releases/20170712100800/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [2d492c4b] Command: [ -L /var/www/Pairs/releases/20170712100800/public/assets ]
+ DEBUG [2d492c4b] Finished in 0.026 seconds with exit status 1 (failed).
+ DEBUG [59ec7bfb] Running [ -d /var/www/Pairs/releases/20170712100800/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [59ec7bfb] Command: [ -d /var/www/Pairs/releases/20170712100800/public/assets ]
+ DEBUG [59ec7bfb] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [6da16028] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712100800/public/assets as ec2-user@52.69.6.42
+ DEBUG [6da16028] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712100800/public/assets )
+  INFO [6da16028] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [a5ea9106] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170712100800/public/assets as ec2-user@52.69.6.42
+ DEBUG [a5ea9106] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170712100800/public/assets )
+  INFO [a5ea9106] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [0362767a] Running if test ! -d /var/www/Pairs/releases/20170712100800; then echo "Directory does not exist '/var/www/Pairs/releases/20170712100800'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [0362767a] Command: if test ! -d /var/www/Pairs/releases/20170712100800; then echo "Directory does not exist '/var/www/Pairs/releases/20170712100800'" 1>&2; false; fi
+ DEBUG [0362767a] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [4b7c5f62] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle as ec2-user@52.69.6.42
+ DEBUG [4b7c5f62] Command: cd /var/www/Pairs/releases/20170712100800 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle )
+ DEBUG [4b7c5f62] 	The following gems are missing
+ DEBUG [4b7c5f62] 	 * byebug (9.0.6)
+ DEBUG [4b7c5f62] 	 * net-ssh (4.1.0)
+ DEBUG [4b7c5f62] 	 * net-scp (1.2.1)
+ DEBUG [4b7c5f62] 	 * sshkit (1.14.0)
+ DEBUG [4b7c5f62] 	 * airbrussh (1.3.0)
+ DEBUG [4b7c5f62] 	 * capistrano (3.8.2)
+ DEBUG [4b7c5f62] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [4b7c5f62] 	 * capistrano-bundler (1.2.0)
+ DEBUG [4b7c5f62] 	 * capistrano-rails (1.3.0)
+ DEBUG [4b7c5f62] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [4b7c5f62] 	 * rspec-support (3.6.0)
+ DEBUG [4b7c5f62] 	 * rspec-core (3.6.0)
+ DEBUG [4b7c5f62] 	 * diff-lcs (1.3)
+ DEBUG [4b7c5f62] 	 * rspec-expectations (3.6.0)
+ DEBUG [4b7c5f62] 	 * rspec-mocks (3.6.0)
+ DEBUG [4b7c5f62] 	 * rspec-rails (3.6.0)
+ DEBUG [4b7c5f62] 	 * factory_girl (4.8.0)
+ DEBUG [4b7c5f62] 	 * factory_girl_rails (4.8.0)
+ DEBUG [4b7c5f62] 	 * faker (1.7.3)
+ DEBUG [4b7c5f62] 	 * rails-controller-testing (1.0.2)
+ DEBUG [4b7c5f62] 	 * coderay (1.1.1)
+ DEBUG [4b7c5f62] 	 * slop (3.6.0)
+ DEBUG [4b7c5f62] 	 * pry (0.10.4)
+ DEBUG [4b7c5f62] 	 * pry-rails (0.3.6)
+ DEBUG [4b7c5f62] 	 * erb2haml (0.1.5)
+ DEBUG [4b7c5f62] 	 * bindex (0.5.0)
+ DEBUG [4b7c5f62] 	 * web-console (3.5.1)
+ DEBUG [4b7c5f62] 	 * rb-fsevent (0.10.2)
+ DEBUG [4b7c5f62] 	 * ffi (1.9.18)
+ DEBUG [4b7c5f62] 	 * rb-inotify (0.9.10)
+ DEBUG [4b7c5f62] 	 * listen (3.0.8)
+ DEBUG [4b7c5f62] 	 * spring (2.0.2)
+ DEBUG [4b7c5f62] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [4b7c5f62] 	Install missing gems with `bundle install`
+ DEBUG [4b7c5f62] Finished in 0.354 seconds with exit status 1 (failed).
+  INFO [0e20f63b] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet as ec2-user@52.69.6.42
+ DEBUG [0e20f63b] Command: cd /var/www/Pairs/releases/20170712100800 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet )
+  INFO [0e20f63b] Finished in 6.305 seconds with exit status 0 (successful).
+ DEBUG [e571478c] Running if test ! -d /var/www/Pairs/releases/20170712100800; then echo "Directory does not exist '/var/www/Pairs/releases/20170712100800'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [e571478c] Command: if test ! -d /var/www/Pairs/releases/20170712100800; then echo "Directory does not exist '/var/www/Pairs/releases/20170712100800'" 1>&2; false; fi
+ DEBUG [e571478c] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [de83bca5] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@52.69.6.42
+ DEBUG [de83bca5] Command: cd /var/www/Pairs/releases/20170712100800 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [de83bca5] Finished in 2.432 seconds with exit status 0 (successful).
+ DEBUG [b6226982] Running if test ! -d /var/www/Pairs/releases/20170712100800; then echo "Directory does not exist '/var/www/Pairs/releases/20170712100800'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [b6226982] Command: if test ! -d /var/www/Pairs/releases/20170712100800; then echo "Directory does not exist '/var/www/Pairs/releases/20170712100800'" 1>&2; false; fi
+ DEBUG [b6226982] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [3c8561e6] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712100800/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [3c8561e6] Command: cd /var/www/Pairs/releases/20170712100800 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712100800/assets_manifest_backup )
+  INFO [3c8561e6] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [c2410ef8] Running /usr/bin/env ls /var/www/Pairs/releases/20170712100800/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [c2410ef8] Command: cd /var/www/Pairs/releases/20170712100800 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170712100800/public/assets/.sprockets-manifest* )
+ DEBUG [c2410ef8] 	/var/www/Pairs/releases/20170712100800/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [c2410ef8] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [6bfa7753] Running /usr/bin/env ls /var/www/Pairs/releases/20170712100800/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [6bfa7753] Command: cd /var/www/Pairs/releases/20170712100800 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170712100800/public/assets/.sprockets-manifest* )
+ DEBUG [6bfa7753] 	/var/www/Pairs/releases/20170712100800/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [6bfa7753] Finished in 0.035 seconds with exit status 0 (successful).
+  INFO [9dfaaecc] Running /usr/bin/env cp /var/www/Pairs/releases/20170712100800/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170712100800/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [9dfaaecc] Command: cd /var/www/Pairs/releases/20170712100800 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/Pairs/releases/20170712100800/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170712100800/assets_manifest_backup )
+  INFO [9dfaaecc] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [052842e6] Running if test ! -d /var/www/Pairs/releases/20170712100800; then echo "Directory does not exist '/var/www/Pairs/releases/20170712100800'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [052842e6] Command: if test ! -d /var/www/Pairs/releases/20170712100800; then echo "Directory does not exist '/var/www/Pairs/releases/20170712100800'" 1>&2; false; fi
+ DEBUG [052842e6] Finished in 0.258 seconds with exit status 0 (successful).
+  INFO [078563cc] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@52.69.6.42
+ DEBUG [078563cc] Command: cd /var/www/Pairs/releases/20170712100800 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [078563cc] Finished in 2.502 seconds with exit status 0 (successful).
+  INFO [07815d78] Running /usr/bin/env ln -s /var/www/Pairs/releases/20170712100800 /var/www/Pairs/releases/current as ec2-user@52.69.6.42
+ DEBUG [07815d78] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/releases/20170712100800 /var/www/Pairs/releases/current )
+  INFO [07815d78] Finished in 0.045 seconds with exit status 0 (successful).
+  INFO [84d29f19] Running /usr/bin/env mv /var/www/Pairs/releases/current /var/www/Pairs as ec2-user@52.69.6.42
+ DEBUG [84d29f19] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /var/www/Pairs/releases/current /var/www/Pairs )
+  INFO [84d29f19] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG [874eddfc] Running if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [874eddfc] Command: if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi
+ DEBUG [874eddfc] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [f170156f] Running [ -e /var/www/Pairs/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` as ec2-user@52.69.6.42
+ DEBUG [f170156f] Command: [ -e /var/www/Pairs/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid`
+ DEBUG [f170156f] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+ DEBUG [22f7134b] Running if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [22f7134b] Command: if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi
+ DEBUG [22f7134b] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [fdb8eb80] Running /usr/bin/env kill -s USR2 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` as ec2-user@52.69.6.42
+ DEBUG [fdb8eb80] Command: cd /var/www/Pairs/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env kill -s USR2 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` )
+  INFO [fdb8eb80] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [10ba2246] Running /usr/bin/env ls -x /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [10ba2246] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /var/www/Pairs/releases )
+ DEBUG [10ba2246] 	20170712091648	20170712092502	20170712094050	20170712094314	20170712094448
+20170712100800
+ DEBUG [10ba2246] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 52.69.6.42
+  INFO [e04d4528] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712091648 as ec2-user@52.69.6.42
+ DEBUG [e04d4528] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712091648 )
+  INFO [e04d4528] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [b3824a0c] Running if test ! -d /var/www/Pairs/releases; then echo "Directory does not exist '/var/www/Pairs/releases'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [b3824a0c] Command: if test ! -d /var/www/Pairs/releases; then echo "Directory does not exist '/var/www/Pairs/releases'" 1>&2; false; fi
+ DEBUG [b3824a0c] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [d7489abe] Running /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712100800 by poppo" >> /var/www/Pairs/revisions.log as ec2-user@52.69.6.42
+ DEBUG [d7489abe] Command: cd /var/www/Pairs/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712100800 by poppo" >> /var/www/Pairs/revisions.log )
+  INFO [d7489abe] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-12 19:10:14 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [12e422e2] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.69.6.42
+ DEBUG [12e422e2] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [12e422e2] Finished in 0.196 seconds with exit status 0 (successful).
+  INFO [087f906f] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.69.6.42
+ DEBUG [087f906f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [087f906f] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pairs-production-poppo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pairs-production-poppo.sh 100.0%
+  INFO [746ce956] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh as ec2-user@52.69.6.42
+ DEBUG [746ce956] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh )
+  INFO [746ce956] Finished in 0.028 seconds with exit status 0 (successful).
+  INFO [259e712f] Running /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD as ec2-user@52.69.6.42
+ DEBUG [259e712f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD )
+ DEBUG [259e712f] 	4319472d106fe609295cb1f76d243fe31754abd4	HEAD
+  INFO [259e712f] Finished in 1.655 seconds with exit status 0 (successful).
+  INFO [77f4204c] Running /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [77f4204c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases )
+  INFO [77f4204c] Finished in 0.036 seconds with exit status 0 (successful).
+  INFO [052c4e9a] Running /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets as ec2-user@52.69.6.42
+ DEBUG [052c4e9a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets )
+  INFO [052c4e9a] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [2fff77fa] Running [ -f /var/www/Pairs/current/REVISION ] as ec2-user@52.69.6.42
+ DEBUG [2fff77fa] Command: [ -f /var/www/Pairs/current/REVISION ]
+ DEBUG [2fff77fa] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [fab8a34d] Running /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null as ec2-user@52.69.6.42
+ DEBUG [fab8a34d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null )
+ DEBUG [fab8a34d] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [fab8a34d] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [6095b65f] Running [ -f /var/www/Pairs/repo/HEAD ] as ec2-user@52.69.6.42
+ DEBUG [6095b65f] Command: [ -f /var/www/Pairs/repo/HEAD ]
+ DEBUG [6095b65f] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/Pairs/repo
+ DEBUG [dd01fc38] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [dd01fc38] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [dd01fc38] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [450b2c41] Running /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git as ec2-user@52.69.6.42
+ DEBUG [450b2c41] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git )
+  INFO [450b2c41] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [07c2cefc] Running /usr/bin/env git remote update --prune as ec2-user@52.69.6.42
+ DEBUG [07c2cefc] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [07c2cefc] 	Fetching origin
+  INFO [07c2cefc] Finished in 1.574 seconds with exit status 0 (successful).
+ DEBUG [5c603833] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [5c603833] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [5c603833] Finished in 0.032 seconds with exit status 0 (successful).
+  INFO [ef82e9d6] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712101016 as ec2-user@52.69.6.42
+ DEBUG [ef82e9d6] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712101016 )
+  INFO [ef82e9d6] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [c27af5c8] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170712101016 as ec2-user@52.69.6.42
+ DEBUG [c27af5c8] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170712101016 )
+  INFO [c27af5c8] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [b176fd5d] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [b176fd5d] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [b176fd5d] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [af2a10aa] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.69.6.42
+ DEBUG [af2a10aa] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [af2a10aa] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [af2a10aa] Finished in 0.031 seconds with exit status 0 (successful).
+ DEBUG [ce9d033f] Running if test ! -d /var/www/Pairs/releases/20170712101016; then echo "Directory does not exist '/var/www/Pairs/releases/20170712101016'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [ce9d033f] Command: if test ! -d /var/www/Pairs/releases/20170712101016; then echo "Directory does not exist '/var/www/Pairs/releases/20170712101016'" 1>&2; false; fi
+ DEBUG [ce9d033f] Finished in 0.036 seconds with exit status 0 (successful).
+  INFO [7bcef048] Running /usr/bin/env echo "4319472d106fe609295cb1f76d243fe31754abd4" >> REVISION as ec2-user@52.69.6.42
+ DEBUG [7bcef048] Command: cd /var/www/Pairs/releases/20170712101016 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "4319472d106fe609295cb1f76d243fe31754abd4" >> REVISION )
+  INFO [7bcef048] Finished in 0.033 seconds with exit status 0 (successful).
+  INFO [0520a4da] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712101016 /var/www/Pairs/releases/20170712101016/tmp /var/www/Pairs/releases/20170712101016/vendor /var/www/Pairs/releases/20170712101016/public as ec2-user@52.69.6.42
+ DEBUG [0520a4da] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712101016 /var/www/Pairs/releases/20170712101016/tmp /var/www/Pairs/releases/20170712101016/vendor /var/www/Pairs/releases/20170712101016/public )
+  INFO [0520a4da] Finished in 0.036 seconds with exit status 0 (successful).
+ DEBUG [955e5084] Running [ -L /var/www/Pairs/releases/20170712101016/log ] as ec2-user@52.69.6.42
+ DEBUG [955e5084] Command: [ -L /var/www/Pairs/releases/20170712101016/log ]
+ DEBUG [955e5084] Finished in 0.047 seconds with exit status 1 (failed).
+ DEBUG [677bdda2] Running [ -d /var/www/Pairs/releases/20170712101016/log ] as ec2-user@52.69.6.42
+ DEBUG [677bdda2] Command: [ -d /var/www/Pairs/releases/20170712101016/log ]
+ DEBUG [677bdda2] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [ee18c382] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712101016/log as ec2-user@52.69.6.42
+ DEBUG [ee18c382] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712101016/log )
+  INFO [ee18c382] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [5c1d3d6c] Running /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170712101016/log as ec2-user@52.69.6.42
+ DEBUG [5c1d3d6c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170712101016/log )
+  INFO [5c1d3d6c] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [e9c03c10] Running [ -L /var/www/Pairs/releases/20170712101016/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [e9c03c10] Command: [ -L /var/www/Pairs/releases/20170712101016/tmp/pids ]
+ DEBUG [e9c03c10] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [f92f62a5] Running [ -d /var/www/Pairs/releases/20170712101016/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [f92f62a5] Command: [ -d /var/www/Pairs/releases/20170712101016/tmp/pids ]
+ DEBUG [f92f62a5] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [b2cbae61] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170712101016/tmp/pids as ec2-user@52.69.6.42
+ DEBUG [b2cbae61] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170712101016/tmp/pids )
+  INFO [b2cbae61] Finished in 0.041 seconds with exit status 0 (successful).
+ DEBUG [018cefed] Running [ -L /var/www/Pairs/releases/20170712101016/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [018cefed] Command: [ -L /var/www/Pairs/releases/20170712101016/tmp/cache ]
+ DEBUG [018cefed] Finished in 0.050 seconds with exit status 1 (failed).
+ DEBUG [485c00ff] Running [ -d /var/www/Pairs/releases/20170712101016/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [485c00ff] Command: [ -d /var/www/Pairs/releases/20170712101016/tmp/cache ]
+ DEBUG [485c00ff] Finished in 0.036 seconds with exit status 0 (successful).
+  INFO [72390555] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712101016/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [72390555] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712101016/tmp/cache )
+  INFO [72390555] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [18a1ad48] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170712101016/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [18a1ad48] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170712101016/tmp/cache )
+  INFO [18a1ad48] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [8b8d95c7] Running [ -L /var/www/Pairs/releases/20170712101016/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [8b8d95c7] Command: [ -L /var/www/Pairs/releases/20170712101016/tmp/sockets ]
+ DEBUG [8b8d95c7] Finished in 0.038 seconds with exit status 1 (failed).
+ DEBUG [188c3233] Running [ -d /var/www/Pairs/releases/20170712101016/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [188c3233] Command: [ -d /var/www/Pairs/releases/20170712101016/tmp/sockets ]
+ DEBUG [188c3233] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [d8442c9e] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170712101016/tmp/sockets as ec2-user@52.69.6.42
+ DEBUG [d8442c9e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170712101016/tmp/sockets )
+  INFO [d8442c9e] Finished in 0.034 seconds with exit status 0 (successful).
+ DEBUG [9519a3a7] Running [ -L /var/www/Pairs/releases/20170712101016/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [9519a3a7] Command: [ -L /var/www/Pairs/releases/20170712101016/vendor/bundle ]
+ DEBUG [9519a3a7] Finished in 0.033 seconds with exit status 1 (failed).
+ DEBUG [756499bd] Running [ -d /var/www/Pairs/releases/20170712101016/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [756499bd] Command: [ -d /var/www/Pairs/releases/20170712101016/vendor/bundle ]
+ DEBUG [756499bd] Finished in 0.040 seconds with exit status 1 (failed).
+  INFO [19d0b32e] Running /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170712101016/vendor/bundle as ec2-user@52.69.6.42
+ DEBUG [19d0b32e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170712101016/vendor/bundle )
+  INFO [19d0b32e] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [299a0e4d] Running [ -L /var/www/Pairs/releases/20170712101016/public/system ] as ec2-user@52.69.6.42
+ DEBUG [299a0e4d] Command: [ -L /var/www/Pairs/releases/20170712101016/public/system ]
+ DEBUG [299a0e4d] Finished in 0.029 seconds with exit status 1 (failed).
+ DEBUG [d30527c8] Running [ -d /var/www/Pairs/releases/20170712101016/public/system ] as ec2-user@52.69.6.42
+ DEBUG [d30527c8] Command: [ -d /var/www/Pairs/releases/20170712101016/public/system ]
+ DEBUG [d30527c8] Finished in 0.030 seconds with exit status 1 (failed).
+  INFO [a8ce3906] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170712101016/public/system as ec2-user@52.69.6.42
+ DEBUG [a8ce3906] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170712101016/public/system )
+  INFO [a8ce3906] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [ef858116] Running [ -L /var/www/Pairs/releases/20170712101016/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [ef858116] Command: [ -L /var/www/Pairs/releases/20170712101016/public/uploads ]
+ DEBUG [ef858116] Finished in 0.033 seconds with exit status 1 (failed).
+ DEBUG [84244ed4] Running [ -d /var/www/Pairs/releases/20170712101016/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [84244ed4] Command: [ -d /var/www/Pairs/releases/20170712101016/public/uploads ]
+ DEBUG [84244ed4] Finished in 0.037 seconds with exit status 1 (failed).
+  INFO [71e48fc6] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170712101016/public/uploads as ec2-user@52.69.6.42
+ DEBUG [71e48fc6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170712101016/public/uploads )
+  INFO [71e48fc6] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [a6edc0cc] Running [ -L /var/www/Pairs/releases/20170712101016/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [a6edc0cc] Command: [ -L /var/www/Pairs/releases/20170712101016/public/assets ]
+ DEBUG [a6edc0cc] Finished in 0.038 seconds with exit status 1 (failed).
+ DEBUG [5323886c] Running [ -d /var/www/Pairs/releases/20170712101016/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [5323886c] Command: [ -d /var/www/Pairs/releases/20170712101016/public/assets ]
+ DEBUG [5323886c] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [6e4d781c] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712101016/public/assets as ec2-user@52.69.6.42
+ DEBUG [6e4d781c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712101016/public/assets )
+  INFO [6e4d781c] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [4531ad98] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170712101016/public/assets as ec2-user@52.69.6.42
+ DEBUG [4531ad98] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170712101016/public/assets )
+  INFO [4531ad98] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [a791edfa] Running if test ! -d /var/www/Pairs/releases/20170712101016; then echo "Directory does not exist '/var/www/Pairs/releases/20170712101016'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [a791edfa] Command: if test ! -d /var/www/Pairs/releases/20170712101016; then echo "Directory does not exist '/var/www/Pairs/releases/20170712101016'" 1>&2; false; fi
+ DEBUG [a791edfa] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [8eb96dc7] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle as ec2-user@52.69.6.42
+ DEBUG [8eb96dc7] Command: cd /var/www/Pairs/releases/20170712101016 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle )
+ DEBUG [8eb96dc7] 	The following gems are missing
+ DEBUG [8eb96dc7] 	 * byebug (9.0.6)
+ DEBUG [8eb96dc7] 	 * net-ssh (4.1.0)
+ DEBUG [8eb96dc7] 	 * net-scp (1.2.1)
+ DEBUG [8eb96dc7] 	 * sshkit (1.14.0)
+ DEBUG [8eb96dc7] 	 * airbrussh (1.3.0)
+ DEBUG [8eb96dc7] 	 * capistrano (3.8.2)
+ DEBUG [8eb96dc7] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [8eb96dc7] 	 * capistrano-bundler (1.2.0)
+ DEBUG [8eb96dc7] 	 * capistrano-rails (1.3.0)
+ DEBUG [8eb96dc7] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [8eb96dc7] 	 * rspec-support (3.6.0)
+ DEBUG [8eb96dc7] 	 * rspec-core (3.6.0)
+ DEBUG [8eb96dc7] 	 * diff-lcs (1.3)
+ DEBUG [8eb96dc7] 	 * rspec-expectations (3.6.0)
+ DEBUG [8eb96dc7] 	 * rspec-mocks (3.6.0)
+ DEBUG [8eb96dc7] 	 * rspec-rails (3.6.0)
+ DEBUG [8eb96dc7] 	 * factory_girl (4.8.0)
+ DEBUG [8eb96dc7] 	 * factory_girl_rails (4.8.0)
+ DEBUG [8eb96dc7] 	 * faker (1.7.3)
+ DEBUG [8eb96dc7] 	 * rails-controller-testing (1.0.2)
+ DEBUG [8eb96dc7] 	 * coderay (1.1.1)
+ DEBUG [8eb96dc7] 	 * slop (3.6.0)
+ DEBUG [8eb96dc7] 	 * pry (0.10.4)
+ DEBUG [8eb96dc7] 	 * pry-rails (0.3.6)
+ DEBUG [8eb96dc7] 	 * erb2haml (0.1.5)
+ DEBUG [8eb96dc7] 	 * bindex (0.5.0)
+ DEBUG [8eb96dc7] 	 * web-console (3.5.1)
+ DEBUG [8eb96dc7] 	 * rb-fsevent (0.10.2)
+ DEBUG [8eb96dc7] 	 * ffi (1.9.18)
+ DEBUG [8eb96dc7] 	 * rb-inotify (0.9.10)
+ DEBUG [8eb96dc7] 	 * listen (3.0.8)
+ DEBUG [8eb96dc7] 	 * spring (2.0.2)
+ DEBUG [8eb96dc7] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [8eb96dc7] 	Install missing gems with `bundle install`
+ DEBUG [8eb96dc7] Finished in 0.327 seconds with exit status 1 (failed).
+  INFO [cce9205b] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet as ec2-user@52.69.6.42
+ DEBUG [cce9205b] Command: cd /var/www/Pairs/releases/20170712101016 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet )
+  INFO [cce9205b] Finished in 2.309 seconds with exit status 0 (successful).
+ DEBUG [6831f9f6] Running if test ! -d /var/www/Pairs/releases/20170712101016; then echo "Directory does not exist '/var/www/Pairs/releases/20170712101016'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [6831f9f6] Command: if test ! -d /var/www/Pairs/releases/20170712101016; then echo "Directory does not exist '/var/www/Pairs/releases/20170712101016'" 1>&2; false; fi
+ DEBUG [6831f9f6] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO [ce8dc9f4] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@52.69.6.42
+ DEBUG [ce8dc9f4] Command: cd /var/www/Pairs/releases/20170712101016 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [ce8dc9f4] Finished in 2.426 seconds with exit status 0 (successful).
+ DEBUG [7b62a7d7] Running if test ! -d /var/www/Pairs/releases/20170712101016; then echo "Directory does not exist '/var/www/Pairs/releases/20170712101016'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [7b62a7d7] Command: if test ! -d /var/www/Pairs/releases/20170712101016; then echo "Directory does not exist '/var/www/Pairs/releases/20170712101016'" 1>&2; false; fi
+ DEBUG [7b62a7d7] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [9b9ff490] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712101016/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [9b9ff490] Command: cd /var/www/Pairs/releases/20170712101016 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712101016/assets_manifest_backup )
+  INFO [9b9ff490] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [7f146d24] Running /usr/bin/env ls /var/www/Pairs/releases/20170712101016/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [7f146d24] Command: cd /var/www/Pairs/releases/20170712101016 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170712101016/public/assets/.sprockets-manifest* )
+ DEBUG [7f146d24] 	/var/www/Pairs/releases/20170712101016/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [7f146d24] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [918a4010] Running /usr/bin/env ls /var/www/Pairs/releases/20170712101016/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [918a4010] Command: cd /var/www/Pairs/releases/20170712101016 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170712101016/public/assets/.sprockets-manifest* )
+ DEBUG [918a4010] 	/var/www/Pairs/releases/20170712101016/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [918a4010] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [4f5be218] Running /usr/bin/env cp /var/www/Pairs/releases/20170712101016/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170712101016/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [4f5be218] Command: cd /var/www/Pairs/releases/20170712101016 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/Pairs/releases/20170712101016/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170712101016/assets_manifest_backup )
+  INFO [4f5be218] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [55fbe78d] Running if test ! -d /var/www/Pairs/releases/20170712101016; then echo "Directory does not exist '/var/www/Pairs/releases/20170712101016'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [55fbe78d] Command: if test ! -d /var/www/Pairs/releases/20170712101016; then echo "Directory does not exist '/var/www/Pairs/releases/20170712101016'" 1>&2; false; fi
+ DEBUG [55fbe78d] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [16851252] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@52.69.6.42
+ DEBUG [16851252] Command: cd /var/www/Pairs/releases/20170712101016 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [16851252] Finished in 2.404 seconds with exit status 0 (successful).
+  INFO [8c85723c] Running /usr/bin/env ln -s /var/www/Pairs/releases/20170712101016 /var/www/Pairs/releases/current as ec2-user@52.69.6.42
+ DEBUG [8c85723c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/releases/20170712101016 /var/www/Pairs/releases/current )
+  INFO [8c85723c] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [082ca255] Running /usr/bin/env mv /var/www/Pairs/releases/current /var/www/Pairs as ec2-user@52.69.6.42
+ DEBUG [082ca255] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /var/www/Pairs/releases/current /var/www/Pairs )
+  INFO [082ca255] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [8dbc8432] Running if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [8dbc8432] Command: if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi
+ DEBUG [8dbc8432] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [89350876] Running [ -e /var/www/Pairs/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` as ec2-user@52.69.6.42
+ DEBUG [89350876] Command: [ -e /var/www/Pairs/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid`
+ DEBUG [89350876] 	bash: 0 行: kill: (4048) - そのようなプロセスはありません
+ DEBUG [89350876] Finished in 0.026 seconds with exit status 1 (failed).
+  INFO [a914e035] Running $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/Pairs/current/config/unicorn.rb -E deployment -D  as ec2-user@52.69.6.42
+ DEBUG [a914e035] Command: cd /var/www/Pairs/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/Pairs/current/config/unicorn.rb -E deployment -D  )
+  INFO [a914e035] Finished in 2.616 seconds with exit status 0 (successful).
+ DEBUG [df480da4] Running if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [df480da4] Command: if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi
+ DEBUG [df480da4] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [1311d2fa] Running /usr/bin/env kill -s USR2 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` as ec2-user@52.69.6.42
+ DEBUG [1311d2fa] Command: cd /var/www/Pairs/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env kill -s USR2 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` )
+  INFO [1311d2fa] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [cf12cd74] Running /usr/bin/env ls -x /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [cf12cd74] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /var/www/Pairs/releases )
+ DEBUG [cf12cd74] 	20170712092502	20170712094050	20170712094314	20170712094448	20170712100800
+20170712101016
+ DEBUG [cf12cd74] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 52.69.6.42
+  INFO [e13560dd] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712092502 as ec2-user@52.69.6.42
+ DEBUG [e13560dd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712092502 )
+  INFO [e13560dd] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [a50119b4] Running if test ! -d /var/www/Pairs/releases; then echo "Directory does not exist '/var/www/Pairs/releases'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [a50119b4] Command: if test ! -d /var/www/Pairs/releases; then echo "Directory does not exist '/var/www/Pairs/releases'" 1>&2; false; fi
+ DEBUG [a50119b4] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [94caa265] Running /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712101016 by poppo" >> /var/www/Pairs/revisions.log as ec2-user@52.69.6.42
+ DEBUG [94caa265] Command: cd /var/www/Pairs/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712101016 by poppo" >> /var/www/Pairs/revisions.log )
+  INFO [94caa265] Finished in 0.064 seconds with exit status 0 (successful).
+>>>>>>> Stashed changes
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-12 19:39:31 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [102f0426] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.69.6.42
+ DEBUG [102f0426] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [102f0426] Finished in 0.529 seconds with exit status 0 (successful).
+  INFO [e5143719] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.69.6.42
+ DEBUG [e5143719] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [e5143719] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Pairs-production-poppo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Pairs-production-poppo.sh 100.0%
+  INFO [9e7cbc2a] Running /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh as ec2-user@52.69.6.42
+ DEBUG [9e7cbc2a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-Pairs-production-poppo.sh )
+  INFO [9e7cbc2a] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [32329037] Running /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD as ec2-user@52.69.6.42
+ DEBUG [32329037] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git ls-remote git@github.com:poppo4444/Pairs.git HEAD )
+ DEBUG [32329037] 	4319472d106fe609295cb1f76d243fe31754abd4	HEAD
+  INFO [32329037] Finished in 1.680 seconds with exit status 0 (successful).
+  INFO [d8a1c872] Running /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [d8a1c872] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared /var/www/Pairs/releases )
+  INFO [d8a1c872] Finished in 0.036 seconds with exit status 0 (successful).
+  INFO [703fd83d] Running /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets as ec2-user@52.69.6.42
+ DEBUG [703fd83d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/shared/log /var/www/Pairs/shared/tmp/pids /var/www/Pairs/shared/tmp/cache /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/shared/public/system /var/www/Pairs/shared/public/uploads /var/www/Pairs/shared/public/assets )
+  INFO [703fd83d] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [95da1292] Running [ -f /var/www/Pairs/current/REVISION ] as ec2-user@52.69.6.42
+ DEBUG [95da1292] Command: [ -f /var/www/Pairs/current/REVISION ]
+ DEBUG [95da1292] Finished in 0.037 seconds with exit status 0 (successful).
+ DEBUG [a976b9d9] Running /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null as ec2-user@52.69.6.42
+ DEBUG [a976b9d9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/Pairs/current/REVISION 2>/dev/null )
+ DEBUG [a976b9d9] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [a976b9d9] Finished in 0.034 seconds with exit status 0 (successful).
+ DEBUG [760d22b4] Running [ -f /var/www/Pairs/repo/HEAD ] as ec2-user@52.69.6.42
+ DEBUG [760d22b4] Command: [ -f /var/www/Pairs/repo/HEAD ]
+ DEBUG [760d22b4] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/Pairs/repo
+ DEBUG [62cd6741] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [62cd6741] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [62cd6741] Finished in 0.037 seconds with exit status 0 (successful).
+  INFO [62194460] Running /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git as ec2-user@52.69.6.42
+ DEBUG [62194460] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote set-url origin git@github.com:poppo4444/Pairs.git )
+  INFO [62194460] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [4879b3ed] Running /usr/bin/env git remote update --prune as ec2-user@52.69.6.42
+ DEBUG [4879b3ed] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [4879b3ed] 	Fetching origin
+  INFO [4879b3ed] Finished in 1.570 seconds with exit status 0 (successful).
+ DEBUG [75d21260] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [75d21260] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [75d21260] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [ac5023de] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712103934 as ec2-user@52.69.6.42
+ DEBUG [ac5023de] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712103934 )
+  INFO [ac5023de] Finished in 0.038 seconds with exit status 0 (successful).
+  INFO [4405b1b1] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170712103934 as ec2-user@52.69.6.42
+ DEBUG [4405b1b1] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/Pairs/releases/20170712103934 )
+  INFO [4405b1b1] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [119049da] Running if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [119049da] Command: if test ! -d /var/www/Pairs/repo; then echo "Directory does not exist '/var/www/Pairs/repo'" 1>&2; false; fi
+ DEBUG [119049da] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [0debd188] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.69.6.42
+ DEBUG [0debd188] Command: cd /var/www/Pairs/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Pairs-production-poppo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [0debd188] 	4319472d106fe609295cb1f76d243fe31754abd4
+ DEBUG [0debd188] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [c8d0c2ef] Running if test ! -d /var/www/Pairs/releases/20170712103934; then echo "Directory does not exist '/var/www/Pairs/releases/20170712103934'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [c8d0c2ef] Command: if test ! -d /var/www/Pairs/releases/20170712103934; then echo "Directory does not exist '/var/www/Pairs/releases/20170712103934'" 1>&2; false; fi
+ DEBUG [c8d0c2ef] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [4377e4b9] Running /usr/bin/env echo "4319472d106fe609295cb1f76d243fe31754abd4" >> REVISION as ec2-user@52.69.6.42
+ DEBUG [4377e4b9] Command: cd /var/www/Pairs/releases/20170712103934 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "4319472d106fe609295cb1f76d243fe31754abd4" >> REVISION )
+  INFO [4377e4b9] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [26423fcd] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712103934 /var/www/Pairs/releases/20170712103934/tmp /var/www/Pairs/releases/20170712103934/vendor /var/www/Pairs/releases/20170712103934/public as ec2-user@52.69.6.42
+ DEBUG [26423fcd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712103934 /var/www/Pairs/releases/20170712103934/tmp /var/www/Pairs/releases/20170712103934/vendor /var/www/Pairs/releases/20170712103934/public )
+  INFO [26423fcd] Finished in 0.032 seconds with exit status 0 (successful).
+ DEBUG [cb3e3c05] Running [ -L /var/www/Pairs/releases/20170712103934/log ] as ec2-user@52.69.6.42
+ DEBUG [cb3e3c05] Command: [ -L /var/www/Pairs/releases/20170712103934/log ]
+ DEBUG [cb3e3c05] Finished in 0.022 seconds with exit status 1 (failed).
+ DEBUG [90ecab5f] Running [ -d /var/www/Pairs/releases/20170712103934/log ] as ec2-user@52.69.6.42
+ DEBUG [90ecab5f] Command: [ -d /var/www/Pairs/releases/20170712103934/log ]
+ DEBUG [90ecab5f] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [3a8c65ba] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712103934/log as ec2-user@52.69.6.42
+ DEBUG [3a8c65ba] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712103934/log )
+  INFO [3a8c65ba] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [ee1d0047] Running /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170712103934/log as ec2-user@52.69.6.42
+ DEBUG [ee1d0047] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/log /var/www/Pairs/releases/20170712103934/log )
+  INFO [ee1d0047] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [13ff99c9] Running [ -L /var/www/Pairs/releases/20170712103934/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [13ff99c9] Command: [ -L /var/www/Pairs/releases/20170712103934/tmp/pids ]
+ DEBUG [13ff99c9] Finished in 0.024 seconds with exit status 1 (failed).
+ DEBUG [a4fd151d] Running [ -d /var/www/Pairs/releases/20170712103934/tmp/pids ] as ec2-user@52.69.6.42
+ DEBUG [a4fd151d] Command: [ -d /var/www/Pairs/releases/20170712103934/tmp/pids ]
+ DEBUG [a4fd151d] Finished in 0.022 seconds with exit status 1 (failed).
+  INFO [7e81131b] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170712103934/tmp/pids as ec2-user@52.69.6.42
+ DEBUG [7e81131b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/pids /var/www/Pairs/releases/20170712103934/tmp/pids )
+  INFO [7e81131b] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [28846a22] Running [ -L /var/www/Pairs/releases/20170712103934/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [28846a22] Command: [ -L /var/www/Pairs/releases/20170712103934/tmp/cache ]
+ DEBUG [28846a22] Finished in 0.025 seconds with exit status 1 (failed).
+ DEBUG [51c9323e] Running [ -d /var/www/Pairs/releases/20170712103934/tmp/cache ] as ec2-user@52.69.6.42
+ DEBUG [51c9323e] Command: [ -d /var/www/Pairs/releases/20170712103934/tmp/cache ]
+ DEBUG [51c9323e] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [f5321cda] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712103934/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [f5321cda] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712103934/tmp/cache )
+  INFO [f5321cda] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [4b614c2f] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170712103934/tmp/cache as ec2-user@52.69.6.42
+ DEBUG [4b614c2f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/cache /var/www/Pairs/releases/20170712103934/tmp/cache )
+  INFO [4b614c2f] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [f8eb5f40] Running [ -L /var/www/Pairs/releases/20170712103934/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [f8eb5f40] Command: [ -L /var/www/Pairs/releases/20170712103934/tmp/sockets ]
+ DEBUG [f8eb5f40] Finished in 0.024 seconds with exit status 1 (failed).
+ DEBUG [9bb3d900] Running [ -d /var/www/Pairs/releases/20170712103934/tmp/sockets ] as ec2-user@52.69.6.42
+ DEBUG [9bb3d900] Command: [ -d /var/www/Pairs/releases/20170712103934/tmp/sockets ]
+ DEBUG [9bb3d900] Finished in 0.024 seconds with exit status 1 (failed).
+  INFO [cdd9e1d2] Running /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170712103934/tmp/sockets as ec2-user@52.69.6.42
+ DEBUG [cdd9e1d2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/tmp/sockets /var/www/Pairs/releases/20170712103934/tmp/sockets )
+  INFO [cdd9e1d2] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [a08d43b9] Running [ -L /var/www/Pairs/releases/20170712103934/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [a08d43b9] Command: [ -L /var/www/Pairs/releases/20170712103934/vendor/bundle ]
+ DEBUG [a08d43b9] Finished in 0.026 seconds with exit status 1 (failed).
+ DEBUG [9f306af6] Running [ -d /var/www/Pairs/releases/20170712103934/vendor/bundle ] as ec2-user@52.69.6.42
+ DEBUG [9f306af6] Command: [ -d /var/www/Pairs/releases/20170712103934/vendor/bundle ]
+ DEBUG [9f306af6] Finished in 0.029 seconds with exit status 1 (failed).
+  INFO [75406f19] Running /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170712103934/vendor/bundle as ec2-user@52.69.6.42
+ DEBUG [75406f19] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/vendor/bundle /var/www/Pairs/releases/20170712103934/vendor/bundle )
+  INFO [75406f19] Finished in 0.033 seconds with exit status 0 (successful).
+ DEBUG [3995730c] Running [ -L /var/www/Pairs/releases/20170712103934/public/system ] as ec2-user@52.69.6.42
+ DEBUG [3995730c] Command: [ -L /var/www/Pairs/releases/20170712103934/public/system ]
+ DEBUG [3995730c] Finished in 0.026 seconds with exit status 1 (failed).
+ DEBUG [5f2549f5] Running [ -d /var/www/Pairs/releases/20170712103934/public/system ] as ec2-user@52.69.6.42
+ DEBUG [5f2549f5] Command: [ -d /var/www/Pairs/releases/20170712103934/public/system ]
+ DEBUG [5f2549f5] Finished in 0.025 seconds with exit status 1 (failed).
+  INFO [f242cdc1] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170712103934/public/system as ec2-user@52.69.6.42
+ DEBUG [f242cdc1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/system /var/www/Pairs/releases/20170712103934/public/system )
+  INFO [f242cdc1] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [abb3a1fa] Running [ -L /var/www/Pairs/releases/20170712103934/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [abb3a1fa] Command: [ -L /var/www/Pairs/releases/20170712103934/public/uploads ]
+ DEBUG [abb3a1fa] Finished in 0.029 seconds with exit status 1 (failed).
+ DEBUG [f1374dad] Running [ -d /var/www/Pairs/releases/20170712103934/public/uploads ] as ec2-user@52.69.6.42
+ DEBUG [f1374dad] Command: [ -d /var/www/Pairs/releases/20170712103934/public/uploads ]
+ DEBUG [f1374dad] Finished in 0.024 seconds with exit status 1 (failed).
+  INFO [8f9e4b65] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170712103934/public/uploads as ec2-user@52.69.6.42
+ DEBUG [8f9e4b65] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/uploads /var/www/Pairs/releases/20170712103934/public/uploads )
+  INFO [8f9e4b65] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [93d5ec36] Running [ -L /var/www/Pairs/releases/20170712103934/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [93d5ec36] Command: [ -L /var/www/Pairs/releases/20170712103934/public/assets ]
+ DEBUG [93d5ec36] Finished in 0.023 seconds with exit status 1 (failed).
+ DEBUG [595c5a86] Running [ -d /var/www/Pairs/releases/20170712103934/public/assets ] as ec2-user@52.69.6.42
+ DEBUG [595c5a86] Command: [ -d /var/www/Pairs/releases/20170712103934/public/assets ]
+ DEBUG [595c5a86] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [ca62a9b9] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712103934/public/assets as ec2-user@52.69.6.42
+ DEBUG [ca62a9b9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712103934/public/assets )
+  INFO [ca62a9b9] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [3ab4cbd2] Running /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170712103934/public/assets as ec2-user@52.69.6.42
+ DEBUG [3ab4cbd2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/shared/public/assets /var/www/Pairs/releases/20170712103934/public/assets )
+  INFO [3ab4cbd2] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [8e16720d] Running if test ! -d /var/www/Pairs/releases/20170712103934; then echo "Directory does not exist '/var/www/Pairs/releases/20170712103934'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [8e16720d] Command: if test ! -d /var/www/Pairs/releases/20170712103934; then echo "Directory does not exist '/var/www/Pairs/releases/20170712103934'" 1>&2; false; fi
+ DEBUG [8e16720d] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [28ef564b] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle as ec2-user@52.69.6.42
+ DEBUG [28ef564b] Command: cd /var/www/Pairs/releases/20170712103934 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/Pairs/shared/bundle )
+ DEBUG [28ef564b] 	The following gems are missing
+ DEBUG [28ef564b] 	 * byebug (9.0.6)
+ DEBUG [28ef564b] 	 * net-ssh (4.1.0)
+ DEBUG [28ef564b] 	 * net-scp (1.2.1)
+ DEBUG [28ef564b] 	 * sshkit (1.14.0)
+ DEBUG [28ef564b] 	 * airbrussh (1.3.0)
+ DEBUG [28ef564b] 	 * capistrano (3.8.2)
+ DEBUG [28ef564b] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [28ef564b] 	 * capistrano-bundler (1.2.0)
+ DEBUG [28ef564b] 	 * capistrano-rails (1.3.0)
+ DEBUG [28ef564b] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [28ef564b] 	 * rspec-support (3.6.0)
+ DEBUG [28ef564b] 	 * rspec-core (3.6.0)
+ DEBUG [28ef564b] 	 * diff-lcs (1.3)
+ DEBUG [28ef564b] 	 * rspec-expectations (3.6.0)
+ DEBUG [28ef564b] 	 * rspec-mocks (3.6.0)
+ DEBUG [28ef564b] 	 * rspec-rails (3.6.0)
+ DEBUG [28ef564b] 	 * factory_girl (4.8.0)
+ DEBUG [28ef564b] 	 * factory_girl_rails (4.8.0)
+ DEBUG [28ef564b] 	 * faker (1.7.3)
+ DEBUG [28ef564b] 	 * rails-controller-testing (1.0.2)
+ DEBUG [28ef564b] 	 * coderay (1.1.1)
+ DEBUG [28ef564b] 	 * slop (3.6.0)
+ DEBUG [28ef564b] 	 * pry (0.10.4)
+ DEBUG [28ef564b] 	 * pry-rails (0.3.6)
+ DEBUG [28ef564b] 	 * erb2haml (0.1.5)
+ DEBUG [28ef564b] 	 * bindex (0.5.0)
+ DEBUG [28ef564b] 	 * web-console (3.5.1)
+ DEBUG [28ef564b] 	 * rb-fsevent (0.10.2)
+ DEBUG [28ef564b] 	 * ffi (1.9.18)
+ DEBUG [28ef564b] 	 * rb-inotify (0.9.10)
+ DEBUG [28ef564b] 	 * listen (3.0.8)
+ DEBUG [28ef564b] 	 * spring (2.0.2)
+ DEBUG [28ef564b] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [28ef564b] 	Install missing gems with `bundle install`
+ DEBUG [28ef564b] Finished in 0.334 seconds with exit status 1 (failed).
+  INFO [c874c0fa] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet as ec2-user@52.69.6.42
+ DEBUG [c874c0fa] Command: cd /var/www/Pairs/releases/20170712103934 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/Pairs/shared/bundle --without development test --deployment --quiet )
+  INFO [c874c0fa] Finished in 2.452 seconds with exit status 0 (successful).
+ DEBUG [2948b72c] Running if test ! -d /var/www/Pairs/releases/20170712103934; then echo "Directory does not exist '/var/www/Pairs/releases/20170712103934'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [2948b72c] Command: if test ! -d /var/www/Pairs/releases/20170712103934; then echo "Directory does not exist '/var/www/Pairs/releases/20170712103934'" 1>&2; false; fi
+ DEBUG [2948b72c] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [2da222cf] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@52.69.6.42
+ DEBUG [2da222cf] Command: cd /var/www/Pairs/releases/20170712103934 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [2da222cf] Finished in 2.594 seconds with exit status 0 (successful).
+ DEBUG [df36c482] Running if test ! -d /var/www/Pairs/releases/20170712103934; then echo "Directory does not exist '/var/www/Pairs/releases/20170712103934'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [df36c482] Command: if test ! -d /var/www/Pairs/releases/20170712103934; then echo "Directory does not exist '/var/www/Pairs/releases/20170712103934'" 1>&2; false; fi
+ DEBUG [df36c482] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [ce3217eb] Running /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712103934/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [ce3217eb] Command: cd /var/www/Pairs/releases/20170712103934 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/Pairs/releases/20170712103934/assets_manifest_backup )
+  INFO [ce3217eb] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [ee62ddd9] Running /usr/bin/env ls /var/www/Pairs/releases/20170712103934/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [ee62ddd9] Command: cd /var/www/Pairs/releases/20170712103934 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170712103934/public/assets/.sprockets-manifest* )
+ DEBUG [ee62ddd9] 	/var/www/Pairs/releases/20170712103934/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [ee62ddd9] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [5b61fffb] Running /usr/bin/env ls /var/www/Pairs/releases/20170712103934/public/assets/.sprockets-manifest* as ec2-user@52.69.6.42
+ DEBUG [5b61fffb] Command: cd /var/www/Pairs/releases/20170712103934 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/Pairs/releases/20170712103934/public/assets/.sprockets-manifest* )
+ DEBUG [5b61fffb] 	/var/www/Pairs/releases/20170712103934/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json
+ DEBUG [5b61fffb] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [52b8c257] Running /usr/bin/env cp /var/www/Pairs/releases/20170712103934/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170712103934/assets_manifest_backup as ec2-user@52.69.6.42
+ DEBUG [52b8c257] Command: cd /var/www/Pairs/releases/20170712103934 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/Pairs/releases/20170712103934/public/assets/.sprockets-manifest-568d4e5b021babc87ad07ed4be961528.json /var/www/Pairs/releases/20170712103934/assets_manifest_backup )
+  INFO [52b8c257] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [72ddd548] Running if test ! -d /var/www/Pairs/releases/20170712103934; then echo "Directory does not exist '/var/www/Pairs/releases/20170712103934'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [72ddd548] Command: if test ! -d /var/www/Pairs/releases/20170712103934; then echo "Directory does not exist '/var/www/Pairs/releases/20170712103934'" 1>&2; false; fi
+ DEBUG [72ddd548] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [791bea16] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@52.69.6.42
+ DEBUG [791bea16] Command: cd /var/www/Pairs/releases/20170712103934 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [791bea16] Finished in 2.403 seconds with exit status 0 (successful).
+  INFO [b0483078] Running /usr/bin/env ln -s /var/www/Pairs/releases/20170712103934 /var/www/Pairs/releases/current as ec2-user@52.69.6.42
+ DEBUG [b0483078] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/Pairs/releases/20170712103934 /var/www/Pairs/releases/current )
+  INFO [b0483078] Finished in 0.028 seconds with exit status 0 (successful).
+  INFO [4c062663] Running /usr/bin/env mv /var/www/Pairs/releases/current /var/www/Pairs as ec2-user@52.69.6.42
+ DEBUG [4c062663] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /var/www/Pairs/releases/current /var/www/Pairs )
+  INFO [4c062663] Finished in 0.032 seconds with exit status 0 (successful).
+ DEBUG [e119af8e] Running if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [e119af8e] Command: if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi
+ DEBUG [e119af8e] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [0f0d923d] Running [ -e /var/www/Pairs/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` as ec2-user@52.69.6.42
+ DEBUG [0f0d923d] Command: [ -e /var/www/Pairs/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid`
+ DEBUG [0f0d923d] Finished in 0.034 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+ DEBUG [9f03ac98] Running if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [9f03ac98] Command: if test ! -d /var/www/Pairs/current; then echo "Directory does not exist '/var/www/Pairs/current'" 1>&2; false; fi
+ DEBUG [9f03ac98] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [053b5cb8] Running /usr/bin/env kill -s USR2 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` as ec2-user@52.69.6.42
+ DEBUG [053b5cb8] Command: cd /var/www/Pairs/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env kill -s USR2 `cat /var/www/Pairs/shared/tmp/pids/unicorn.pid` )
+  INFO [053b5cb8] Finished in 0.033 seconds with exit status 0 (successful).
+ DEBUG [c3837ff0] Running /usr/bin/env ls -x /var/www/Pairs/releases as ec2-user@52.69.6.42
+ DEBUG [c3837ff0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /var/www/Pairs/releases )
+ DEBUG [c3837ff0] 	20170712094050	20170712094314	20170712094448	20170712100800	20170712101016
+20170712103934
+ DEBUG [c3837ff0] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 52.69.6.42
+  INFO [de93c30d] Running /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094050 as ec2-user@52.69.6.42
+ DEBUG [de93c30d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/Pairs/releases/20170712094050 )
+  INFO [de93c30d] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [34284a7a] Running if test ! -d /var/www/Pairs/releases; then echo "Directory does not exist '/var/www/Pairs/releases'" 1>&2; false; fi as ec2-user@52.69.6.42
+ DEBUG [34284a7a] Command: if test ! -d /var/www/Pairs/releases; then echo "Directory does not exist '/var/www/Pairs/releases'" 1>&2; false; fi
+ DEBUG [34284a7a] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [90923499] Running /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712103934 by poppo" >> /var/www/Pairs/revisions.log as ec2-user@52.69.6.42
+ DEBUG [90923499] Command: cd /var/www/Pairs/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 4319472d106fe609295cb1f76d243fe31754abd4) deployed as release 20170712103934 by poppo" >> /var/www/Pairs/revisions.log )
+  INFO [90923499] Finished in 0.069 seconds with exit status 0 (successful).

@@ -43,6 +43,7 @@ gem 'fog'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'kaminari'
+gem 'dotenv-rails'
 
 group :production do
   gem 'unicorn'
