@@ -2,8 +2,8 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   # API key
-  if Rails.env.production?     
-    config.omniauth :facebook, ENV['API_PRODUCT_ID'], ENV['API_PRODUCT_PASS']
+  if Rails.env.production?
+  config.omniauth :facebook, "241291043045652", ENV['API_PRODUCT_PASS']
   else
   config.omniauth :facebook, ENV['API_DEVELOPMENT_ID'], ENV['API_DEVELOPMENT_PASS']
   end
