@@ -10,7 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170713064530) do
+ActiveRecord::Schema.define(version: 20170719125215) do
+
+  create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "nickname"
+    t.string   "age"
+    t.string   "blood"
+    t.string   "brother"
+    t.string   "birthplace"
+    t.string   "language"
+    t.string   "education"
+    t.string   "job"
+    t.integer  "height"
+    t.string   "bodytype"
+    t.boolean  "marital"
+    t.boolean  "children"
+    t.boolean  "housemate"
+    t.datetime "holiday"
+    t.boolean  "liquor"
+    t.boolean  "tobacco"
+    t.boolean  "marriagedesire"
+    t.string   "wantchild"
+    t.string   "household"
+    t.string   "meet"
+    t.string   "datecost"
+    t.string   "personality"
+    t.string   "sociability"
+    t.text     "body",           limit: 65535
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "user_id",                      null: false
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
