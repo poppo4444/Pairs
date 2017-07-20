@@ -18014,3 +18014,15 @@ Processing by ProfileController#index as HTML
 Completed 200 OK in 94ms (Views: 91.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/5/profile" for 127.0.0.1 at 2017-07-20 14:27:52 +0900
+Processing by ProfileController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering profile/index.haml within layouts/application
+  Rendered shared/_header.haml (41.6ms)
+  Rendered shared/_side.haml (82.7ms)
+  Rendered profile/_user_profile.haml (91.3ms)
+  Rendered shared/_footer.haml (25.0ms)
+  Rendered profile/index.haml within layouts/application (315.4ms)
+Completed 200 OK in 501ms (Views: 457.6ms | ActiveRecord: 0.0ms)
+
+
