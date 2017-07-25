@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   :omniauth_callbacks => "users/omniauth_callbacks" 
   } 
    resources :users,only: %i() do
-    resources :profile, only: [:index,:new,:create,:edit,:update]
+    resources :profile, only: [:index,:edit,:update]
   end
   resources :message,only: [:index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

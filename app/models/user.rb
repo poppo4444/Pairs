@@ -9,13 +9,15 @@ class User < ApplicationRecord
   def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first
     unless user
-      user = User.create(
+      user = User.new(
         uid:      auth.uid,
         provider: auth.provider,
         email:    User.dummy_email(auth),
         password: Devise.friendly_token[0, 20],
-        image:    auth.info.image
+        name:     auth.info.name
       )
+      user.remote_image_url = auth.info.image.gsub('http://','https://')
+      user.save
     end
     user
   end
