@@ -3,6 +3,7 @@
     .banner
       %p.banner__message バナーだよ
     .box_search_menu
+      =link_to "編集はこちら", edit_profile_path(@user.id)
       .button_search_setting.float_left
         %a.button_b.button_white_a 
           %span.search プロフィールの見え方を確認
@@ -46,125 +47,125 @@
         .mypage_detail_inner_right
           .box_my_display_photo
             .my_summary_info
+              =image_tag current_user.image,size: "390x390"
             .box_my_photo
             .box_my_photo_pager
               %a.pager_pre.button_c.button_white_a 前の4枚
               %a.pager_next.button_c.button_white_a 次の４枚
       .box_mypage_detail_inner02
-        - @profiles.each do |profile|
-          .mypage_detail_inner_left
-            .box_profile_detail
-              %p.detail_sub_note この項目を押すと編集できます。
-              %p.detail_sub_title
-                %span.title_a Pairsプロフ
-              %dl.detail_item_list
-                %dt.detail_item_title 
-                  %span.item_title 身長
-                %dd.detail_item_value= profile.height
-                %dt.detail_item_title 
-                  %span.item_title 体型
-                %dd.detail_item_value= profile.bodytype
-                %dt.detail_item_title
-                  %span.item_title 血液型
-                %dd.detail_item_value= profile.blood
-                %dt.detail_item_title
-                  %span.item_title 居住区
-                %dd.detail_item_value DBに作る
-                %dt.detail_item_title 
-                  %span.item_title 出身地
-                %dd.detail_item_value= profile.birthplace
-                %dt.detail_item_title 
-                  %span.item_title 職種
-                %dd.detail_item_value= profile.job
-                %dt.detail_item_title 
-                  %span.item_title 学歴
-                %dd.detail_item_value= profile.education
-                %dt.detail_item_title
-                  %span.item_title 年収
-                %dd.detail_item_value DBに作る
-                %dt.detail_item_title 
-                  %span.item_title タバコ
-                %dd.detail_item_value= profile.tobacco
-              %p.detail_sub_title
-                %span.title_a 詳細プロフ
-              %p.detail_sub_title 基本情報
-              %dl.detail_item_list
-                %dt.detail_item_title 
-                  %span.item_title ニックネーム
-                %dd.detail_item_value= profile.nickname
-                %dt.detail_item_title 
-                  %span.item_title 年齢
-                %dd.detail_item_value= profile.age
-                %dt.detail_item_title 
-                  %span.item_title 兄弟姉妹
-                %dd.detail_item_value= profile.brother
-                %dt.detail_item_title 
-                  %span.item_title 国籍
-                %dd.detail_item_value 蓮舫
-                %dt.detail_item_title 
-                  %span.item_title 話せる言語
-                %dd.detail_item_value= profile.language
-              %p.detail_sub_title 恋愛・結婚について
-              %dl.detail_item_list
-                %dt.detail_item_title 
-                  %span.item_title 結婚歴
-                %dd.detail_item_value= profile.marital
-                %dt.detail_item_title 
-                  %span.item_title 子供の有無
-                %dd.detail_item_value= profile.children
-                %dt.detail_item_title 
-                  %span.item_title 結婚に対する意思
-                %dd.detail_item_value= profile.marriagedesire
-                %dt.detail_item_title 
-                  %span.item_title 子供が欲しいか
-                %dd.detail_item_value= profile.wantchild
-                %dt.detail_item_title 
-                  %span.item_title 家事・育児
-                %dd.detail_item_value= profile.household
-                %dt.detail_item_title 
-                  %span.item_title 出会うまでの希望
-                %dd.detail_item_value= profile.meet
-                %dt.detail_item_title 
-                  %span.item_title 初回デート費用
-                %dd.detail_item_value= profile.datecost
-              %p.detail_sub_title 性格・趣味・生活
-              %dl.detail_item_list
-                %dt.detail_item_title 
-                  %span.item_title 性格・タイプ
-                %dd.detail_item_value= profile.personality
-                %dt.detail_item_title 
-                  %span.item_title 社交性
-                %dd.detail_item_value= profile.sociability
-                %dt.detail_item_title 
-                  %span.item_title 同居人
-                %dd.detail_item_value= profile.housemate
-                %dt.detail_item_title 
-                  %span.item_title 休日
-                %dd.detail_item_value= profile.holiday
-                %dt.detail_item_title 
-                  %span.item_title お酒
-                %dd.detail_item_value= profile.liquor
-                %dt.detail_item_title 
-                  %span.item_title 好きなこと・趣味
-                %dd.detail_item_value 作る
-            %a.button_b.button_white_a 
-              %span 質問付きいいね！の設定
-          .mypage_detail_inner_right
-            .box_join_community
-              .join_community_title_b
-                %span.title_a 参加しているコミュニティ
-                %a.button_b.button_white_a.button_new_entry 新しいコミュニティに入る
-              %ul.join_community_list
-                %li.join_community_item
-                  %a
-                    .box_community_item_img
-                      %p image画像
-                    %p.community_item_title ペンタトニックスが好き
-                    %p.community_item_count 276人
-              .box_community_pager
-                %a.pager_pre.button_c.button_white_a.fa.fa-chevron-left
-                %a.pager_next.button_c.button_white_a.fa.fa-chevron-right
-            .box_mypage_introduction
-              %p.introduction_title 自己紹介文
-              %p.introduction_note 自己紹介文を充実させると、マッチング１０倍UP!!
-              %p.introduction_text 本文
+        .mypage_detail_inner_left
+          .box_profile_detail
+            %p.detail_sub_note この項目を押すと編集できます。
+            %p.detail_sub_title
+              %span.title_a Pairsプロフ
+            %dl.detail_item_list
+              %dt.detail_item_title 
+                %span.item_title 身長
+              %dd.detail_item_value= @user.height
+              %dt.detail_item_title 
+                %span.item_title 体型
+              %dd.detail_item_value= @user.bodytype
+              %dt.detail_item_title
+                %span.item_title 血液型
+              %dd.detail_item_value= @user.blood
+              %dt.detail_item_title
+                %span.item_title 居住区
+              %dd.detail_item_value= @user.live
+              %dt.detail_item_title 
+                %span.item_title 出身地
+              %dd.detail_item_value= @user.birthplace
+              %dt.detail_item_title 
+                %span.item_title 職種
+              %dd.detail_item_value= @user.job
+              %dt.detail_item_title 
+                %span.item_title 学歴
+              %dd.detail_item_value= @user.education
+              %dt.detail_item_title
+                %span.item_title 年収
+              %dd.detail_item_value= @user.income
+              %dt.detail_item_title 
+                %span.item_title タバコ
+              %dd.detail_item_value= @user.tobacco
+            %p.detail_sub_title
+              %span.title_a 詳細プロフ
+            %p.detail_sub_title 基本情報
+            %dl.detail_item_list
+              %dt.detail_item_title 
+                %span.item_title ニックネーム
+              %dd.detail_item_value= @user.nickname
+              %dt.detail_item_title 
+                %span.item_title 年齢
+              %dd.detail_item_value= @user.age
+              %dt.detail_item_title 
+                %span.item_title 兄弟姉妹
+              %dd.detail_item_value= @user.brother
+              %dt.detail_item_title 
+                %span.item_title 国籍
+              %dd.detail_item_value= @user.country
+              %dt.detail_item_title 
+                %span.item_title 話せる言語
+              %dd.detail_item_value= @user.language
+            %p.detail_sub_title 恋愛・結婚について
+            %dl.detail_item_list
+              %dt.detail_item_title 
+                %span.item_title 結婚歴
+              %dd.detail_item_value= @user.marital
+              %dt.detail_item_title 
+                %span.item_title 子供の有無
+              %dd.detail_item_value= @user.children
+              %dt.detail_item_title 
+                %span.item_title 結婚に対する意思
+              %dd.detail_item_value= @user.marriagedesire
+              %dt.detail_item_title 
+                %span.item_title 子供が欲しいか
+              %dd.detail_item_value= @user.wantchild
+              %dt.detail_item_title 
+                %span.item_title 家事・育児
+              %dd.detail_item_value= @user.household
+              %dt.detail_item_title 
+                %span.item_title 出会うまでの希望
+              %dd.detail_item_value= @user.meet
+              %dt.detail_item_title 
+                %span.item_title 初回デート費用
+              %dd.detail_item_value= @user.datecost
+            %p.detail_sub_title 性格・趣味・生活
+            %dl.detail_item_list
+              %dt.detail_item_title 
+                %span.item_title 性格・タイプ
+              %dd.detail_item_value= @user.personality
+              %dt.detail_item_title 
+                %span.item_title 社交性
+              %dd.detail_item_value= @user.sociability
+              %dt.detail_item_title 
+                %span.item_title 同居人
+              %dd.detail_item_value= @user.housemate
+              %dt.detail_item_title 
+                %span.item_title 休日
+              %dd.detail_item_value= @user.holiday
+              %dt.detail_item_title 
+                %span.item_title お酒
+              %dd.detail_item_value= @user.liquor
+              %dt.detail_item_title 
+                %span.item_title 好きなこと・趣味
+              %dd.detail_item_value= @user.hobby
+          %a.button_b.button_white_a 
+            %span 質問付きいいね！の設定
+        .mypage_detail_inner_right
+          .box_join_community
+            .join_community_title_b
+              %span.title_a 参加しているコミュニティ
+              %a.button_b.button_white_a.button_new_entry 新しいコミュニティに入る
+            %ul.join_community_list
+              %li.join_community_item
+                %a
+                  .box_community_item_img
+                    %p image画像
+                  %p.community_item_title ペンタトニックスが好き
+                  %p.community_item_count 276人
+            .box_community_pager
+              %a.pager_pre.button_c.button_white_a.fa.fa-chevron-left
+              %a.pager_next.button_c.button_white_a.fa.fa-chevron-right
+          .box_mypage_introduction
+            %p.introduction_title 自己紹介文
+            %p.introduction_note 自己紹介文を充実させると、マッチング１０倍UP!!
+            %p.introduction_text 本文

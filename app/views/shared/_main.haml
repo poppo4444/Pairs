@@ -33,41 +33,25 @@
         %button.button_b.button_white_a.button_show_pickup 今日のピックアップ
     .box_list_view_user
       %ul.list_view_users
-        %li.list_view_user_item
-          =image_tag "logo_pairs.png"
-          .box_user_info01
-            %p.user_summary ◯
-            %span.user_area 神奈川
-            %span.user_age 28歳
-          .box_user_info02
-          .box_user_info03
-            %p.user_chemistry 86%
-            %i.fa.fa-thumbs-o-up
-            %p.user_like_count 30いいね！
+        -@searches.each do |user|
+          %li.list_view_user_item
+            .box_user_photo
+              =image_tag(user.image,size: "150x150")
+            .box_user_info01
+              %span.user_summary ●
+              %span.user_area= user.birthplace
+              %span.user_age= "#{user.age} 歳" 
+            .box_user_info02
+            .box_user_info03
+              %i.fa.fa-thumbs-o-up 30
+              %i.fa.fa-heart.user_chemistry 86%
             .user_tweet
               .user_tweet_body よろしくお願いします！
-          %button.box_button_like
-            %i.fa.fa-thumbs-o-up いいね！
-        %li.list_view_user_item
-          =image_tag "logo_pairs.png"
-          .box_user_info01
-            %p.user_summary ◯
-            %span.user_area 神奈川
-            %span.user_age 28歳
-          .box_user_info02
-          .box_user_info03
-            %p.user_chemistry 86%
-            %i.fa.fa-thumbs-o-up
-            %p.user_like_count 30いいね！
-            .user_tweet
-              .user_tweet_body よろしくお願いします！
-          %button.box_button_like
-            %i.fa.fa-thumbs-o-up いいね！
-      .box_result_pager
-        %ol.pager_nums 雷
-        %li.pager_num
+            =render "users/like_form", user: user
+      =paginate @searches
       .box_like_remaining
         %p いいねをあと
         %em
           %span#total_like_numbers_footer 46人押せます！
+
 

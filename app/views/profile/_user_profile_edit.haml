@@ -1,0 +1,171 @@
+.ui-view
+  .main.box_mypage_view.contents_padding
+    .banner
+      %p.banner__message バナーだよ
+    .box_search_menu
+      .button_search_setting.float_left
+        %a.button_b.button_white_a 
+          %span.search プロフィールの見え方を確認
+      %nav.box_change_view_tabs
+        %ul.change_view_tabs
+          %li.tab_item.tab_item01.is_current
+          %li.tab_item.tab_item02
+      .button_search_setting.float_right
+        %a.button_b.button_white_a.pairs_new
+          %span.news.fa.fa-lightbulb-o Pairsからのお知らせ
+    .box_mypage_detail
+      .box_mypage_detail_inner01
+        .mypage_detail_inner_left
+          .user_status
+            .user_status_title
+              %p 会員ステータス
+              %a.button_status_conf.button_f.button_white_a 確認
+            %p.user_status_label 無料会員
+          .user_tweet
+            .user_tweet_title
+              %p つぶやき
+            .user_tweet_inner
+              .user_tweet_inner
+                .user_tweet_textarea
+                  %p.user_tweet_textarea ここにツイートしてね
+          .visiter_summary
+            %p.visiter_summary_title 足跡
+            .visiter_summary_count
+              %p.text 過去１週間の足跡
+              %p.count 
+                %em１６
+                人
+            %ul.user_list
+              %li.user_item
+                %a
+                  %img.image-circle 
+                  %p.user_info 名前
+                  %p.user_time 時間
+            .box_link_more
+              %a.button_f.button_white_a もっと見る
+        .mypage_detail_inner_right
+          .box_my_display_photo
+            .my_summary_info
+            .box_my_photo
+            .box_my_photo_pager
+              %a.pager_pre.button_c.button_white_a 前の4枚
+              %a.pager_next.button_c.button_white_a 次の４枚
+      .box_mypage_detail_inner02
+        .mypage_detail_inner_left
+          .box_profile_detail
+            =form_for @user ,:url => {:action => :update} do |f|
+              %p.detail_sub_note この項目を押すと編集できます。
+              %p.detail_sub_title
+                %span.title_a Pairsプロフ
+              %dl.detail_item_list
+                %dt.detail_item_title 
+                  %span.item_title 身長
+                %dd.detail_item_value= f.text_field :height,autofocus: true
+                %dt.detail_item_title 
+                  %span.item_title 体型
+                %dd.detail_item_value= f.text_field :bodytype
+                %dt.detail_item_title
+                  %span.item_title 血液型
+                %dd.detail_item_value= f.text_field :blood
+                %dt.detail_item_title
+                  %span.item_title 居住区
+                %dd.detail_item_value= f.text_field :live
+                %dt.detail_item_title 
+                  %span.item_title 出身地
+                %dd.detail_item_value= f.text_field :birthplace
+                %dt.detail_item_title 
+                  %span.item_title 職種
+                %dd.detail_item_value= f.text_field :job
+                %dt.detail_item_title 
+                  %span.item_title 学歴
+                %dd.detail_item_value= f.text_field :education
+                %dt.detail_item_title
+                  %span.item_title 年収
+                %dd.detail_item_value= f.text_field :income
+                %dt.detail_item_title 
+                  %span.item_title タバコ
+                %dd.detail_item_value= f.text_field :tobacco
+              %p.detail_sub_title
+                %span.title_a 詳細プロフ
+              %p.detail_sub_title 基本情報
+              %dl.detail_item_list
+                %dt.detail_item_title 
+                  %span.item_title ニックネーム
+                %dd.detail_item_value= f.text_field :nickname
+                %dt.detail_item_title 
+                  %span.item_title 年齢
+                %dd.detail_item_value= f.text_field :age
+                %dt.detail_item_title 
+                  %span.item_title 兄弟姉妹
+                %dd.detail_item_value= f.text_field :brother
+                %dt.detail_item_title 
+                  %span.item_title 国籍
+                %dd.detail_item_value= f.text_field :country
+                %dt.detail_item_title 
+                  %span.item_title 話せる言語
+                %dd.detail_item_value= f.text_field :language
+              %p.detail_sub_title 恋愛・結婚について
+              %dl.detail_item_list
+                %dt.detail_item_title 
+                  %span.item_title 結婚歴
+                %dd.detail_item_value= f.text_field :marital
+                %dt.detail_item_title 
+                  %span.item_title 子供の有無
+                %dd.detail_item_value= f.text_field :children
+                %dt.detail_item_title 
+                  %span.item_title 結婚に対する意思
+                %dd.detail_item_value= f.text_field :marriagedesire
+                %dt.detail_item_title 
+                  %span.item_title 子供が欲しいか
+                %dd.detail_item_value= f.text_field :wantchild
+                %dt.detail_item_title 
+                  %span.item_title 家事・育児
+                %dd.detail_item_value= f.text_field :household
+                %dt.detail_item_title 
+                  %span.item_title 出会うまでの希望
+                %dd.detail_item_value= f.text_field :meet
+                %dt.detail_item_title 
+                  %span.item_title 初回デート費用
+                %dd.detail_item_value= f.text_field :datecost
+              %p.detail_sub_title 性格・趣味・生活
+              %dl.detail_item_list
+                %dt.detail_item_title 
+                  %span.item_title 性格・タイプ
+                %dd.detail_item_value= f.text_field :personality
+                %dt.detail_item_title 
+                  %span.item_title 社交性
+                %dd.detail_item_value= f.text_field :sociability
+                %dt.detail_item_title 
+                  %span.item_title 同居人
+                %dd.detail_item_value= f.text_field :housemate
+                %dt.detail_item_title 
+                  %span.item_title 休日
+                %dd.detail_item_value= f.text_field :holiday
+                %dt.detail_item_title 
+                  %span.item_title お酒
+                %dd.detail_item_value= f.text_field :liquor
+                %dt.detail_item_title 
+                  %span.item_title 好きなこと・趣味
+                %dd.detail_item_value= f.text_field :hobby
+                = f.submit "Save"
+          %a.button_b.button_white_a 
+            %span 質問付きいいね！の設定
+        .mypage_detail_inner_right
+          .box_join_community
+            .join_community_title_b
+              %span.title_a 参加しているコミュニティ
+              %a.button_b.button_white_a.button_new_entry 新しいコミュニティに入る
+            %ul.join_community_list
+              %li.join_community_item
+                %a
+                  .box_community_item_img
+                    %p image画像
+                  %p.community_item_title ペンタトニックスが好き
+                  %p.community_item_count 276人
+            .box_community_pager
+              %a.pager_pre.button_c.button_white_a.fa.fa-chevron-left
+              %a.pager_next.button_c.button_white_a.fa.fa-chevron-right
+          .box_mypage_introduction
+            %p.introduction_title 自己紹介文
+            %p.introduction_note 自己紹介文を充実させると、マッチング１０倍UP!!
+            %p.introduction_text 本文

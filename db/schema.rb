@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720123316) do
+ActiveRecord::Schema.define(version: 20170804033259) do
+
+  create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "liker_id"
+    t.integer  "liking_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["liker_id", "liking_id"], name: "index_likes_on_liker_id_and_liking_id", unique: true, using: :btree
+    t.index ["liker_id"], name: "index_likes_on_liker_id", using: :btree
+    t.index ["liking_id"], name: "index_likes_on_liking_id", using: :btree
+  end
 
   create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "nickname"
@@ -58,6 +68,36 @@ ActiveRecord::Schema.define(version: 20170720123316) do
     t.string   "name"
     t.string   "token"
     t.text     "image",                  limit: 65535
+    t.integer  "sexes"
+    t.string   "nickname"
+    t.integer  "age"
+    t.string   "blood"
+    t.string   "brother"
+    t.string   "birthplace"
+    t.string   "language"
+    t.string   "education"
+    t.string   "job"
+    t.integer  "height"
+    t.string   "bodytype"
+    t.string   "marital"
+    t.string   "children"
+    t.string   "housemate"
+    t.string   "holiday"
+    t.string   "liquor"
+    t.string   "tobacco"
+    t.string   "marriagedesire"
+    t.string   "wantchild"
+    t.string   "household"
+    t.string   "meet"
+    t.string   "datecost"
+    t.string   "personality"
+    t.string   "sociability"
+    t.string   "body"
+    t.string   "live"
+    t.string   "income"
+    t.string   "country"
+    t.string   "hobby"
+    t.string   "likes_count"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

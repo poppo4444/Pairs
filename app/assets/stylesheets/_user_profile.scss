@@ -137,11 +137,15 @@
           .box_my_display_photo{
             padding: 10px;
             background-color: #fff;
+            .my_summary_info{
+              text-align: center;
+            }
           }
         }
       }
       .box_mypage_detail_inner02{
         @include clearfix();
+        padding:1px;
         .mypage_detail_inner_left{
           width: 288px;
           float: left;

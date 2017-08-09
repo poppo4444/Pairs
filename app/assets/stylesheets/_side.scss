@@ -14,6 +14,12 @@
   }
   .profile_photo {
     margin-bottom: 12px;
+    text-align:center;
+    .side_image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    }
   }
   .profile_name{
     margin-bottom: 2px;

@@ -1,9 +1,9 @@
 .side_contents
   .profile_summary
     .profile_photo
-      %img
+      =link_to image_tag(current_user.image,class: "side_image"),profile_path(current_user)
     .profile_name
-      %a.name 名前 居住地
+      =link_to current_user.name,profile_path(current_user)
     .profile_status
       %p.is_free_member 無料会員
   .my_profile_input_rate
@@ -14,7 +14,7 @@
     %ul.my_status_list
       %li.my_status_item.leftover_like
         %p.status_label 残りのいいね数
-        %p#total_like_numbers 
+        %p#total_like_numbers
           .stats_value
         %a#sidemenu_addlike.button_c.button_orange_a.link_more 追加する
       %li.my_status_item.leftover_point
