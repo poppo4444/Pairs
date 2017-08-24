@@ -3,7 +3,6 @@
     .banner
       %p.banner__message バナーだよ
     .box_search_menu
-      =link_to "編集はこちら", edit_profile_path(@user.id)
       .button_search_setting.float_left
         %a.button_b.button_white_a 
           %span.search プロフィールの見え方を確認
@@ -55,7 +54,7 @@
       .box_mypage_detail_inner02
         .mypage_detail_inner_left
           .box_profile_detail
-            %p.detail_sub_note この項目を押すと編集できます。
+            %p.detail_sub_note=link_to "編集はこちら", edit_profile_path(@user.id)
             %p.detail_sub_title
               %span.title_a Pairsプロフ
             %dl.detail_item_list

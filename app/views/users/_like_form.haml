@@ -1,7 +1,7 @@
 #like_form
   -if current_user.liking?(user)
-    %button "見てね"
+    %button.button_white_a "見てね"
   -else
     =form_for(current_user.liking_likes.build(liking_id: user.id)) do |f|
       = f.hidden_field :liking_id
-      = f.submit "いいね", class: "btn btn-large follow-btn"
+      = f.submit "いいね", class: "button_white_a"
